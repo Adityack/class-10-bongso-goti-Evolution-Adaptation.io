@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>জীববিজ্ঞান ইন্টারেক্টিভ পাঠ</title>
+    <title>বংশগতি এবং অভিব্যক্তি ইন্টারেক্টিভ পাঠ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -62,9 +62,7 @@
         <!-- Tabs Navigation -->
         <div class="mb-8 border-b border-gray-300">
             <nav class="flex flex-wrap -mb-px" aria-label="Tabs">
-                <button class="tab-btn whitespace-nowrap py-4 px-6 border-b-2 font-medium text-lg border-teal-500 text-teal-600" onclick="showTab('introduction')">বংশগতি</button>
-                <button class="tab-btn whitespace-nowrap py-4 px-6 border-b-2 font-medium text-lg border-transparent hover:text-gray-700 hover:border-gray-300" onclick="showTab('mendels-laws')">মেন্ডেলের সূত্র</button>
-                <button class="tab-btn whitespace-nowrap py-4 px-6 border-b-2 font-medium text-lg border-transparent hover:text-gray-700 hover:border-gray-300" onclick="showTab('genetic-diseases')">জিনগত রোগ</button>
+                <button class="tab-btn whitespace-nowrap py-4 px-6 border-b-2 font-medium text-lg border-teal-500 text-teal-600" onclick="showTab('heredity')">বংশগতি</button>
                 <button class="tab-btn whitespace-nowrap py-4 px-6 border-b-2 font-medium text-lg border-transparent hover:text-gray-700 hover:border-gray-300" onclick="showTab('evolution-adaptation')">অভিব্যক্তি ও অভিযোজন</button>
                 <button class="tab-btn whitespace-nowrap py-4 px-6 border-b-2 font-medium text-lg border-transparent hover:text-gray-700 hover:border-gray-300" onclick="showTab('quiz')">কুইজ</button>
             </nav>
@@ -72,139 +70,97 @@
 
         <!-- Tab Content -->
         <main>
-            <!-- Heredity Introduction Tab -->
-            <div id="introduction" class="tab-content active">
+            <!-- Heredity Tab -->
+            <div id="heredity" class="tab-content active">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4 text-teal-700">বংশগতি কী?</h2>
-                    <p class="mb-4">যে নির্দিষ্ট রীতি বা পদ্ধতিতে জননের মাধ্যমে পিতা-মাতা থেকে চারিত্রিক বৈশিষ্ট্য বংশপরম্পরায় সন্তান-সন্ততিতে সঞ্চারিত হয়, তাকে বংশগতি বা হেরিডিটি বলে। জীববিজ্ঞানের যে শাখায় জিনের গঠন এবং তার বংশানুক্রমে সঞ্চারণ নিয়ে আলোচনা হয়, তাকে বংশগতিবিদ্যা বা জেনেটিক্স (genetics) বলে।</p>
-                    <div class="flex justify-center my-6">
-                        <img src="https://i.imgur.com/3aJt3rX.png" alt="নিষেক প্রক্রিয়া" class="rounded-lg shadow-lg max-w-xs w-full">
-                    </div>
-                    <h3 class="text-xl font-semibold mt-6 mb-2">প্রকরণ (Variation)</h3>
-                    <p>একই প্রজাতিভুক্ত জীবেদের মধ্যে চারিত্রিক বৈশিষ্ট্যের পার্থক্যকেই প্রকরণ বলে। যেমন, মানুষের মধ্যে কানের লতির গঠন (মুক্ত বা সংযুক্ত) বা জিভ ঘোরানোর ক্ষমতা (রোলার বা স্বাভাবিক) প্রকরণের উদাহরণ।</p>
-                    <div class="flex flex-col md:flex-row justify-around items-center mt-4 gap-4">
-                        <figure class="text-center">
-                            <img src="https://i.imgur.com/sC5O8zL.png" alt="মুক্ত ও সংযুক্ত কানের লতি" class="rounded-lg shadow-md h-40">
-                            <figcaption class="mt-2 text-sm">মুক্ত ও সংযুক্ত কানের লতি</figcaption>
-                        </figure>
-                        <figure class="text-center">
-                            <img src="https://i.imgur.com/5g7dY3e.png" alt="রোলার ও স্বাভাবিক জিভ" class="rounded-lg shadow-md h-40">
-                            <figcaption class="mt-2 text-sm">রোলার ও স্বাভাবিক জিভ</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mendel's Laws Tab -->
-            <div id="mendels-laws" class="tab-content">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4 text-teal-700">মেন্ডেলের পরীক্ষা ও সূত্র</h2>
-                    <p class="mb-4">গ্রেগর যোহান মেন্ডেল মটর গাছের উপর পরীক্ষা করে বংশগতির দুটি গুরুত্বপূর্ণ সূত্র আবিষ্কার করেন।</p>
-                    
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-2">একসংকর জনন (Monohybrid Cross)</h3>
-                        <p>একজোড়া বিপরীত বৈশিষ্ট্যসম্পন্ন একই প্রজাতিভুক্ত দুটি জীবের মধ্যে সংকরায়ণ ঘটানোকে একসংকর জনন বলে।</p>
-                        <div id="monohybrid-cross-animation" class="p-4 border rounded-lg mt-4 text-center bg-gray-50">
-                            <p class="mb-4">বিশুদ্ধ লম্বা (TT) ও বিশুদ্ধ বেঁটে (tt) মটর গাছের মধ্যে ক্রস করলে কী হবে দেখতে নিচের বোতামে ক্লিক করুন।</p>
-                            <button onclick="startMonohybridCross()" class="bg-teal-500 text-white px-6 py-2 rounded-lg hover:bg-teal-600 transition">অ্যানিমেশন শুরু করুন</button>
-                            <div id="monohybrid-steps" class="mt-4 text-left"></div>
+                    <h2 class="text-3xl font-bold mb-4 text-teal-700">বংশগতি এবং কয়েকটি সাধারণ জিনগত রোগ</h2>
+                    <div id="introduction">
+                        <h3 class="text-2xl font-semibold mb-2">বংশগতি কী?</h3>
+                        <p class="mb-4">যে নির্দিষ্ট রীতি বা পদ্ধতিতে জননের মাধ্যমে পিতা-মাতা থেকে চারিত্রিক বৈশিষ্ট্য বংশপরম্পরায় সন্তান-সন্ততিতে সঞ্চারিত হয়, তাকে বংশগতি বা হেরিডিটি বলে।</p>
+                        <div class="flex justify-center my-6">
+                            <img src="https://i.imgur.com/3aJt3rX.png" alt="নিষেক প্রক্রিয়া" class="rounded-lg shadow-lg max-w-xs w-full">
                         </div>
                     </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">দ্বিসংকর জনন (Dihybrid Cross)</h3>
-                        <p>দু-জোড়া বিপরীত চারিত্রিক বৈশিষ্ট্যযুক্ত একই প্রজাতিভুক্ত দুটি জীবের মধ্যে সংকরায়ণ ঘটানোকে দ্বিসংকর জনন বলে।</p>
-                        <div id="dihybrid-cross-visual" class="p-4 border rounded-lg mt-4 bg-gray-50">
-                            <p class="mb-4">বিশুদ্ধ গোল-হলুদ (RRYY) ও বিশুদ্ধ কুঞ্চিত-সবুজ (rryy) বীজের মধ্যে দ্বিসংকর জননের ফলাফল নিচে দেখানো হলো।</p>
+                    <div id="mendels-laws" class="mt-8">
+                        <h3 class="text-2xl font-semibold mb-2">মেন্ডেলের পরীক্ষা ও সূত্র</h3>
+                        <p class="mb-4">গ্রেগর যোহান মেন্ডেল মটর গাছের উপর পরীক্ষা করে বংশগতির দুটি গুরুত্বপূর্ণ সূত্র আবিষ্কার করেন।</p>
+                        <div class="mb-8">
+                            <h4 class="text-xl font-semibold mb-2">একসংকর জনন (Monohybrid Cross)</h4>
+                            <div id="monohybrid-cross-animation" class="p-4 border rounded-lg mt-4 text-center bg-gray-50">
+                                <p class="mb-4">বিশুদ্ধ লম্বা (TT) ও বিশুদ্ধ বেঁটে (tt) মটর গাছের মধ্যে ক্রস করলে কী হবে দেখতে নিচের বোতামে ক্লিক করুন।</p>
+                                <button onclick="startMonohybridCross()" class="bg-teal-500 text-white px-6 py-2 rounded-lg hover:bg-teal-600 transition">অ্যানিমেশন শুরু করুন</button>
+                                <div id="monohybrid-steps" class="mt-4 text-left"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">দ্বিসংকর জনন (Dihybrid Cross)</h4>
                              <div class="flex justify-center">
                                 <img src="https://i.imgur.com/eF4tB9C.png" alt="দ্বিসংকর জনন চেকার বোর্ড" class="rounded-lg shadow-lg max-w-full md:max-w-2xl">
                             </div>
-                            <p class="mt-4 text-center font-semibold">F₂ জনুর ফিনোটাইপ অনুপাত: গোল-হলুদ : গোল-সবুজ : কুঞ্চিত-হলুদ : কুঞ্চিত-সবুজ = ৯ : ৩ : ৩ : ১</p>
+                        </div>
+                    </div>
+                     <div id="genetic-diseases" class="mt-8">
+                        <h3 class="text-2xl font-semibold mb-4">সাধারণ জিনগত রোগ</h3>
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xl font-semibold text-red-600">থ্যালাসেমিয়া</h4>
+                                <p>এটি একটি অটোজোমাল প্রচ্ছন্ন জিনবাহিত রোগ। এই রোগে হিমোগ্লোবিন ঠিকমতো তৈরি হয় না, ফলে রক্তাল্পতা দেখা দেয়।</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-blue-600">হিমোফিলিয়া</h4>
+                                <p>এটি X-ক্রোমোজোমবাহিত প্রচ্ছন্ন জিনঘটিত রোগ। এই রোগে রক্ত তঞ্চনকারী ফ্যাক্টর তৈরি হয় না।</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-green-600">বর্ণান্ধতা</h4>
+                                <p>এটিও একটি X-ক্রোমোজোমবাহিত প্রচ্ছন্ন জিনঘটিত রোগ। আক্রান্ত ব্যক্তি লাল ও সবুজ বর্ণের মধ্যে পার্থক্য করতে পারেন না।</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Genetic Diseases Tab -->
-            <div id="genetic-diseases" class="tab-content">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4 text-teal-700">সাধারণ জিনগত রোগ</h2>
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-xl font-semibold text-red-600">থ্যালাসেমিয়া (Thalassemia)</h3>
-                            <p>এটি একটি অটোজোমাল প্রচ্ছন্ন জিনবাহিত রোগ। এই রোগে হিমোগ্লোবিন ঠিকমতো তৈরি হয় না, ফলে রক্তাল্পতা দেখা দেয়।</p>
-                            <div class="mt-4 p-4 border-l-4 border-red-500 bg-red-50">
-                                <p><span class="font-bold">কারণ:</span> ১১ বা ১৬ নং অটোজোমে থাকা জিনের ত্রুটির জন্য হয়।</p>
-                                <p><span class="font-bold">লক্ষণ:</span> شدید রক্তাল্পতা, ক্লান্তি, দেহের ফ্যাকাসে ভাব, হৃৎপিণ্ড ও যকৃতের সমস্যা।</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-blue-600">হিমোফিলিয়া (Haemophilia)</h3>
-                            <p>এটি X-ক্রোমোজোমবাহিত প্রচ্ছন্ন জিনঘটিত রোগ। এই রোগে রক্ত তঞ্চনকারী ফ্যাক্টর তৈরি হয় না, ফলে কেটে গেলে রক্তপাত বন্ধ হতে চায় না।</p>
-                             <div class="mt-4 p-4 border-l-4 border-blue-500 bg-blue-50">
-                                <p><span class="font-bold">কারণ:</span> X-ক্রোমোজোমে থাকা জিনের মিউটেশন।</p>
-                                <p><span class="font-bold">উত্তরাধিকার:</span> সাধারণত পুরুষরা বেশি আক্রান্ত হয় এবং মহিলারা এই রোগের বাহক হন।</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-green-600">বর্ণান্ধতা (Colour Blindness)</h3>
-                            <p>এটিও একটি X-ক্রোমোজোমবাহিত প্রচ্ছন্ন জিনঘটিত রোগ। আক্রান্ত ব্যক্তি লাল ও সবুজ বর্ণের মধ্যে পার্থক্য করতে পারেন না।</p>
-                             <div class="mt-4 p-4 border-l-4 border-green-500 bg-green-50">
-                                <p><span class="font-bold">কারণ:</span> X-ক্রোমোজোমে থাকা জিনের ত্রুটি।</p>
-                                <p><span class="font-bold">লক্ষণ:</span> লাল-সবুজ বর্ণ চিনতে অসুবিধা।</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Evolution and Adaptation Tab -->
+            <!-- Evolution & Adaptation Tab -->
             <div id="evolution-adaptation" class="tab-content">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4 text-teal-700">অভিব্যক্তি ও অভিযোজন</h2>
+                    <h2 class="text-3xl font-bold mb-4 text-teal-700">অভিব্যক্তি ও অভিযোজন</h2>
                     
                     <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-2">অভিব্যক্তি বা বিবর্তন (Evolution)</h3>
-                        <p>যে মন্থর ও গতিশীল প্রক্রিয়ায় কোনো সরল উদবংশীয় জীব থেকে জটিল জীবের উদ্ভব হয়, তাকে অভিব্যক্তি বা বিবর্তন বলে।</p>
-                        <ul class="list-disc list-inside mt-4 space-y-2">
-                            <li><b>ল্যামার্কের মতবাদ:</b> ল্যামার্কের মতে, জীবের অর্জিত বৈশিষ্ট্য বংশানুক্রমে সঞ্চারিত হয়। যেমন, জিরাফের গলা লম্বা হওয়ার কারণ হলো উঁচু গাছের পাতা খাওয়ার জন্য ক্রমাগত গলা প্রসারিত করা।</li>
-                            <li><b>ডারউইনের মতবাদ:</b> ডারউইনের মতে, প্রাকৃতিক নির্বাচনই হলো বিবর্তনের মূল কারণ। তাঁর তত্ত্বের মূল প্রতিপাদ্য বিষয়গুলি হলো - অত্যাধিক হারে বংশবৃদ্ধি, সীমিত খাদ্য ও বাসস্থান, জীবন সংগ্রাম, প্রকরণের উদ্ভব এবং যোগ্যতমের উদবর্তন।</li>
-                        </ul>
-                        <div class="flex justify-center my-6">
-                            <img src="https://i.imgur.com/8Q5t4sS.jpg" alt="ঘোড়ার বিবর্তন" class="rounded-lg shadow-lg max-w-full md:max-w-xl">
-                        </div>
-                    </div>
+                        <h3 class="text-2xl font-semibold mb-2">অভিব্যক্তি (Evolution)</h3>
+                        <p class="mb-4">অভিব্যক্তি হলো সেই ধীর ও গতিশীল প্রক্রিয়া যার মাধ্যমে সরল জীব থেকে জটিল জীবের উদ্ভব ঘটে।</p>
+                        
+                        <h4 class="text-xl font-semibold mt-6 mb-2">ল্যামার্কের মতবাদ (Lamarckism)</h4>
+                        <p>ল্যামার্কের মতে, পরিবেশের প্রভাবে জীবের মধ্যে কিছু বৈশিষ্ট্য অর্জিত হয় এবং সেই অর্জিত বৈশিষ্ট্যগুলি বংশপরম্পরায় সঞ্চারিত হয়ে নতুন প্রজাতির উদ্ভব ঘটায়। যেমন - জিরাফের গলা লম্বা হওয়া।</p>
+                        <div class="flex justify-center my-4"><img src="https://i.imgur.com/5CRJ8Sg.png" alt="ল্যামার্কের জিরাফ" class="rounded-lg shadow-md max-w-sm w-full"></div>
 
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-2">বিবর্তনের প্রমাণ</h3>
-                         <p><b>সমসংস্থ অঙ্গ (Homologous Organs):</b> যে সব অঙ্গের উৎপত্তি ও গঠন একই কিন্তু কাজ ভিন্ন, তাদের সমসংস্থ অঙ্গ বলে। যেমন, পাখির ডানা, তিমির ফ্লিপার এবং মানুষের হাত। এরা বিবর্তনের অপসারী গতিকে নির্দেশ করে।</p>
-                         <div class="flex justify-center my-4"><img src="https://i.imgur.com/w1jY8qV.png" alt="সমসংস্থ অঙ্গ" class="rounded-lg shadow-md max-w-full md:max-w-lg"></div>
-                         <p><b>সমবৃত্তীয় অঙ্গ (Analogous Organs):</b> যে সব অঙ্গের কাজ এক কিন্তু উৎপত্তি ও গঠন ভিন্ন, তাদের সমবৃত্তীয় অঙ্গ বলে। যেমন, পাখির ডানা ও পতঙ্গের ডানা। এরা বিবর্তনের অভিসারী গতিকে নির্দেশ করে।</p>
+                        <h4 class="text-xl font-semibold mt-6 mb-2">ডারউইনের মতবাদ (Darwinism)</h4>
+                        <p>ডারউইনের তত্ত্বের মূল কথা হলো 'প্রাকৃতিক নির্বাচন'। এর মতে, জীবন সংগ্রামে যোগ্যতম জীবেরা প্রকৃতি দ্বারা নির্বাচিত হয় এবং বংশবিস্তার করে, অন্যরা বিলুপ্ত হয়ে যায়।</p>
+                        <div class="flex justify-center my-4"><img src="https://i.imgur.com/s1mJ3D3.png" alt="ডারউইনের ফিঞ্চ পাখি" class="rounded-lg shadow-md max-w-sm w-full"></div>
+
+                        <h4 class="text-xl font-semibold mt-6 mb-2">অভিব্যক্তির প্রমাণ</h4>
+                        <p class="mb-2"><b>সমসংস্থ অঙ্গ (Homologous Organs):</b> যে সব অঙ্গের উৎপত্তি ও গঠন এক কিন্তু কাজ ভিন্ন, তাদের সমসংস্থ অঙ্গ বলে। যেমন - মানুষের হাত, তিমির ফ্লিপার, বাদুড়ের ডানা।</p>
+                        <div class="flex justify-center my-4"><img src="https://i.imgur.com/xQ8k4gW.png" alt="সমসংস্থ অঙ্গ" class="rounded-lg shadow-md max-w-md w-full"></div>
+                        <p class="mb-2"><b>সমবৃত্তীয় অঙ্গ (Analogous Organs):</b> যে সব অঙ্গের উৎপত্তি ভিন্ন কিন্তু কাজ এক, তাদের সমবৃত্তীয় অঙ্গ বলে। যেমন - পাখির ডানা ও পতঙ্গের ডানা।</p>
+                        <div class="flex justify-center my-4"><img src="https://i.imgur.com/uR2i1yW.png" alt="সমবৃত্তীয় অঙ্গ" class="rounded-lg shadow-md max-w-md w-full"></div>
                     </div>
 
                     <div>
-                        <h3 class="text-xl font-semibold mb-2">অভিযোজন (Adaptation)</h3>
-                        <p>পরিবর্তনশীল পরিবেশে নিজেদের অস্তিত্ব বজায় রাখার জন্য এবং বংশবৃদ্ধি করার জন্য জীবের অঙ্গসংস্থানিক ও শারীরবৃত্তীয় পরিবর্তনকে অভিযোজন বলে।</p>
-                        <div class="grid md:grid-cols-2 gap-6 mt-4">
-                            <div class="p-4 bg-gray-50 rounded-lg">
-                                <h4 class="font-bold">ক্যাকটাসের অভিযোজন</h4>
-                                <p>জল সংরক্ষণের জন্য পাতা কাঁটায় রূপান্তরিত হয়েছে এবং কাণ্ড সবুজ ও রসালো হয়েছে।</p>
-                                <img src="https://i.imgur.com/lYg7s8p.jpg" alt="ক্যাকটাস" class="rounded-lg shadow-md mt-2 h-40 w-full object-cover">
+                        <h3 class="text-2xl font-semibold mb-2">অভিযোজন (Adaptation)</h3>
+                        <p class="mb-4">পরিবর্তনশীল পরিবেশে নিজেদের অস্তিত্ব বজায় রাখার জন্য এবং বংশবিস্তার করার জন্য জীবের অঙ্গসংস্থানিক ও শারীরবৃত্তীয় পরিবর্তনকে অভিযোজন বলে।</p>
+                        <div class="grid md:grid-cols-3 gap-6 text-center">
+                            <div>
+                                <img src="https://i.imgur.com/dM2z1xS.jpg" alt="ক্যাকটাস" class="rounded-lg shadow-md w-full h-48 object-cover">
+                                <h5 class="font-bold mt-2">ক্যাকটাসের অভিযোজন</h5>
+                                <p class="text-sm">জল সংরক্ষণের জন্য পাতা কাঁটায় রূপান্তরিত হয়েছে।</p>
                             </div>
-                            <div class="p-4 bg-gray-50 rounded-lg">
-                                <h4 class="font-bold">সুন্দরী গাছের অভিযোজন</h4>
-                                <p>লবণাক্ত মাটিতে শ্বাসকার্য চালানোর জন্য শ্বাসমূল বা নিউম্যাটোফোর দেখা যায়।</p>
-                                <img src="https://i.imgur.com/5D9wY1h.jpg" alt="শ্বাসমূল" class="rounded-lg shadow-md mt-2 h-40 w-full object-cover">
+                            <div>
+                                <img src="https://i.imgur.com/jYt8vIK.jpg" alt="পায়রা" class="rounded-lg shadow-md w-full h-48 object-cover">
+                                <h5 class="font-bold mt-2">পায়রার খেচর অভিযোজন</h5>
+                                <p class="text-sm">দেহে বায়ুথলি থাকায় দেহ হালকা হয় এবং সহজে উড়তে পারে।</p>
                             </div>
-                             <div class="p-4 bg-gray-50 rounded-lg">
-                                <h4 class="font-bold">উটের অভিযোজন</h4>
-                                <p>জলপান না করে দীর্ঘ সময় থাকতে পারে, কুঁজে চর্বি সঞ্চিত থাকে এবং পায়ের পাতা চওড়া হয়।</p>
-                                <img src="https://i.imgur.com/3h0Jz9C.jpg" alt="উট" class="rounded-lg shadow-md mt-2 h-40 w-full object-cover">
-                            </div>
-                             <div class="p-4 bg-gray-50 rounded-lg">
-                                <h4 class="font-bold">মৌমাছির আচরণগত অভিযোজন</h4>
-                                <p>খাদ্যের উৎস ও দূরত্ব বোঝানোর জন্য মৌমাছিরা বিশেষ ধরনের নৃত্য (ওয়াগল নৃত্য) করে।</p>
-                                <img src="https://i.imgur.com/n1e9z9n.gif" alt="মৌমাছির ওয়াগল নৃত্য" class="rounded-lg shadow-md mt-2 h-40 w-full object-cover">
+                            <div>
+                                <img src="https://i.imgur.com/cWJz9gV.jpg" alt="উট" class="rounded-lg shadow-md w-full h-48 object-cover">
+                                <h5 class="font-bold mt-2">উটের অভিযোজন</h5>
+                                <p class="text-sm">কুঁজে সঞ্চিত ফ্যাট থেকে প্রয়োজনে জল ও শক্তি পায়।</p>
                             </div>
                         </div>
                     </div>
@@ -215,17 +171,9 @@
             <div id="quiz" class="tab-content">
                 <div id="quiz-start-screen" class="text-center bg-white p-8 rounded-lg shadow-md">
                     <h2 class="text-2xl font-bold mb-4 text-teal-700">জীববিজ্ঞান কুইজ</h2>
-                    <p class="mb-6">আপনার জ্ঞান পরীক্ষা করুন। শুরু করার আগে আপনার নাম ও অধ্যায় লিখুন।</p>
+                    <p class="mb-6">আপনার জ্ঞান পরীক্ষা করুন। শুরু করার আগে আপনার নাম ও স্তর নির্বাচন করুন।</p>
                     <input type="text" id="student-name" placeholder="আপনার নাম লিখুন" class="w-full md:w-1/2 p-3 border rounded-lg mb-4">
                     <div id="name-error" class="text-red-500 mb-4 hidden">অনুগ্রহ করে আপনার নাম লিখুন।</div>
-                    <div class="mb-4">
-                        <label for="chapter-selection" class="block mb-2 font-medium">অধ্যায় নির্বাচন করুন:</label>
-                        <select id="chapter-selection" class="w-full md:w-1/2 p-3 border rounded-lg">
-                            <option value="0">সব অধ্যায় একসাথে</option>
-                            <option value="1">বংশগতি ও জিনগত রোগ</option>
-                            <option value="2">অভিব্যক্তি ও অভিযোজন</option>
-                        </select>
-                    </div>
                     <div id="level-selection" class="mb-4">
                         <label for="quiz-level" class="block mb-2 font-medium">স্তর নির্বাচন করুন:</label>
                         <select id="quiz-level" class="w-full md:w-1/2 p-3 border rounded-lg">
@@ -279,14 +227,6 @@
             });
             event.currentTarget.classList.add('border-teal-500', 'text-teal-600');
             event.currentTarget.classList.remove('border-transparent', 'hover:text-gray-700', 'hover:border-gray-300');
-            
-            // Adjust button text for the first tab
-            if (tabId === 'introduction') {
-                event.currentTarget.innerText = "বংশগতি";
-            } else {
-                 const introBtn = document.querySelector('button[onclick*="introduction"]');
-                 if(introBtn) introBtn.innerText = "বংশগতি";
-            }
         }
 
         // Monohybrid cross animation
@@ -316,239 +256,262 @@
 
         // Quiz functionality
         const allQuestions = [
-            // Chapter 1: Heredity and Genetic Diseases
-            // Level 1 (30 questions)
-            { question: "বংশগতিবিদ্যার জনক কে?", options: ["ডারউইন", "ল্যামার্ক", "মেন্ডেল", "দ্য ভ্রিস"], answer: "মেন্ডেল", explanation: "গ্রেগর যোহান মেন্ডেলকে বংশগতিবিদ্যার জনক বলা হয়।", level: 1, chapter: 1, time: 15 },
-            { question: "মেন্ডেল তার পরীক্ষার জন্য কোন উদ্ভিদ বেছে নিয়েছিলেন?", options: ["আম গাছ", "জবা গাছ", "মটর গাছ", "ধান গাছ"], answer: "মটর গাছ", explanation: "মেন্ডেল তার পরীক্ষার জন্য বাগান মটর গাছ (Pisum sativum) নির্বাচন করেছিলেন।", level: 1, chapter: 1, time: 15 },
-            { question: "মানুষের মধ্যে প্রকট বৈশিষ্ট্য কোনটি?", options: ["সংযুক্ত কানের লতি", "স্বাভাবিক জিভ", "রোলার জিভ", "নীল চোখ"], answer: "রোলার জিভ", explanation: "রোলার জিভ একটি প্রকট বৈশিষ্ট্য, যা প্রকট জিন দ্বারা নিয়ন্ত্রিত হয়।", level: 1, chapter: 1, time: 20 },
-            { question: "একসংকর জননের F₂ জনুর ফিনোটাইপিক অনুপাত কত?", options: ["১:২:১", "৯:৩:৩:১", "৩:১", "১:১"], answer: "৩:১", explanation: "মেন্ডেলের একসংকর জনন পরীক্ষায় F₂ জনুতে প্রকট ও প্রচ্ছন্ন বৈশিষ্ট্যের অনুপাত হয় ৩:১।", level: 1, chapter: 1, time: 20 },
-            { question: "কোনটি জিনগত রোগ?", options: ["সর্দি-কাশি", "টাইফয়েড", "থ্যালাসেমিয়া", "ম্যালেরিয়া"], answer: "থ্যালাসেমিয়া", explanation: "থ্যালাসেমিয়া একটি অটোজোমবাহিত প্রচ্ছন্ন জিনগত রোগ।", level: 1, chapter: 1, time: 15 },
-            { question: "মানুষের দেহকোশে ক্রোমোজোমের সংখ্যা কত?", options: ["২৩টি", "২২ জোড়া", "৪৬টি", "৪৬ জোড়া"], answer: "৪৬টি", explanation: "মানুষের প্রতিটি দেহকোশে ২৩ জোড়া অর্থাৎ ৪৬টি ক্রোমোজোম থাকে।", level: 1, chapter: 1, time: 15 },
-            { question: "মহিলাদের সেক্স ক্রোমোজোম কোনটি?", options: ["XY", "XX", "XO", "YY"], answer: "XX", explanation: "মহিলাদের দেহে দুটি X ক্রোমোজোম (XX) থাকে।", level: 1, chapter: 1, time: 15 },
-            { question: "পুরুষদের সেক্স ক্রোমোজোম কোনটি?", options: ["XY", "XX", "XO", "YY"], answer: "XY", explanation: "পুরুষদের দেহে একটি X ও একটি Y ক্রোমোজোম (XY) থাকে।", level: 1, chapter: 1, time: 15 },
-            { question: "কোন রোগে রক্ত তঞ্চন ব্যাহত হয়?", options: ["বর্ণান্ধতা", "হিমোফিলিয়া", "থ্যালাসেমিয়া", "ডায়াবেটিস"], answer: "হিমোফিলিয়া", explanation: "হিমোফিলিয়া রোগে রক্ত তঞ্চনকারী ফ্যাক্টরের অভাবে রক্ত জমাট বাঁধতে পারে না।", level: 1, chapter: 1, time: 20 },
-            { question: "ফিনোটাইপ বলতে কী বোঝায়?", options: ["জিনের গঠন", "বাহ্যিক বৈশিষ্ট্য", "ক্রোমোজোমের সংখ্যা", "DNA-এর গঠন"], answer: "বাহ্যিক বৈশিষ্ট্য", explanation: "কোনো জীবের বাহ্যিক প্রকাশিত বৈশিষ্ট্যকে ফিনোটাইপ বলে।", level: 1, chapter: 1, time: 20 },
-            { question: "জিন কোথায় অবস্থিত?", options: ["সাইটোপ্লাজমে", "রাইবোজোমে", "ক্রোমোজোমে", "লাইসোজোমে"], answer: "ক্রোমোজোমে", explanation: "জিন ক্রোমোজোমের উপর রৈখিকভাবে সাজানো থাকে।", level: 1, chapter: 1, time: 15 },
-            { question: "মটর গাছের কোন বৈশিষ্ট্যটি প্রচ্ছন্ন?", options: ["বেগুনি ফুল", "কাক্ষিক ফুল", "হলুদ বীজ", "কুঞ্চিত বীজ"], answer: "কুঞ্চিত বীজ", explanation: "মটর গাছের কুঞ্চিত বীজ একটি প্রচ্ছন্ন বৈশিষ্ট্য।", level: 1, chapter: 1, time: 15 },
-            { question: "সংকরায়ণ পরীক্ষায় প্রথম অপত্য জনুকে কী বলা হয়?", options: ["P জনু", "F₁ জনু", "F₂ জনু", "F₃ জনু"], answer: "F₁ জনু", explanation: "সংকরায়ণ পরীক্ষায় জনিতৃ জনুর মিলনের ফলে সৃষ্ট প্রথম প্রজন্মকে F₁ জনু বা প্রথম অপত্য জনু বলে।", level: 1, chapter: 1, time: 15 },
-            { question: "হোমোজাইগাস জীবের উদাহরণ কোনটি?", options: ["Tt", "Rr", "TT", "Yy"], answer: "TT", explanation: "যখন কোনো বৈশিষ্ট্যের জন্য দুটি অ্যালিল একই রকম হয় (যেমন TT বা tt), তখন তাকে হোমোজাইগাস বলে।", level: 1, chapter: 1, time: 20 },
-            { question: "বর্ণান্ধ ব্যক্তিরা কোন দুটি রং চিনতে পারে না?", options: ["লাল ও নীল", "নীল ও হলুদ", "লাল ও সবুজ", "কালো ও সাদা"], answer: "লাল ও সবুজ", explanation: "সাধারণত লাল-সবুজ বর্ণান্ধতাই বেশি দেখা যায়।", level: 1, chapter: 1, time: 15 },
-            { question: "অ্যালিল কী?", options: ["একটি সম্পূর্ণ জিন", "একটি ক্রোমোজোম", "একটি জিনের বিভিন্ন রূপ", "একটি প্রোটিন"], answer: "একটি জিনের বিভিন্ন রূপ", explanation: "কোনো নির্দিষ্ট জিনের বিভিন্ন রূপকে পরস্পরের অ্যালিল বলে।", level: 1, chapter: 1, time: 20 },
-            { question: "মেন্ডেলের প্রথম সূত্রের অপর নাম কী?", options: ["প্রকটতার সূত্র", "স্বাধীন সঞ্চারণ সূত্র", "পৃথকীভবনের সূত্র", "লিংকেজের সূত্র"], answer: "পৃথকীভবনের সূত্র", explanation: "মেন্ডেলের প্রথম সূত্রটি 'পৃথকীভবনের সূত্র' বা 'Law of Segregation' নামে পরিচিত।", level: 1, chapter: 1, time: 20 },
-            { question: "জিনোটাইপ বলতে কী বোঝায়?", options: ["বাহ্যিক প্রকাশ", "জিনের সংযুক্তি", "প্রোটিনের প্রকার", "কোশের গঠন"], answer: "জিনের সংযুক্তি", explanation: "কোনো জীবের কোনো বৈশিষ্ট্যের জিনগত গঠন বা সংযুক্তিকে জিনোটাইপ বলে।", level: 1, chapter: 1, time: 15 },
-            { question: "সন্তানের লিঙ্গ নির্ধারণের জন্য কোন গ্যামেট দায়ী?", options: ["ডিম্বাণু", "শুক্রাণু", "উভয়ই", "কোনোটিই নয়"], answer: "শুক্রাণু", explanation: "শুক্রাণু X বা Y ক্রোমোজোম বহন করে, যা সন্তানের লিঙ্গ নির্ধারণ করে।", level: 1, chapter: 1, time: 20 },
-            { question: "থ্যালাসেমিয়া রোগের প্রধান লক্ষণ কী?", options: ["রক্ত তঞ্চন না হওয়া", "রক্তাল্পতা", "হাড়ের বিকৃতি", "অজ্ঞান হয়ে যাওয়া"], answer: "রক্তাল্পতা", explanation: "হিমোগ্লোবিন ঠিকমতো তৈরি না হওয়ায় থ্যালাসেমিয়া রোগীদের তীব্র রক্তাল্পতা দেখা দেয়।", level: 1, chapter: 1, time: 15 },
-            { question: "মটর ফুল কি ধরনের?", options: ["একಲಿঙ্গ", "উভলিঙ্গ", "ক্লীবলিঙ্গ", "অসম্পূর্ণ"], answer: "উভলিঙ্গ", explanation: "মটর ফুল উভলিঙ্গ হওয়ায় স্বপরাগযোগ এবং ইতরপরাগযোগ উভয়ই ঘটানো সম্ভব।", level: 1, chapter: 1, time: 15 },
-            { question: "মানুষের মধ্যে সংযুক্ত কানের লতি কি ধরনের বৈশিষ্ট্য?", options: ["প্রকট", "প্রচ্ছন্ন", "সহপ্রকট", "অসম্পূর্ণ প্রকট"], answer: "প্রচ্ছন্ন", explanation: "সংযুক্ত কানের লতি একটি প্রচ্ছন্ন বৈশিষ্ট্য, যা দুটি প্রচ্ছন্ন জিনের উপস্থিতিতে প্রকাশ পায়।", level: 1, chapter: 1, time: 20 },
-            { question: "DNA এর সম্পূর্ণ নাম কী?", options: ["ডিঅক্সিরাইবো নিউক্লিক অ্যাসিড", "রাইবো নিউক্লিক অ্যাসিড", "ডিঅক্সিরাইবোজ নিউক্লিওসাইড", "রাইবোজ নিউক্লিক অ্যাসিড"], answer: "ডিঅক্সিরাইবো নিউক্লিক অ্যাসিড", explanation: "জিন মূলত DNA দ্বারা গঠিত, যার পুরো নাম ডিঅক্সিরাইবো নিউক্লিক অ্যাসিড।", level: 1, chapter: 1, time: 20 },
-            { question: "কোন বিজ্ঞানী মেন্ডেলের সূত্রের পুনরাবিষ্কার করেন?", options: ["ওয়াটসন ও ক্রিক", "দ্য ভ্রিস, কোরেন্স ও শেরম্যাক", "ডারউইন ও ওয়ালেস", "ল্যামার্ক"], answer: "দ্য ভ্রিস, কোরেন্স ও শেরম্যাক", explanation: "১৯০০ সালে হুগো দ্য ভ্রিস, কার্ল কোরেন্স এবং এরিক ভন শেরম্যাক পৃথকভাবে মেন্ডেলের সূত্রগুলির পুনরাবিষ্কার করেন।", level: 1, chapter: 1, time: 25 },
-            { question: "পিউর লাইন বা বিশুদ্ধ জীব বলতে কী বোঝায়?", options: ["সংকর জীব", "হেটেরোজাইগাস জীব", "হোমোজাইগাস জীব", "ট্রান্সজেনিক জীব"], answer: "হোমোজাইগাস জীব", explanation: "যে জীব বংশপরম্পরায় একই বৈশিষ্ট্যযুক্ত অপত্য সৃষ্টি করে, তাকে বিশুদ্ধ বা হোমোজাইগাস জীব বলে।", level: 1, chapter: 1, time: 20 },
-            { question: "মানুষের মধ্যে স্বাভাবিক জিভ (রোল করতে না পারা) কি ধরনের বৈশিষ্ট্য?", options: ["প্রকট", "প্রচ্ছন্ন", "লিঙ্গ সংযোজিত", "অসম্পূর্ণ প্রকট"], answer: "প্রচ্ছন্ন", explanation: "জিভ রোল করতে না পারা একটি প্রচ্ছন্ন বৈশিষ্ট্য।", level: 1, chapter: 1, time: 20 },
-            { question: "ক্রোমোজোমের যে নির্দিষ্ট স্থানে জিন অবস্থান করে, তাকে কী বলে?", options: ["সেন্ট্রোমিয়ার", "অ্যালিল", "লোকাস", "টেলোমিয়ার"], answer: "লোকাস", explanation: "ক্রোমোজোমের উপর জিনের নির্দিষ্ট অবস্থানকে লোকাস বলে।", level: 1, chapter: 1, time: 15 },
-            { question: "হিমোফিলিয়া রোগের বাহক কারা হতে পারে?", options: ["শুধুমাত্র পুরুষরা", "শুধুমাত্র মহিলারা", "উভয়ই", "কোনোটিই নয়"], answer: "শুধুমাত্র মহিলারা", explanation: "যেহেতু এটি X-লিঙ্কড প্রচ্ছন্ন রোগ, তাই কেবল মহিলারাই এর বাহক হতে পারে।", level: 1, chapter: 1, time: 20 },
-            { question: "মেন্ডেল কত জোড়া বিপরীতধর্মী বৈশিষ্ট্য নিয়ে কাজ করেছিলেন?", options: ["এক জোড়া", "তিন জোড়া", "সাত জোড়া", "দশ জোড়া"], answer: "সাত জোড়া", explanation: "মেন্ডেল তার পরীক্ষার জন্য মটর গাছের সাত জোড়া বিপরীতধর্মী বৈশিষ্ট্য নির্বাচন করেছিলেন।", level: 1, chapter: 1, time: 15 },
-            { question: "কোন ক্রস থেকে স্বাধীন সঞ্চারণ সূত্রটি পাওয়া যায়?", options: ["একসংকর জনন", "দ্বিসংকর জনন", "টেস্ট ক্রস", "ব্যাক ক্রস"], answer: "দ্বিসংকর জনন", explanation: "মেন্ডেল দ্বিসংকর জনন পরীক্ষা থেকে স্বাধীন সঞ্চারণ সূত্রে উপনীত হয়েছিলেন।", level: 1, chapter: 1, time: 20 },
+            // Heredity Questions (Level 1)
+            { chapter: "Heredity", question: "বংশগতিবিদ্যার জনক কে?", options: ["ডারউইন", "ল্যামার্ক", "মেন্ডেল", "দ্য ভ্রিস"], answer: "মেন্ডেল", explanation: "গ্রেগর যোহান মেন্ডেলকে বংশগতিবিদ্যার জনক বলা হয়।", level: 1, time: 15 },
+            { chapter: "Heredity", question: "মেন্ডেল তার পরীক্ষার জন্য কোন উদ্ভিদ বেছে নিয়েছিলেন?", options: ["আম গাছ", "জবা গাছ", "মটর গাছ", "ধান গাছ"], answer: "মটর গাছ", explanation: "মেন্ডেল তার পরীক্ষার জন্য বাগান মটর গাছ (Pisum sativum) নির্বাচন করেছিলেন।", level: 1, time: 15 },
+            { chapter: "Heredity", question: "মানুষের মধ্যে প্রকট বৈশিষ্ট্য কোনটি?", options: ["সংযুক্ত কানের লতি", "স্বাভাবিক জিভ", "রোলার জিভ", "নীল চোখ"], answer: "রোলার জিভ", explanation: "রোলার জিভ একটি প্রকট বৈশিষ্ট্য, যা প্রকট জিন দ্বারা নিয়ন্ত্রিত হয়।", level: 1, time: 20 },
+            { chapter: "Heredity", question: "একসংকর জননের F₂ জনুর ফিনোটাইপিক অনুপাত কত?", options: ["১:২:১", "৯:৩:৩:১", "৩:১", "১:১"], answer: "৩:১", explanation: "মেন্ডেলের একসংকর জনন পরীক্ষায় F₂ জনুতে প্রকট ও প্রচ্ছন্ন বৈশিষ্ট্যের অনুপাত হয় ৩:১।", level: 1, time: 20 },
+            { chapter: "Heredity", question: "কোনটি জিনগত রোগ?", options: ["সর্দি-কাশি", "টাইফয়েড", "থ্যালাসেমিয়া", "ম্যালেরিয়া"], answer: "থ্যালাসেমিয়া", explanation: "থ্যালাসেমিয়া একটি অটোজোমবাহিত প্রচ্ছন্ন জিনগত রোগ।", level: 1, time: 15 },
+            { chapter: "Heredity", question: "মানুষের দেহকোশে ক্রোমোজোমের সংখ্যা কত?", options: ["২৩টি", "২২ জোড়া", "৪৬টি", "৪৬ জোড়া"], answer: "৪৬টি", explanation: "মানুষের প্রতিটি দেহকোশে ২৩ জোড়া অর্থাৎ ৪৬টি ক্রোমোজোম থাকে।", level: 1, time: 15 },
+            { chapter: "Heredity", question: "মহিলাদের সেক্স ক্রোমোজোম কোনটি?", options: ["XY", "XX", "XO", "YY"], answer: "XX", explanation: "মহিলাদের দেহে দুটি X ক্রোমোজোম (XX) থাকে।", level: 1, time: 15 },
+            { chapter: "Heredity", question: "পুরুষদের সেক্স ক্রোমোজোম কোনটি?", options: ["XY", "XX", "XO", "YY"], answer: "XY", explanation: "পুরুষদের দেহে একটি X ও একটি Y ক্রোমোজোম (XY) থাকে।", level: 1, time: 15 },
+            { chapter: "Heredity", question: "কোন রোগে রক্ত তঞ্চন ব্যাহত হয়?", options: ["বর্ণান্ধতা", "হিমোফিলিয়া", "থ্যালাসেমিয়া", "ডায়াবেটিস"], answer: "হিমোফিলিয়া", explanation: "হিমোফিলিয়া রোগে রক্ত তঞ্চনকারী ফ্যাক্টরের অভাবে রক্ত জমাট বাঁধতে পারে না।", level: 1, time: 20 },
+            { chapter: "Heredity", question: "ফিনোটাইপ বলতে কী বোঝায়?", options: ["জিনের গঠন", "বাহ্যিক বৈশিষ্ট্য", "ক্রোমোজোমের সংখ্যা", "DNA-এর গঠন"], answer: "বাহ্যিক বৈশিষ্ট্য", explanation: "কোনো জীবের বাহ্যিক প্রকাশিত বৈশিষ্ট্যকে ফিনোটাইপ বলে।", level: 1, time: 20 },
+            
+            // Evolution & Adaptation Questions (Level 1)
+            { chapter: "Evolution", question: "'অর্জিত বৈশিষ্ট্যের উত্তরাধিকার' কার মতবাদ?", options: ["ডারউইন", "ল্যামার্ক", "দ্য ভ্রিস", "ভাইসম্যান"], answer: "ল্যামার্ক", explanation: "বিজ্ঞানী জ্যাঁ ব্যাপটিস্ট ল্যামার্ক 'অর্জিত বৈশিষ্ট্যের উত্তরাধিকার' মতবাদটির প্রবক্তা।", level: 1, time: 15 },
+            { chapter: "Evolution", question: "প্রাকৃতিক নির্বাচনবাদের প্রবক্তা কে?", options: ["মেন্ডেল", "ল্যামার্ক", "ডারউইন", "হেকেল"], answer: "ডারউইন", explanation: "চার্লস ডারউইন তার 'On the Origin of Species' গ্রন্থে প্রাকৃতিক নির্বাচনবাদের ব্যাখ্যা দেন।", level: 1, time: 15 },
+            { chapter: "Evolution", question: "কোনটি নিষ্ক্রিয় অঙ্গ নয়?", options: ["মানুষের অ্যাপেন্ডিক্স", "ঘোড়ার পায়ের আঙুল", "মানুষের কানের পেশি", "অজগরের পশ্চাৎপদ"], answer: "ঘোড়ার পায়ের আঙুল", explanation: "ঘোড়ার একটি মাত্র সক্রিয় আঙুল থাকে, যা দৌড়ানোর জন্য অভিযোজিত। অ্যাপেন্ডিক্স, কানের পেশি নিষ্ক্রিয়।", level: 1, time: 20 },
+            { chapter: "Evolution", question: "পাখির ডানা ও পতঙ্গের ডানা কি ধরনের অঙ্গ?", options: ["সমসংস্থ অঙ্গ", "সমবৃত্তীয় অঙ্গ", "নিষ্ক্রিয় অঙ্গ", "প্রতিস্থাপিত অঙ্গ"], answer: "সমবৃত্তীয় অঙ্গ", explanation: "পাখির ডানা ও পতঙ্গের ডানার কাজ এক (উড়তে সাহায্য করা) কিন্তু গঠন ও উৎপত্তি ভিন্ন, তাই এরা সমবৃত্তীয় অঙ্গ।", level: 1, time: 20 },
+            { chapter: "Evolution", question: "উটের কুঁজে কী সঞ্চিত থাকে?", options: ["জল", "ফ্যাট", "প্রোটিন", "কার্বোহাইড্রেট"], answer: "ফ্যাট", explanation: "উটের কুঁজে চর্বি বা ফ্যাট সঞ্চিত থাকে, যা থেকে প্রয়োজনে শক্তি ও জল উৎপন্ন হয়।", level: 1, time: 15 },
+            { chapter: "Evolution", question: "ক্যাকটাসের পাতা কাঁটায় রূপান্তরিত হয় কেন?", options: ["আত্মরক্ষার জন্য", "বাষ্পমোচন কমানোর জন্য", "খাদ্য সঞ্চয়ের জন্য", "পরাগযোগে সাহায্যের জন্য"], answer: "বাষ্পমোচন কমানোর জন্য", explanation: "মরুভূমি অঞ্চলে জলের অপচয় কমানোর জন্য ক্যাকটাসের পাতা কাঁটায় রূপান্তরিত হয়।", level: 1, time: 15 },
+            { chapter: "Evolution", question: "পায়রার বায়ুথলি কী কাজে সাহায্য করে?", options: ["খাদ্য পরিপাকে", "রক্ত সংবহনে", "শ্বাসকার্যে ও উড়তে", "রেচনে"], answer: "শ্বাসকার্যে ও উড়তে", explanation: "বায়ুথলি পায়রার দেহকে হালকা রাখে এবং অতিরিক্ত অক্সিজেন সরবরাহ করে, যা উড়তে সাহায্য করে।", level: 1, time: 15 },
+            { chapter: "Evolution", question: "জীবন্ত জীবাশ্মের একটি উদাহরণ হল-", options: ["পেরিপেটাস", "আর্কিওপটেরিক্স", "তিমি", "ডাইনোসর"], answer: "পেরিপেটাস", explanation: "পেরিপেটাস এর মধ্যে অঙ্গুরীমাল ও সন্ধিপদী উভয় পর্বের বৈশিষ্ট্য থাকায় একে জীবন্ত জীবাশ্ম বলে।", level: 1, time: 20 },
+            { chapter: "Evolution", question: "ডারউইন কোন জাহাজে করে বিশ্ব ভ্রমণ করেন?", options: ["টাইটানিক", "এইচ.এম.এস. বিগল", "সান্তা মারিয়া", "ভিক্টোরিয়া"], answer: "এইচ.এম.এস. বিগল", explanation: "ডারউইন এইচ.এম.এস. বিগল জাহাজে করে প্রায় পাঁচ বছর ধরে বিশ্ব ভ্রমণ করেন এবং বিভিন্ন তথ্য সংগ্রহ করেন।", level: 1, time: 20 },
+            { chapter: "Evolution", question: "অভিব্যক্তির ফলে উদ্ভূত নতুন প্রজাতিকে কী বলে?", options: ["জীবন্ত জীবাশ্ম", "মিসিং লিঙ্ক", "প্রজাতি গঠন", "অভিযোজন"], answer: "প্রজাতি গঠন", explanation: "অভিব্যক্তি প্রক্রিয়ার মাধ্যমে নতুন প্রজাতি সৃষ্টির ঘটনাকে স্পিসিয়েশন বা প্রজাতি গঠন বলে।", level: 1, time: 15 },
 
-            // Level 2 (35 questions)
-            { question: "দ্বিসংকর জননের F₂ জনুর ফিনোটাইপিক অনুপাত কত?", options: ["১:২:১", "৯:৩:৩:১", "৩:১", "১:১:১:১"], answer: "৯:৩:৩:১", explanation: "মেন্ডেলের দ্বিসংকর জনন পরীক্ষায় F₂ জনুতে ৯:৩:৩:১ অনুপাতে চার প্রকার ফিনোটাইপ দেখা যায়।", level: 2, chapter: 1, time: 25 },
-            { question: "হেটেরোজাইগাস জীব কোনটি?", options: ["TT", "tt", "Tt", "RR"], answer: "Tt", explanation: "যখন কোনো জীবের একটি বৈশিষ্ট্যের জন্য দুটি ভিন্ন অ্যালিল (যেমন T ও t) থাকে, তাকে হেটেরোজাইগাস বলে।", level: 2, chapter: 1, time: 25 },
-            { question: "থ্যালাসেমিয়া কোন ধরনের রোগ?", options: ["অটোজোমাল প্রকট", "অটোজোমাল প্রচ্ছন্ন", "সেক্স-লিঙ্কড প্রকট", "সেক্স-লিঙ্কড প্রচ্ছন্ন"], answer: "অটোজোমাল প্রচ্ছন্ন", explanation: "থ্যালাসেমিয়া একটি অটোজোম দ্বারা বাহিত প্রচ্ছন্ন জিনঘটিত রোগ।", level: 2, chapter: 1, time: 30 },
-            { question: "বর্ণান্ধতার জন্য দায়ী জিন কোন ক্রোমোজোমে থাকে?", options: ["Y ক্রোমোজোম", "X ক্রোমোজোম", "১১ নং অটোজোম", "২১ নং অটোজোম"], answer: "X ক্রোমোজোম", explanation: "বর্ণান্ধতা একটি X-লিঙ্কড প্রচ্ছন্ন রোগ, তাই এর জিন X ক্রোমোজোমে অবস্থান করে।", level: 2, chapter: 1, time: 25 },
-            { question: "বিশুদ্ধ লম্বা (TT) ও সংকর লম্বা (Tt) মটর গাছের মধ্যে পার্থক্য করার উপায় কী?", options: ["ইমাসকুলেশন", "টেস্ট ক্রস", "ব্যাক ক্রস", "স্বপরাগযোগ"], answer: "টেস্ট ক্রস", explanation: "প্রচ্ছন্ন হোমোজাইগাস জীবের সঙ্গে ক্রস ঘটিয়ে (টেস্ট ক্রস) কোনো জীবের জিনোটাইপ বিশুদ্ধ না সংকর তা নির্ণয় করা যায়।", level: 2, chapter: 1, time: 30 },
-            { question: "মানুষের লিঙ্গ নির্ধারণে কার ভূমিকা প্রধান?", options: ["মাতা", "পিতা", "দুজনের সমান", "পরিবেশ"], answer: "পিতা", explanation: "পিতার শুক্রাণু X বা Y ক্রোমোজোম বহন করে, যা সন্তানের লিঙ্গ নির্ধারণ করে।", level: 2, chapter: 1, time: 25 },
-            { question: "অসম্পূর্ণ প্রকটতার ক্ষেত্রে F₂ জনুর জিনোটাইপিক অনুপাত কত?", options: ["৩:১", "৯:৩:৩:১", "১:২:১", "১:১"], answer: "১:২:১", explanation: "সন্ধ্যামালতী ফুলে অসম্পূর্ণ প্রকটতা দেখা যায়, যেখানে F₂ জনুর ফিনোটাইপ ও জিনোটাইপ উভয় অনুপাতই ১:২:১ হয়।", level: 2, chapter: 1, time: 30 },
-            { question: "হিমোফিলিয়ার বাহক মাতা ও স্বাভাবিক পিতার পুত্রসন্তানদের হিমোফিলিক হওয়ার সম্ভাবনা কত?", options: ["০%", "২৫%", "৫০%", "১০০%"], answer: "৫০%", explanation: "মাতা বাহক (XᴴXʰ) হলে তার পুত্রদের মধ্যে ৫০% স্বাভাবিক (XᴴY) এবং ৫০% হিমোফিলিক (XʰY) হওয়ার সম্ভাবনা থাকে।", level: 2, chapter: 1, time: 35 },
-            { question: "কোনটিকে মেন্ডেলের ব্যতিক্রমী ঘটনা বলা হয়?", options: ["প্রকটতা", "পৃথকীভবন সূত্র", "স্বাধীন সঞ্চারণ সূত্র", "সহপ্রকটতা"], answer: "সহপ্রকটতা", explanation: "সহপ্রকটতা (যেমন মানুষের AB রক্তগ্রুপ) মেন্ডেলের প্রকটতা-প্রচ্ছন্নতা সূত্রের একটি ব্যতিক্রম।", level: 2, chapter: 1, time: 30 },
-            { question: "জিনোটাইপ 'rrYy' যুক্ত মটর গাছের ফিনোটাইপ কী হবে?", options: ["গোল ও হলুদ", "কুঞ্চিত ও হলুদ", "গোল ও সবুজ", "কুঞ্চিত ও সবুজ"], answer: "কুঞ্চিত ও হলুদ", explanation: "'rr' জিনোটাইপ কুঞ্চিত বৈশিষ্ট্যের এবং 'Yy' জিনোটাইপ হলুদ বৈশিষ্ট্যের প্রকাশ ঘটায়।", level: 2, chapter: 1, time: 30 },
-            { question: "একসংকর জননের F₂ জনুর জিনোটাইপিক অনুপাত কত?", options: ["৩:১", "৯:৩:৩:১", "১:২:১", "১:১"], answer: "১:২:১", explanation: "একসংকর জননের F₂ জনুতে জিনোটাইপের অনুপাত হয় ১ (বিশুদ্ধ প্রকট) : ২ (সংকর) : ১ (বিশুদ্ধ প্রচ্ছন্ন)।", level: 2, chapter: 1, time: 25 },
-            { question: "যদি পিতা ও মাতা উভয়েই থ্যালাসেমিয়ার বাহক হন, তবে সন্তানের আক্রান্ত হওয়ার সম্ভাবনা কত?", options: ["২৫%", "৫০%", "৭৫%", "১০০%"], answer: "২৫%", explanation: "দুজন বাহক (Thal⁺/thal) পিতা-মাতার ক্ষেত্রে প্রতি গর্ভাবস্থায় সন্তানের থ্যালাসেমিয়া মেজর (thal/thal) হওয়ার সম্ভাবনা ২৫%।", level: 2, chapter: 1, time: 35 },
-            { question: "ইমাসকুলেশন কী?", options: ["স্বপরাগযোগ ঘটানো", "পুংকেশর অপসারণ করা", "গর্ভকেশর অপসারণ করা", "বীজ বপন করা"], answer: "পুংকেশর অপসারণ করা", explanation: "সংকরায়ণ পরীক্ষার জন্য উভলিঙ্গ ফুল থেকে পুংকেশর কেটে বাদ দেওয়াকে ইমাসকুলেশন বলে।", level: 2, chapter: 1, time: 25 },
-            { question: "মানুষের মধ্যে ক্রিস-ক্রস উত্তরাধিকার কোন ক্ষেত্রে দেখা যায়?", options: ["অটোজোমাল রোগে", "Y-লিঙ্কড রোগে", "X-লিঙ্কড রোগে", "মাইটোকন্ড্রিয়াল রোগে"], answer: "X-লিঙ্কড রোগে", explanation: "X-লিঙ্কড রোগ যেমন হিমোফিলিয়া বা বর্ণান্ধতায় মাতা থেকে পুত্রে বৈশিষ্ট্য সঞ্চারিত হয়, যা ক্রিস-ক্রস উত্তরাধিকারের উদাহরণ।", level: 2, chapter: 1, time: 30 },
-            { question: "টেস্ট ক্রসে কী ধরনের অনুপাত পাওয়া গেলে বোঝা যাবে জীবটি হেটেরোজাইগাস?", options: ["১:১", "৩:১", "সবাই প্রকট", "সবাই প্রচ্ছন্ন"], answer: "১:১", explanation: "হেটেরোজাইগাস জীবের সঙ্গে প্রচ্ছন্ন হোমোজাইগাস জীবের টেস্ট ক্রসে ১:১ ফিনোটাইপিক অনুপাত পাওয়া যায়।", level: 2, chapter: 1, time: 35 },
-            { question: "কোন রক্তгрупকে সর্বজনীন দাতা বলা হয়?", options: ["A", "B", "AB", "O"], answer: "O", explanation: "O গ্রুপের রক্তে কোনো অ্যান্টিজেন না থাকায় এটি সবাইকে দেওয়া যায়।", level: 2, chapter: 1, time: 20 },
-            { question: "কোন রক্তгрупকে সর্বজনীন গ্রহীতা বলা হয়?", options: ["A", "B", "AB", "O"], answer: "AB", explanation: "AB গ্রুপের রক্তে কোনো অ্যান্টিবডি না থাকায় এটি সবার থেকে রক্ত নিতে পারে।", level: 2, chapter: 1, time: 20 },
-            { question: "মানুষের Y ক্রোমোজোম বাহিত একটি বৈশিষ্ট্য হল-", options: ["বর্ণান্ধতা", "কানের লোম", "টাক পড়া", "হিমোফিলিয়া"], answer: "কানের লোম", explanation: "কর্ণছত্রে লোম বা হাইপারট্রাইকোসিস একটি Y-লিঙ্কড বৈশিষ্ট্য।", level: 2, chapter: 1, time: 25 },
-            { question: "মেন্ডেলবাদ-এর একটি বিচ্যুতি হলো-", options: ["প্রকটতা", "অসম্পূর্ণ প্রকটতা", "পৃথকীভবন", "রেসিপ্রোকাল ক্রস"], answer: "অসম্পূর্ণ প্রকটতা", explanation: "অসম্পূর্ণ প্রকটতায় দুটি বিপরীত বৈশিষ্ট্যের কোনোটিই সম্পূর্ণরূপে প্রকাশিত না হয়ে একটি মধ্যবর্তী বৈশিষ্ট্য প্রকাশ পায়।", level: 2, chapter: 1, time: 25 },
-            { question: "ডাইহাইব্রিড ক্রসের F₂ জনুতে কত প্রকার জিনোটাইপ পাওয়া যায়?", options: ["৩ প্রকার", "৪ প্রকার", "৯ প্রকার", "১৬ প্রকার"], answer: "৯ প্রকার", explanation: "দ্বিসংকর জননের F₂ জনুতে মোট ৯ ধরনের জিনোটাইপ পাওয়া যায়।", level: 2, chapter: 1, time: 30 },
-            { question: "হিমোফিলিয়া A কোন ফ্যাক্টরের অভাবে হয়?", options: ["ফ্যাক্টর VIII", "ফ্যাক্টর IX", "ফ্যাক্টর X", "ফ্যাক্টর XI"], answer: "ফ্যাক্টর VIII", explanation: "রক্ত তঞ্চনকারী ফ্যাক্টর VIII এর অভাবে হিমোফিলিয়া A বা ক্লাসিক হিমোফিলিয়া হয়।", level: 2, chapter: 1, time: 30 },
-            { question: "একটি সংকর লম্বা (Tt) মটর গাছ থেকে কত প্রকার গ্যামেট উৎপন্ন হয়?", options: ["এক প্রকার", "দুই প্রকার", "তিন প্রকার", "চার প্রকার"], answer: "দুই প্রকার", explanation: "সংকর লম্বা (Tt) গাছ মিয়োসিস কোষ বিভাজনের মাধ্যমে দুই প্রকার গ্যামেট (T ও t) তৈরি করে।", level: 2, chapter: 1, time: 25 },
-            { question: "RRYY জিনোটাইপযুক্ত মটর গাছ থেকে কত ধরনের গ্যামেট উৎপন্ন হয়?", options: ["এক ধরনের", "দুই ধরনের", "চার ধরনের", "আট ধরনের"], answer: "এক ধরনের", explanation: "যেহেতু এটি উভয় বৈশিষ্ট্যের জন্য হোমোজাইগাস, তাই কেবল এক ধরনের (RY) গ্যামেট তৈরি হবে।", level: 2, chapter: 1, time: 25 },
-            { question: "কোনটিকে 'রয়েল ডিজিজ' বা রাজকীয় রোগ বলা হয়?", options: ["থ্যালাসেমিয়া", "বর্ণান্ধতা", "হিমোফিলিয়া", "ডাউন সিনড্রোম"], answer: "হিমোফিলিয়া", explanation: "ইংল্যান্ডের রাজপরিবারে এই রোগটি বংশপরম্পরায় দেখা যাওয়ায় একে রাজকীয় রোগ বলা হয়।", level: 2, chapter: 1, time: 25 },
-            { question: "মানুষের ক্ষেত্রে হেটারোগ্যামেটিক লিঙ্গ কোনটি?", options: ["পুরুষ", "মহিলা", "উভয়ই", "কোনোটিই নয়"], answer: "পুরুষ", explanation: "পুরুষরা দুই প্রকার গ্যামেট (X ও Y যুক্ত) তৈরি করে বলে তাদের হেটারোগ্যামেটিক বলা হয়।", level: 2, chapter: 1, time: 25 },
-            { question: "মানুষের ক্ষেত্রে হোমোগ্যামেটিক লিঙ্গ কোনটি?", options: ["পুরুষ", "মহিলা", "উভয়ই", "কোনোটিই নয়"], answer: "মহিলা", explanation: "মহিলারা এক প্রকার গ্যামেট (X যুক্ত) তৈরি করে বলে তাদের হোমোগ্যামেটিক বলা হয়।", level: 2, chapter: 1, time: 25 },
-            { question: "Bbrr জিনোটাইপযুক্ত গিনিপিগ থেকে কত ধরনের গ্যামেট উৎপন্ন হয়?", options: ["১", "২", "৩", "৪"], answer: "২", explanation: "Bbrr জিনোটাইপ থেকে দুই ধরনের গ্যামেট (Br ও br) উৎপন্ন হয়।", level: 2, chapter: 1, time: 30 },
-            { question: "নীচের কোনটি অটোজোম দ্বারা নিয়ন্ত্রিত হয় না?", options: ["রোলার জিভ", "থ্যালাসেমিয়া", "হিমোফিলিয়া", "কানের যুক্ত লতি"], answer: "হিমোফিলিয়া", explanation: "হিমোফিলিয়া একটি X-ক্রোমোজোম বাহিত রোগ, অটোজোম বাহিত নয়।", level: 2, chapter: 1, time: 25 },
-            { question: "প্রোটানোপিয়া কী?", options: ["লাল বর্ণান্ধতা", "সবুজ বর্ণান্ধতা", "নীল বর্ণান্ধতা", "সম্পূর্ণ বর্ণান্ধতা"], answer: "লাল বর্ণান্ধতা", explanation: "লাল রং চিনতে না পারার সমস্যাকে প্রোটানোপিয়া বলে।", level: 2, chapter: 1, time: 25 },
-            { question: "ডিউটেরানোপিয়া কী?", options: ["লাল বর্ণান্ধতা", "সবুজ বর্ণান্ধতা", "নীল বর্ণান্ধতা", "সম্পূর্ণ বর্ণান্ধতা"], answer: "সবুজ বর্ণান্ধতা", explanation: "সবুজ রং চিনতে না পারার সমস্যাকে ডিউটেরানোপিয়া বলে।", level: 2, chapter: 1, time: 25 },
-            { question: "মেন্ডেল তার পরীক্ষার ফলাফল কোন পত্রিকায় প্রকাশ করেন?", options: ["ন্যাচারাল হিস্ট্রি সোসাইটি অফ ব্রুন", "রয়্যাল সোসাইটি অফ লন্ডন", "নেচার", "সায়েন্স"], answer: "ন্যাচারাল হিস্ট্রি সোসাইটি অফ ব্রুন", explanation: "মেন্ডেল তার গবেষণাপত্র ১৮৬৬ সালে ব্রুনের ন্যাচারাল হিস্ট্রি সোসাইটির পত্রিকায় প্রকাশ করেন।", level: 2, chapter: 1, time: 35 },
-            { question: "একটি বিশুদ্ধ কালো (BB) গিনিপিগের সাথে একটি সাদা (bb) গিনিপিগের সংকরায়ণে F₁ জনুর ফিনোটাইপ কী হবে?", options: ["সব সাদা", "সব কালো", "অর্ধেক কালো, অর্ধেক সাদা", "সব ছাই রঙের"], answer: "সব কালো", explanation: "যেহেতু কালো রঙ (B) সাদা রঙের (b) উপর প্রকট, তাই F₁ জনুর সব অপত্য (Bb) কালো হবে।", level: 2, chapter: 1, time: 30 },
-            { question: "কোনটি মেন্ডেলের সাফল্যের কারণ নয়?", options: ["বিশুদ্ধ উদ্ভিদ নির্বাচন", "এক বা দুই জোড়া বৈশিষ্ট্য নিয়ে পরীক্ষা", "লিংকেজ আবিষ্কার করা", "গাণিতিক ও পরিসংখ্যান পদ্ধতির প্রয়োগ"], answer: "লিংকেজ আবিষ্কার করা", explanation: "মেন্ডেল লিংকেজ সম্পর্কে অবগত ছিলেন না। ঘটনাচক্রে তিনি যে বৈশিষ্ট্যগুলি নিয়েছিলেন সেগুলি ভিন্ন ভিন্ন ক্রোমোজোমে ছিল।", level: 2, chapter: 1, time: 30 },
-            { question: "জিনগত রোগের পরামর্শদানকে কী বলে?", options: ["সাইকোথেরাপি", "ফিজিওথেরাপি", "জেনেটিক কাউন্সেলিং", "জিন থেরাপি"], answer: "জেনেটিক কাউন্সেলিং", explanation: "বংশগত রোগ ও তার সঞ্চারণের সম্ভাবনা নিয়ে পরামর্শদানকে জেনেটিক কাউন্সেলিং বলে।", level: 2, chapter: 1, time: 20 },
-            { question: "α-থ্যালাসেমিয়ার জন্য দায়ী জিন কোন ক্রোমোজোমে থাকে?", options: ["১১ নং", "১৬ নং", "X ক্রোমোজোম", "Y ক্রোমোজোম"], answer: "১৬ নং", explanation: "১৬ নং ক্রোমোজোমে থাকা জিনের ত্রুটির কারণে α-গ্লোবিন শৃঙ্খল তৈরি হয় না, ফলে α-থ্যালাসেমিয়া হয়।", level: 2, chapter: 1, time: 35 },
+            // Heredity Questions (Level 2)
+            { chapter: "Heredity", question: "দ্বিসংকর জননের F₂ জনুর ফিনোটাইপিক অনুপাত কত?", options: ["১:২:১", "৯:৩:৩:১", "৩:১", "১:১:১:১"], answer: "৯:৩:৩:১", explanation: "মেন্ডেলের দ্বিসংকর জনন পরীক্ষায় F₂ জনুতে ৯:৩:৩:১ অনুপাতে চার প্রকার ফিনোটাইপ দেখা যায়।", level: 2, time: 25 },
+            { chapter: "Heredity", question: "অসম্পূর্ণ প্রকটতার ক্ষেত্রে F₂ জনুর জিনোটাইপিক অনুপাত কত?", options: ["৩:১", "৯:৩:৩:১", "১:২:১", "১:১"], answer: "১:২:১", explanation: "সন্ধ্যামালতী ফুলে অসম্পূর্ণ প্রকটতা দেখা যায়, যেখানে F₂ জনুর ফিনোটাইপ ও জিনোটাইপ উভয় অনুপাতই ১:২:১ হয়।", level: 2, time: 30 },
+            { chapter: "Heredity", question: "হিমোফিলিয়ার বাহক মাতা ও স্বাভাবিক পিতার পুত্রসন্তানদের হিমোফিলিক হওয়ার সম্ভাবনা কত?", options: ["০%", "২৫%", "৫০%", "১০০%"], answer: "৫০%", explanation: "মাতা বাহক (XᴴXʰ) হলে তার পুত্রদের মধ্যে ৫০% স্বাভাবিক (XᴴY) এবং ৫০% হিমোফিলিক (XʰY) হওয়ার সম্ভাবনা থাকে।", level: 2, time: 35 },
+            { chapter: "Heredity", question: "কোনটিকে মেন্ডেলের ব্যতিক্রমী ঘটনা বলা হয়?", options: ["প্রকটতা", "পৃথকীভবন সূত্র", "স্বাধীন সঞ্চারণ সূত্র", "সহপ্রকটতা"], answer: "সহপ্রকটতা", explanation: "সহপ্রকটতা (যেমন মানুষের AB রক্তগ্রুপ) মেন্ডেলের প্রকটতা-প্রচ্ছন্নতা সূত্রের একটি ব্যতিক্রম।", level: 2, time: 30 },
+            { chapter: "Heredity", question: "যদি পিতা ও মাতা উভয়েই থ্যালাসেমিয়ার বাহক হন, তবে সন্তানের আক্রান্ত হওয়ার সম্ভাবনা কত?", options: ["২৫%", "৫০%", "৭৫%", "১০০%"], answer: "২৫%", explanation: "দুজন বাহক (Thal⁺/thal) পিতা-মাতার ক্ষেত্রে প্রতি গর্ভাবস্থায় সন্তানের থ্যালাসেমিয়া মেজর (thal/thal) হওয়ার সম্ভাবনা ২৫%।", level: 2, time: 35 },
 
-            // Level 3 (35 questions)
-            { question: "একজন বর্ণান্ধ পুরুষ ও একজন বাহক মহিলার সন্তানদের মধ্যে বর্ণান্ধতার সম্ভাবনা কত?", options: ["৫০% পুত্র ও ৫০% কন্যা বর্ণান্ধ", "সব পুত্র বর্ণান্ধ", "সব কন্যা বাহক", "২৫% পুত্র বর্ণান্ধ"], answer: "৫০% পুত্র ও ৫০% কন্যা বর্ণান্ধ", explanation: "বর্ণান্ধ পিতা (XᶜY) ও বাহক মাতা (X⁺Xᶜ) এর ক্ষেত্রে ৫০% পুত্র বর্ণান্ধ (XᶜY) এবং ৫০% কন্যা বর্ণান্ধ (XᶜXᶜ) হওয়ার সম্ভাবনা থাকে।", level: 3, chapter: 1, time: 45 },
-            { question: "ক্রিস-ক্রস উত্তরাধিকার কোন রোগে দেখা যায়?", options: ["থ্যালাসেমিয়া", "ডাউন সিনড্রোম", "হিমোফিলিয়া", "সিকেল সেল অ্যানিমিয়া"], answer: "হিমোফিলিয়া", explanation: "X-লিঙ্কড রোগ যেমন হিমোফিলিয়া ও বর্ণান্ধতায় ক্রিস-ক্রস উত্তরাধিকার দেখা যায়, যেখানে বৈশিষ্ট্য মাতা থেকে পুত্রে এবং পিতা থেকে কন্যায় সঞ্চারিত হয়।", level: 3, chapter: 1, time: 35 },
-            { question: "মানুষের ABO রক্তগ্রুপ কোন ধরনের বংশগতির উদাহরণ?", options: ["অসম্পূর্ণ প্রকটতা", "সহপ্রকটতা ও মাল্টিপল অ্যালিল", "পলিজেনিক বংশগতি", "লিংকেজ"], answer: "সহপ্রকটতা ও মাল্টিপল অ্যালিল", explanation: "ABO রক্তগ্রুপে A ও B অ্যালিল পরস্পরের প্রতি সহপ্রকট, কিন্তু O অ্যালিলের উপর প্রকট। এটি তিনটি অ্যালিল (Iᴬ, Iᴮ, i) দ্বারা নিয়ন্ত্রিত হয় বলে মাল্টিপল অ্যালিলেরও উদাহরণ।", level: 3, chapter: 1, time: 40 },
-            { question: "জিনগত পরামর্শ বা জেনেটিক কাউন্সেলিং কেন গুরুত্বপূর্ণ?", options: ["রোগ নিরাময়ের জন্য", "জিনগত রোগের সম্ভাবনা নির্ণয়ের জন্য", "নতুন প্রজাতির সৃষ্টির জন্য", "জিনোম সিকোয়েন্সিং এর জন্য"], answer: "জিনগত রোগের সম্ভাবনা নির্ণয়ের জন্য", explanation: "জেনেটিক কাউন্সেলিং এর মাধ্যমে বিবাহে ইচ্ছুক দম্পতি বা পরিবারকে তাদের ভবিষ্যৎ প্রজন্মে জিনগত রোগের সম্ভাবনা সম্পর্কে অবহিত করা হয়।", level: 3, chapter: 1, time: 30 },
-            { question: "YyRr জিনোটাইপ থেকে কত প্রকার গ্যামেট তৈরি হতে পারে?", options: ["১ প্রকার", "২ প্রকার", "৪ প্রকার", "৮ প্রকার"], answer: "৪ প্রকার", explanation: "স্বাধীন সঞ্চারণ সূত্র অনুযায়ী, YyRr জিনোটাইপ থেকে চার প্রকার গ্যামেট (YR, Yr, yR, yr) তৈরি হতে পারে।", level: 3, chapter: 1, time: 35 },
-            { question: "ব্যাক ক্রস কী?", options: ["F₁ জনুর সাথে জনিতৃর ক্রস", "F₁ জনুর সাথে প্রচ্ছন্ন জনিতৃর ক্রস", "দুটি F₁ জীবের ক্রস", "দুটি জনিতৃর ক্রস"], answer: "F₁ জনুর সাথে জনিতৃর ক্রস", explanation: "F₁ অপত্যের সঙ্গে যেকোনো জনিতৃর (প্রকট বা প্রচ্ছন্ন) সংকরায়ণকে ব্যাক ক্রস বলে।", level: 3, chapter: 1, time: 35 },
-            { question: "একটি দ্বিসংকর জননে F₂ জনুতে কতগুলি অপত্যের জিনোটাইপ উভয় বৈশিষ্ট্যের জন্য হেটেরোজাইগাস হয়?", options: ["১/১৬", "২/১৬", "৩/১৬", "৪/১৬"], answer: "৪/১৬", explanation: "দ্বিসংকর ক্রসের F₂ জনুতে ১৬টি সম্ভাব্য অপত্যের মধ্যে ৪টির জিনোটাইপ হয় RrYy।", level: 3, chapter: 1, time: 40 },
-            { question: "β-থ্যালাসেমিয়ার অপর নাম কী?", options: ["হিমোফিলিয়া A", "কুলির অ্যানিমিয়া", "ক্রিসমাস ডিজিজ", "সিকেল সেল অ্যানিমিয়া"], answer: "কুলির অ্যানিমিয়া", explanation: "β-গ্লোবিন শৃঙ্খলের উৎপাদন ব্যাহত হলে যে β-থ্যালাসেমিয়া হয়, তাকে কুলির অ্যানিমিয়াও বলে।", level: 3, chapter: 1, time: 30 },
-            { question: "সহপ্রকটতার ক্ষেত্রে F₁ জনুর ফিনোটাইপ কেমন হয়?", options: ["প্রকট বৈশিষ্ট্য প্রকাশ পায়", "প্রচ্ছন্ন বৈশিষ্ট্য প্রকাশ পায়", "মধ্যবর্তী বৈশিষ্ট্য প্রকাশ পায়", "উভয় বৈশিষ্ট্যই একসঙ্গে প্রকাশ পায়"], answer: "উভয় বৈশিষ্ট্যই একসঙ্গে প্রকাশ পায়", explanation: "সহপ্রকটতায় হেটেরোজাইগাস অবস্থায় দুটি অ্যালিলই নিজেদের বৈশিষ্ট্য সমানভাবে প্রকাশ করে।", level: 3, chapter: 1, time: 35 },
-            { question: "যদি কোনো দম্পতির প্রথম সন্তান থ্যালাসেমিয়া মেজর হয়, তাহলে তাদের দ্বিতীয় সন্তানের থ্যালাসেমিয়া মেজর হওয়ার সম্ভাবনা কত?", options: ["০%", "২৫%", "৫০%", "১০০%"], answer: "২৫%", explanation: "প্রতিটি গর্ভাবস্থা একটি স্বাধীন ঘটনা। তাই পূর্ববর্তী সন্তানের উপর পরবর্তী সন্তানের রোগের সম্ভাবনা নির্ভর করে না। দুজন বাহক পিতা-মাতার ক্ষেত্রে প্রতিবারই সম্ভাবনা ২৫%।", level: 3, chapter: 1, time: 45 },
-            { question: "একটি সংকর কালো (Bb) ও মসৃণ লোমযুক্ত (rr) গিনিপিগের সাথে একটি সাদা (bb) ও সংকর অমসৃণ (Rr) গিনিপিগের ক্রস ঘটালে কত শতাংশ অপত্য সাদা ও মসৃণ লোমযুক্ত হবে?", options: ["১২.৫%", "২৫%", "৫০%", "৭৫%"], answer: "২৫%", explanation: "ক্রসটি হল Bb rr x bb Rr। এখান থেকে সাদা ও মসৃণ (bb rr) জিনোটাইপ পাওয়ার সম্ভাবনা হল (১/২) x (১/২) = ১/৪ বা ২৫%।", level: 3, chapter: 1, time: 50 },
-            { question: "লিথাল জিন (Lethal Gene) কী?", options: ["যে জিন জীবের মৃত্যু ঘটায়", "যে জিন প্রকট হয়", "যে জিন প্রচ্ছন্ন হয়", "যে জিন লিঙ্গ নির্ধারণ করে"], answer: "যে জিন জীবের মৃত্যু ঘটায়", explanation: "কিছু জিন হোমোজাইগাস অবস্থায় জীবের জীবনধারণের পক্ষে হানিকারক হয় এবং ভ্রূণ অবস্থাতেই বা জন্মের পর জীবের মৃত্যু ঘটায়।", level: 3, chapter: 1, time: 30 },
-            { question: "মানুষের Rh ফ্যাক্টর কোন ধরনের বংশগতির উদাহরণ?", options: ["প্রকট-প্রচ্ছন্ন", "অসম্পূর্ণ প্রকটতা", "সহপ্রকটতা", "লিঙ্গ সংযোজিত"], answer: "প্রকট-প্রচ্ছন্ন", explanation: "Rh+ (পজিটিভ) বৈশিষ্ট্যটি Rh- (নেগেটিভ) বৈশিষ্ট্যের উপর সম্পূর্ণরূপে প্রকট।", level: 3, chapter: 1, time: 30 },
-            { question: "একটি বিশুদ্ধ হলুদ ও গোল (YYRR) মটর গাছের সঙ্গে একটি বিশুদ্ধ সবুজ ও কুঞ্চিত (yyrr) মটর গাছের ক্রসে F₂ জনুতে কত শতাংশ গাছ বিশুদ্ধ হলুদ ও কুঞ্চিত হবে?", options: ["১/১৬", "২/১৬", "৩/১৬", "৪/১৬"], answer: "১/১৬", explanation: "বিশুদ্ধ হলুদ ও কুঞ্চিত জিনোটাইপ হল YYrr। F₂ জনুতে এর সম্ভাবনা হল ১/১৬।", level: 3, chapter: 1, time: 45 },
-            { question: "হিমোফিলিয়া B বা ক্রিসমাস ডিজিজ কোন ফ্যাক্টরের অভাবে হয়?", options: ["ফ্যাক্টর VIII", "ফ্যাক্টর IX", "ফ্যাক্টর X", "ফ্যাক্টর XI"], answer: "ফ্যাক্টর IX", explanation: "ফ্যাক্টর IX বা প্লাজমা থ্রম্বোপ্লাস্টিন কম্পোনেন্ট (PTC) এর অভাবে হিমোফিলিয়া B হয়।", level: 3, chapter: 1, time: 35 },
-            { question: "প্লিওট্রপি (Pleiotropy) বলতে কী বোঝায়?", options: ["একটি জিন দ্বারা একাধিক বৈশিষ্ট্যের নিয়ন্ত্রণ", "একাধিক জিন দ্বারা একটি বৈশিষ্ট্যের নিয়ন্ত্রণ", "দুটি জিনের মধ্যে মিথস্ক্রিয়া", "জিনের অবস্থান পরিবর্তন"], answer: "একটি জিন দ্বারা একাধিক বৈশিষ্ট্যের নিয়ন্ত্রণ", explanation: "যখন একটিমাত্র জিন একাধিক ফিনোটাইপিক বৈশিষ্ট্যকে নিয়ন্ত্রণ করে, তখন সেই ঘটনাকে প্লিওট্রপি বলে। যেমন- সিকেল সেল অ্যানিমিয়া।", level: 3, chapter: 1, time: 40 },
-            { question: "একজন স্বাভাবিক পুরুষ একজন হিমোফিলিক মহিলাকে বিবাহ করলে তাদের সন্তানদের ক্ষেত্রে কী হবে?", options: ["সব পুত্র স্বাভাবিক, সব কন্যা বাহক", "সব পুত্র হিমোফিলিক, সব কন্যা বাহক", "সব পুত্র ও কন্যা হিমোফিলিক", "সবাই স্বাভাবিক"], answer: "সব পুত্র হিমোফিলিক, সব কন্যা বাহক", explanation: "স্বাভাবিক পিতা (X⁺Y) ও হিমোফিলিক মাতা (XʰXʰ) এর সব পুত্র হিমোফিলিক (XʰY) এবং সব কন্যা বাহক (X⁺Xʰ) হবে।", level: 3, chapter: 1, time: 45 },
-            { question: "রেসিপ্রোকাল ক্রস (Reciprocal Cross) কেন করা হয়?", options: ["প্রকটতা নির্ণয়ের জন্য", "জিনোটাইপ জানার জন্য", "বৈশিষ্ট্যটি সাইটোপ্লাজম দ্বারা বাহিত কিনা তা জানার জন্য", "লিংকেজ পরীক্ষার জন্য"], answer: "বৈশিষ্ট্যটি সাইটোপ্লাজম দ্বারা বাহিত কিনা তা জানার জন্য", explanation: "রেসিপ্রোকাল ক্রসে জনিতৃদের লিঙ্গ পরিবর্তন করে ক্রস ঘটানো হয়। যদি ফলাফল ভিন্ন হয়, তবে বোঝা যায় বৈশিষ্ট্যটি সাইটোপ্লাজমীয় বা লিঙ্গ সংযোজিত।", level: 3, chapter: 1, time: 40 },
-            { question: "একটি হেটেরোজাইগাস লম্বা ও হেটেরোজাইগাস বেগুনি ফুলের মটর গাছের (TtPp) স্বপরাগযোগে কত শতাংশ গাছ লম্বা ও সাদা ফুলযুক্ত হবে?", options: ["৩/১৬", "১/১৬", "৯/১৬", "৪/১৬"], answer: "৩/১৬", explanation: "লম্বা ও সাদা ফুলযুক্ত (T_pp) হওয়ার সম্ভাবনা হল (৩/৪) x (১/৪) = ৩/১৬।", level: 3, chapter: 1, time: 50 },
-            { question: "জিনোম কী?", options: ["একটি জীবের সম্পূর্ণ DNA", "একটি কোশের সম্পূর্ণ ক্রোমোজোম সেট (হ্যাপ্লয়েড)", "একটি জীবের সম্পূর্ণ প্রোটিন", "একটি ক্রোমোজোমের অংশ"], answer: "একটি কোশের সম্পূর্ণ ক্রোমোজোম সেট (হ্যাপ্লয়েড)", explanation: "কোনো জীবের একটি কোশের হ্যাপ্লয়েড সংখ্যক ক্রোমোজোমে উপস্থিত মোট জিন সমষ্টিকে জিনোম বলে।", level: 3, chapter: 1, time: 30 },
-            { question: "কোনটি সেক্স-লিমিটেড (Sex-limited) বৈশিষ্ট্যের উদাহরণ?", options: ["বর্ণান্ধতা", "হিমোফিলিয়া", "মানুষের দাড়ি-গোঁফ", "কানের লতি"], answer: "মানুষের দাড়ি-গোঁফ", explanation: "সেক্স-লিমিটেড বৈশিষ্ট্যগুলি অটোজোমাল জিন দ্বারা নিয়ন্ত্রিত হলেও কেবল একটি লিঙ্গে প্রকাশ পায়, যেমন পুরুষের দাড়ি-গোঁফ।", level: 3, chapter: 1, time: 35 },
-            { question: "জিন মিউটেশনের ফলে সৃষ্ট একটি রোগ হল-", options: ["ডাউন সিনড্রোম", "টার্নার সিনড্রোম", "সিকেল সেল অ্যানিমিয়া", "এডওয়ার্ড সিনড্রোম"], answer: "সিকেল সেল অ্যানিমিয়া", explanation: "হিমোগ্লোবিনের বিটা-গ্লোবিন জিনে পয়েন্ট মিউটেশনের ফলে সিকেল সেল অ্যানিমিয়া হয়।", level: 3, chapter: 1, time: 35 },
-            { question: "মানুষের গায়ের রং কোন ধরনের বংশগতির উদাহরণ?", options: ["মেন্ডেলীয় বংশগতি", "পলিজেনিক বংশগতি", "অসম্পূর্ণ প্রকটতা", "সহপ্রকটতা"], answer: "পলিজেনিক বংশগতি", explanation: "মানুষের গায়ের রঙের মতো বৈশিষ্ট্যগুলি একাধিক জিন দ্বারা নিয়ন্ত্রিত হয়, যা পলিজেনিক বংশগতির উদাহরণ।", level: 3, chapter: 1, time: 30 },
-            { question: "মাইটোকন্ড্রিয়াল ইনহেরিটেন্স কার মাধ্যমে সঞ্চারিত হয়?", options: ["পিতা", "মাতা", "উভয়ই", "কোনোটিই নয়"], answer: "মাতা", explanation: "যেহেতু জাইগোটে সাইটোপ্লাজম ও মাইটোকন্ড্রিয়া মূলত ডিম্বাণু থেকে আসে, তাই মাইটোকন্ড্রিয়াল বৈশিষ্ট্যগুলি মাতৃ সূত্রে সঞ্চারিত হয়।", level: 3, chapter: 1, time: 35 },
-            { question: "একটি দ্বিসংকর টেস্ট ক্রসের ফিনোটাইপিক অনুপাত কত?", options: ["৯:৩:৩:১", "৩:১", "১:১", "১:১:১:১"], answer: "১:১:১:১", explanation: "একটি হেটেরোজাইগাস জীবের (RrYy) সাথে একটি হোমোজাইগাস প্রচ্ছন্ন জীবের (rryy) টেস্ট ক্রসে চারটি ফিনোটাইপ ১:১:১:১ অনুপাতে পাওয়া যায়।", level: 3, chapter: 1, time: 40 },
-            { question: "কোন অবস্থায় একজন মহিলা বর্ণান্ধ হতে পারেন?", options: ["হোমোজাইগাস প্রকট", "হেটেরোজাইগাস", "হোমোজাইগাস প্রচ্ছন্ন", "কখনোই হতে পারে না"], answer: "হোমোজাইগাস প্রচ্ছন্ন", explanation: "যেহেতু বর্ণান্ধতা একটি X-লিঙ্কড প্রচ্ছন্ন রোগ, তাই একজন মহিলাকে বর্ণান্ধ হতে হলে তার দুটি X ক্রোমোজোমেই রোগের জিন (XᶜXᶜ) থাকতে হবে।", level: 3, chapter: 1, time: 35 },
-            { question: "কমপ্লিমেন্টারি জিন (Complementary Gene) এর ক্ষেত্রে F₂ জনুর অনুপাত কত হয়?", options: ["৯:৩:৩:১", "৯:৭", "১২:৩:১", "৯:৩:৪"], answer: "৯:৭", explanation: "দুটি ভিন্ন লোকাসে থাকা দুটি প্রকট জিন যখন একসঙ্গে কোনো বৈশিষ্ট্য প্রকাশ করে, তখন তাকে কমপ্লিমেন্টারি জিন বলে এবং এর F₂ অনুপাত ৯:৭ হয়।", level: 3, chapter: 1, time: 45 },
-            { question: "টার্নার সিনড্রোম এর ক্রোমোজোমীয় গঠন কী?", options: ["44A + XXY", "44A + X0", "44A + XXX", "47, +21"], answer: "44A + X0", explanation: "একটি X ক্রোমোজোমের অনুপস্থিতির কারণে টার্নার সিনড্রোম (45, X0) হয়, যা মহিলাদের মধ্যে দেখা যায়।", level: 3, chapter: 1, time: 35 },
-            { question: "ক্লাইনফেল্টার সিনড্রোম এর ক্রোমোজোমীয় গঠন কী?", options: ["44A + XXY", "44A + X0", "44A + XY", "47, +18"], answer: "44A + XXY", explanation: "একটি অতিরিক্ত X ক্রোমোজোমের উপস্থিতির কারণে পুরুষদের মধ্যে ক্লাইনফেল্টার সিনড্রোম (47, XXY) হয়।", level: 3, chapter: 1, time: 35 },
-            { question: "ডাউন সিনড্রোম কী কারণে হয়?", options: ["২১ নং ক্রোমোজোমের ট্রাইসোমি", "১৮ নং ক্রোমোজোমের ট্রাইসোমি", "X ক্রোমোজোমের মনোসোমি", "Y ক্রোমোজোমের অনুপস্থিতি"], answer: "২১ নং ক্রোমোজোমের ট্রাইসোমি", explanation: "২১ নং ক্রোমোজোম দুটি না থেকে তিনটি থাকার কারণে ডাউন সিনড্রোম হয়।", level: 3, chapter: 1, time: 30 },
-            { question: "বার বডি (Barr Body) কী?", options: ["সক্রিয় X ক্রোমোজোম", "নিষ্ক্রিয় X ক্রোমোজোম", "Y ক্রোমোজোম", "অটোজোম"], answer: "নিষ্ক্রিয় X ক্রোমোজোম", explanation: "স্তন্যপায়ী প্রাণীর স্ত্রীদেহে দুটি X ক্রোমোজোমের মধ্যে একটি নিষ্ক্রিয় হয়ে কোষের নিউক্লিয়াসের একপাশে অবস্থান করে, যা বার বডি নামে পরিচিত।", level: 3, chapter: 1, time: 40 },
-            { question: "মানুষের মধ্যে হিমোফিলিয়া রোগের প্রথম উল্লেখ পাওয়া যায় কোন পরিবারে?", options: ["ব্রিটিশ রাজপরিবার", "ফরাসি রাজপরিবার", "রোমান সাম্রাজ্য", "মুঘল সাম্রাজ্য"], answer: "ব্রিটিশ রাজপরিবার", explanation: "রানী ভিক্টোরিয়ার বংশধরদের মধ্যে এই রোগটি ব্যাপকভাবে দেখা গিয়েছিল, তাই একে 'রাজকীয় রোগ' বলা হয়।", level: 3, chapter: 1, time: 30 },
-            { question: "জিনপুল (Gene Pool) কী?", options: ["একটি জীবের মোট জিন", "একটি পপুলেশনের মোট জিন ও তাদের অ্যালিল", "একটি ক্রোমোজোমের জিন", "একটি প্রজাতির জিনোম"], answer: "একটি পপুলেশনের মোট জিন ও তাদের অ্যালিল", explanation: "কোনো একটি নির্দিষ্ট প্রজাতির পপুলেশনে উপস্থিত সমস্ত জিন ও তাদের বিভিন্ন অ্যালিলকে একত্রে জিনপুল বলে।", level: 3, chapter: 1, time: 35 },
-            { question: "এপিস্ট্যাসিস (Epistasis) কী?", options: ["একটি জিন অন্য একটি জিনের প্রকাশকে বাধা দেয়", "দুটি জিন একসঙ্গে কাজ করে", "একটি জিন একাধিক বৈশিষ্ট্য নিয়ন্ত্রণ করে", "জিনের অবস্থান পরিবর্তন"], answer: "একটি জিন অন্য একটি জিনের প্রকাশকে বাধা দেয়", explanation: "যখন একটি জিন (এপিস্ট্যাটিক) অন্য একটি নন-অ্যালিলিক জিনের (হাইপোস্ট্যাটিক) প্রকাশে বাধা দেয়, তখন তাকে এপিস্ট্যাসিস বলে।", level: 3, chapter: 1, time: 40 },
-            { question: "হেমিজাইগাস (Hemizygous) অবস্থা কাদের মধ্যে দেখা যায়?", options: ["হোমোজাইগাস মহিলা", "হেটেরোজাইগাস মহিলা", "পুরুষদের X-লিঙ্কড জিনের ক্ষেত্রে", "অটোজোমাল রোগের ক্ষেত্রে"], answer: "পুরুষদের X-লিঙ্কড জিনের ক্ষেত্রে", explanation: "পুরুষদের একটিমাত্র X ক্রোমোজোম থাকায়, সেখানে থাকা প্রকট বা প্রচ্ছন্ন সব জিনেরই প্রকাশ ঘটে। এই অবস্থাকে হেমিজাইগাস বলে।", level: 3, chapter: 1, time: 40 },
+            // Evolution & Adaptation Questions (Level 2)
+            { chapter: "Evolution", question: "কোন বিজ্ঞানীর মতবাদকে 'যোগ্যতমের উদবর্তন' বলা হয়?", options: ["ল্যামার্ক", "ডারউইন", "স্পেন্সার", "ভাইসম্যান"], answer: "ডারউইন", explanation: "ডারউইনের প্রাকৃতিক নির্বাচন তত্ত্বে জীবন সংগ্রামে যোগ্যতমরাই বেঁচে থাকে, যা 'যোগ্যতমের উদবর্তন' নামে পরিচিত। হার্বার্ট স্পেন্সার এই শব্দবন্ধটি প্রথম ব্যবহার করেন।", level: 2, time: 25 },
+            { chapter: "Evolution", question: "মানুষের হাত ও পাখির ডানা কীসের উদাহরণ?", options: ["সমবৃত্তীয় অঙ্গ", "সমসংস্থ অঙ্গ", "নিষ্ক্রিয় অঙ্গ", "প্রতিবর্তী অঙ্গ"], answer: "সমসংস্থ অঙ্গ", explanation: "মানুষের হাত ও পাখির ডানার অভ্যন্তরীণ গঠন ও উৎপত্তি এক, কিন্তু কাজ আলাদা। তাই এরা সমসংস্থ অঙ্গ।", level: 2, time: 25 },
+            { chapter: "Evolution", question: "মাছ ও স্তন্যপায়ীর হৃৎপিণ্ডের মধ্যে কোনটি বেশি উন্নত?", options: ["মাছের হৃৎপিণ্ড", "স্তন্যপায়ীর হৃৎপিণ্ড", "উভয়ই সমান", "বলা সম্ভব নয়"], answer: "স্তন্যপায়ীর হৃৎপিণ্ড", explanation: "স্তন্যপায়ীর হৃৎপিণ্ড চার প্রকোষ্ঠযুক্ত হওয়ায় বিশুদ্ধ ও দূষিত রক্ত সম্পূর্ণ পৃথক থাকে, যা এটিকে বেশি উন্নত করে।", level: 2, time: 25 },
+            { chapter: "Evolution", question: "সুন্দরী গাছের শ্বাসমূল কোন দিকে বৃদ্ধি পায়?", options: ["মাটির গভীরে", "মাটির সমান্তরালে", "অভিকর্ষের বিপরীতে", "আলোর দিকে"], answer: "অভিকর্ষের বিপরীতে", explanation: "শ্বাস-প্রশ্বাসের জন্য অক্সিজেন গ্রহণের উদ্দেশ্যে সুন্দরী গাছের শ্বাসমূল বা নিউম্যাটোফোর অভিকর্ষের বিপরীতে মাটির উপরে উঠে আসে।", level: 2, time: 30 },
+            { chapter: "Evolution", question: "মাছের পটকার গ্যাস শোষণকারী অঙ্গ কোনটি?", options: ["রেড গ্রন্থি", "রেটিয়া মিরাবিলিয়া", "অ্যান্টেরিয়র প্রকোষ্ঠ", "পোস্টেরিয়র প্রকোষ্ঠ"], answer: "রেটিয়া মিরাবিলিয়া", explanation: "রেটিয়া মিরাবিলিয়া একটি রক্তজালক যা পটকার গ্যাস শোষণ করে মাছকে জলে ডুবতে সাহায্য করে।", level: 2, time: 30 },
+            { chapter: "Evolution", question: "ডারউইনের তত্ত্বের একটি ত্রুটি উল্লেখ কর।", options: ["প্রাকৃতিক নির্বাচন", "যোগ্যতমের উদবর্তন", "প্রকরণের কারণ ব্যাখ্যা করতে না পারা", "অস্তিত্বের জন্য সংগ্রাম"], answer: "প্রকরণের কারণ ব্যাখ্যা করতে না পারা", explanation: "ডারউইন প্রকরণ বা ভ্যারিয়েশনের উপর গুরুত্ব দিলেও, এর উৎপত্তি বা কারণ ব্যাখ্যা করতে পারেননি।", level: 2, time: 30 },
+            { chapter: "Evolution", question: "অভিব্যক্তির ভ্রূণতত্ত্ব ঘটিত প্রমাণের প্রবক্তা কে?", options: ["হেকেল", "ম্যালথাস", "ওয়ালেস", "ক্যুভিয়ার"], answer: "হেকেল", explanation: "বিজ্ঞানী আর্নস্ট হেকেল বায়োজেনেটিক সূত্রের মাধ্যমে বলেন যে 'Ontogeny recapitulates phylogeny', অর্থাৎ ভ্রূণের পরিস্ফুটন জাতির বিবর্তনকে পুনরাবৃত্তি করে।", level: 2, time: 30 },
+            { chapter: "Evolution", question: "কোনটি লবণাক্ত পরিবেশের উদ্ভিদের অভিযোজন?", options: ["পাতার কাঁটায় রূপান্তর", "শ্বাসমূলের উপস্থিতি", "বায়ুথলির উপস্থিতি", " পুরু কিউটিকল"], answer: "শ্বাসমূলের উপস্থিতি", explanation: "ম্যানগ্রোভ বা লবণাম্বু উদ্ভিদের শ্বাসমূল একটি গুরুত্বপূর্ণ অভিযোজন।", level: 2, time: 25 },
+            { chapter: "Evolution", question: "উটের আরবিসি-র আকৃতি কেমন?", options: ["গোলাকার", "ডিম্বাকার ও নিউক্লিয়াসবিহীন", "দ্বি-অবতল", "তারা আকৃতির"], answer: "ডিম্বাকার ও নিউক্লিয়াসবিহীন", explanation: "উটের লোহিত রক্তকণিকা ডিম্বাকার হওয়ায় এটি অধিক জল গ্রহণ করে প্রায় দ্বিগুণ স্ফীত হতে পারে এবং ফেটে যায় না।", level: 2, time: 30 },
+            { chapter: "Evolution", question: "'ফিলোসফিক জুওলজিক' গ্রন্থটি কার লেখা?", options: ["ডারউইন", "ল্যামার্ক", "অ্যারিস্টটল", "লিনিয়াস"], answer: "ল্যামার্ক", explanation: "১৮০৯ সালে প্রকাশিত 'ফিলোসফিক জুওলজিক' গ্রন্থে ল্যামার্ক তার অভিব্যক্তি সংক্রান্ত মতবাদ ব্যাখ্যা করেন।", level: 2, time: 30 },
+            
+            // Heredity Questions (Level 3)
+            { chapter: "Heredity", question: "একজন বর্ণান্ধ পুরুষ ও একজন বাহক মহিলার সন্তানদের মধ্যে বর্ণান্ধতার সম্ভাবনা কত?", options: ["৫০% পুত্র ও ৫০% কন্যা বর্ণান্ধ", "সব পুত্র বর্ণান্ধ", "সব কন্যা বাহক", "২৫% পুত্র বর্ণান্ধ"], answer: "৫০% পুত্র ও ৫০% কন্যা বর্ণান্ধ", explanation: "বর্ণান্ধ পিতা (XᶜY) ও বাহক মাতা (X⁺Xᶜ) এর ক্ষেত্রে ৫০% পুত্র বর্ণান্ধ (XᶜY) এবং ৫০% কন্যা বর্ণান্ধ (XᶜXᶜ) হওয়ার সম্ভাবনা থাকে।", level: 3, time: 45 },
+            { chapter: "Heredity", question: "মানুষের ABO রক্তগ্রুপ কোন ধরনের বংশগতির উদাহরণ?", options: ["অসম্পূর্ণ প্রকটতা", "সহপ্রকটতা ও মাল্টিপল অ্যালিল", "পলিজেনিক বংশগতি", "লিংকেজ"], answer: "সহপ্রকটতা ও মাল্টিপল অ্যালিল", explanation: "ABO রক্তগ্রুপে A ও B অ্যালিল পরস্পরের প্রতি সহপ্রকট এবং এটি তিনটি অ্যালিল দ্বারা নিয়ন্ত্রিত হয় বলে মাল্টিপল অ্যালিলেরও উদাহরণ।", level: 3, time: 40 },
+            { chapter: "Heredity", question: "একটি দ্বিসংকর জননে F₂ জনুতে কতগুলি অপত্যের জিনোটাইপ উভয় বৈশিষ্ট্যের জন্য হেটেরোজাইগাস হয়?", options: ["১/১৬", "২/১৬", "৩/১৬", "৪/১৬"], answer: "৪/১৬", explanation: "দ্বিসংকর ক্রসের F₂ জনুতে ১৬টি সম্ভাব্য অপত্যের মধ্যে ৪টির জিনোটাইপ হয় RrYy।", level: 3, time: 40 },
+            { chapter: "Heredity", question: "প্লিওট্রপি (Pleiotropy) বলতে কী বোঝায়?", options: ["একটি জিন দ্বারা একাধিক বৈশিষ্ট্যের নিয়ন্ত্রণ", "একাধিক জিন দ্বারা একটি বৈশিষ্ট্যের নিয়ন্ত্রণ", "দুটি জিনের মধ্যে মিথস্ক্রিয়া", "জিনের অবস্থান পরিবর্তন"], answer: "একটি জিন দ্বারা একাধিক বৈশিষ্ট্যের নিয়ন্ত্রণ", explanation: "যখন একটিমাত্র জিন একাধিক ফিনোটাইপিক বৈশিষ্ট্যকে নিয়ন্ত্রণ করে, তখন সেই ঘটনাকে প্লিওট্রপি বলে। যেমন- সিকেল সেল অ্যানিমিয়া।", level: 3, time: 40 },
+            { chapter: "Heredity", question: "একটি দ্বিসংকর টেস্ট ক্রসের ফিনোটাইপিক অনুপাত কত?", options: ["৯:৩:৩:১", "৩:১", "১:১", "১:১:১:১"], answer: "১:১:১:১", explanation: "একটি হেটেরোজাইগাস জীবের (RrYy) সাথে একটি হোমোজাইগাস প্রচ্ছন্ন জীবের (rryy) টেস্ট ক্রসে চারটি ফিনোটাইপ ১:১:১:১ অনুপাতে পাওয়া যায়।", level: 3, time: 40 },
 
-            // Level 4 (30 questions)
-            { question: "লিংকেজ (Linkage) মেন্ডেলের কোন সূত্রের ব্যতিক্রম?", options: ["প্রকটতার সূত্র", "পৃথকীভবন সূত্র", "স্বাধীন সঞ্চারণ সূত্র", "কোনোটিই নয়"], answer: "স্বাধীন সঞ্চারণ সূত্র", explanation: "একই ক্রোমোজোমে থাকা জিনগুলি একসঙ্গে সঞ্চারিত হওয়ার প্রবণতা দেখায় (লিংকেজ), যা স্বাধীন সঞ্চারণ সূত্রের ব্যতিক্রম।", level: 4, chapter: 1, time: 45 },
-            { question: "একজন থ্যালাসেমিয়া মেজর আক্রান্ত রোগীর জিনোটাইপ কী হতে পারে?", options: ["Thal⁺/Thal⁺", "Thal⁺/thal", "thal/thal", "কেবল পুরুষদের হয়"], answer: "thal/thal", explanation: "থ্যালাসেমিয়া একটি প্রচ্ছন্ন রোগ, তাই দুটি প্রচ্ছন্ন অ্যালিল (thal/thal) উপস্থিত থাকলেই রোগের তীব্র প্রকাশ (মেজর) ঘটে।", level: 4, chapter: 1, time: 40 },
-            { question: "যদি একটি দ্বিসংকর ক্রসের F₂ জনুতে ৯:৩:৪ অনুপাত দেখা যায়, তবে এটি কোন ঘটনার উদাহরণ?", options: ["কমপ্লিমেন্টারি জিন", "প্রচ্ছন্ন এপিস্ট্যাসিস", "প্রকট এপিস্ট্যাসিস", "লিথাল জিন"], answer: "প্রচ্ছন্ন এপিস্ট্যাসিস", explanation: "প্রচ্ছন্ন এপিস্ট্যাসিস-এর ক্ষেত্রে দ্বিসংকর জননের F₂ জনুর ফিনোটাইপিক অনুপাত ৯:৩:৪ হয়।", level: 4, chapter: 1, time: 50 },
-            { question: "মানুষের উচ্চতা কোন ধরনের বংশগতির উদাহরণ?", options: ["মেন্ডেলীয় বংশগতি", "পলিজেনিক বংশগতি", "অসম্পূর্ণ প্রকটতা", "লিঙ্গ সংযোজিত বংশগতি"], answer: "পলিজেনিক বংশগতি", explanation: "মানুষের উচ্চতার মতো বৈশিষ্ট্যগুলি একাধিক জিন দ্বারা নিয়ন্ত্রিত হয়, একে পলিজেনিক বংশগতি বলে।", level: 4, chapter: 1, time: 40 },
-            { question: "হোলান্ড্রিক জিন (Holandric gene) কোথায় অবস্থিত?", options: ["X ক্রোমোজোমে", "Y ক্রোমোজোমে", "অটোজোমে", "মাইটোকন্ড্রিয়ায়"], answer: "Y ক্রোমোজোমে", explanation: "যেসব জিন কেবল Y ক্রোমোজোমে থাকে এবং শুধুমাত্র পিতা থেকে পুত্রে সঞ্চারিত হয়, তাদের হোলান্ড্রিক জিন বলে।", level: 4, chapter: 1, time: 45 },
-            { question: "ক্রসিং ওভারের হার কিসের উপর নির্ভরশীল?", options: ["ক্রোমোজোমের সংখ্যা", "দুটি জিনের মধ্যে দূরত্ব", "সেন্ট্রোমিয়ারের অবস্থান", "তাপমাত্রা"], answer: "দুটি জিনের মধ্যে দূরত্ব", explanation: "দুটি জিনের মধ্যে দূরত্ব যত বেশি হয়, তাদের মধ্যে ক্রসিং ওভারের সম্ভাবনা তত বাড়ে এবং লিংকেজের শক্তি তত কমে।", level: 4, chapter: 1, time: 40 },
-            { question: "সেন্ট্রাল ডগমা (Central Dogma) এর সঠিক ক্রম কোনটি?", options: ["DNA → Protein → RNA", "RNA → DNA → Protein", "DNA → RNA → Protein", "Protein → RNA → DNA"], answer: "DNA → RNA → Protein", explanation: "ফ্রান্সিস ক্রিক প্রস্তাবিত সেন্ট্রাল ডগমা অনুযায়ী, জেনেটিক তথ্য DNA থেকে RNA (ট্রান্সক্রিপশন) এবং RNA থেকে প্রোটিনে (ট্রান্সলেশন) প্রবাহিত হয়।", level: 4, chapter: 1, time: 40 },
-            { question: "প্রকট এপিস্ট্যাসিস (Dominant Epistasis) এর ক্ষেত্রে F₂ জনুর অনুপাত কত?", options: ["৯:৩:৩:১", "৯:৭", "১২:৩:১", "৯:৩:৪"], answer: "১২:৩:১", explanation: "যখন একটি প্রকট জিন অন্য একটি জিনের প্রকাশে বাধা দেয়, তখন তাকে প্রকট এপিস্ট্যাসিস বলে এবং এর F₂ অনুপাত ১২:৩:১ হয়।", level: 4, chapter: 1, time: 50 },
-            { question: "অ্যানিউপ্লয়েডি (Aneuploidy) কী?", options: ["সম্পূর্ণ জিনোমের পরিবর্তন", "এক বা একাধিক ক্রোমোজোমের সংখ্যার পরিবর্তন", "জিনের গঠন পরিবর্তন", "ক্রোমোজোমের গঠন পরিবর্তন"], answer: "এক বা একাধিক ক্রোমোজোমের সংখ্যার পরিবর্তন", explanation: "কোনো জীবের কোষে এক বা একাধিক ক্রোমোজোমের হ্রাস বা বৃদ্ধি ঘটলে সেই অবস্থাকে অ্যানিউপ্লয়েডি বলে (যেমন- ট্রাইসোমি, মনোসোমি)।", level: 4, chapter: 1, time: 40 },
-            { question: "জিন ম্যাপিং এর একক কী?", options: ["ম্যাপ ইউনিট বা সেন্টিমরগ্যান", "অ্যাংস্ট্রম", "নিউক্লিওটাইড", "মরগ্যান"], answer: "ম্যাপ ইউনিট বা সেন্টিমরগ্যান", explanation: "জিন ম্যাপিং এর একক হল ম্যাপ ইউনিট। ১% ক্রসিং ওভারকে ১ ম্যাপ ইউনিট বা ১ সেন্টিমরগ্যান (cM) ধরা হয়।", level: 4, chapter: 1, time: 45 },
-            { question: "সাইটোপ্লাজমীয় বংশগতি মেন্ডেলের সূত্র মেনে চলে না কেন?", options: ["কারণ এটি Y ক্রোমোজোম দ্বারা বাহিত হয়", "কারণ এটি মাইটোকন্ড্রিয়াল DNA দ্বারা নিয়ন্ত্রিত হয়", "কারণ এতে প্রকট-প্রচ্ছন্ন সম্পর্ক নেই", "কারণ এতে ক্রসিং ওভার হয় না"], answer: "কারণ এটি মাইটোকন্ড্রিয়াল DNA দ্বারা নিয়ন্ত্রিত হয়", explanation: "সাইটোপ্লাজমীয় বংশগতি মূলত মাইটোকন্ড্রিয়া বা ক্লোরোপ্লাস্টের জিন দ্বারা নিয়ন্ত্রিত হয় এবং এটি সাধারণত মাতৃসূত্রে সঞ্চারিত হয়, তাই মেন্ডেলীয় অনুপাত দেখায় না।", level: 4, chapter: 1, time: 50 },
-            { question: "কোনো পপুলেশনে একটি জিনের অ্যালিলের ফ্রিকোয়েন্সি স্থির থাকলে তাকে কী বলে?", options: ["জেনেটিক ড্রিফট", "হার্ডি-উইনবার্গ সাম্যাবস্থা", "ন্যাচারাল সিলেকশন", "জিন ফ্লো"], answer: "হার্ডি-উইনবার্গ সাম্যাবস্থা", explanation: "যদি কোনো পপুলেশনে পরিব্যক্তি, সিলেকশন, মাইগ্রেশন ইত্যাদি না ঘটে, তবে অ্যালিল ফ্রিকোয়েন্সি প্রজন্ম থেকে প্রজন্মান্তরে অপরিবর্তিত থাকে।", level: 4, chapter: 1, time: 45 },
-            { question: "সেক্স-ইনফ্লুয়েন্সড (Sex-influenced) বৈশিষ্ট্য কোনটি?", options: ["হিমোফিলিয়া", "মানুষের টাক পড়া", "বর্ণান্ধতা", "দাড়ি-গোঁফ"], answer: "মানুষের টাক পড়া", explanation: "সেক্স-ইনফ্লুয়েন্সড বৈশিষ্ট্যগুলি অটোজোমাল জিন দ্বারা নিয়ন্ত্রিত হলেও হরমোনের প্রভাবে একটি লিঙ্গে প্রকট এবং অন্য লিঙ্গে প্রচ্ছন্ন হিসেবে আচরণ করে।", level: 4, chapter: 1, time: 45 },
-            { question: "ট্রান্সপোসন বা 'জাম্পিং জিন' কে আবিষ্কার করেন?", options: ["মেন্ডেল", "মরগ্যান", "ম্যাকক্লিনটক", "ওয়াটসন"], answer: "ম্যাকক্লিনটক", explanation: "বারবারা ম্যাকক্লিনটক ভুট্টা গাছের উপর গবেষণা করে ট্রান্সপোসন বা জাম্পিং জিন আবিষ্কার করেন, যা জিনোমের মধ্যে স্থান পরিবর্তন করতে পারে।", level: 4, chapter: 1, time: 40 },
-            { question: "একটি পপুলেশন থেকে দৈবচয়নের কারণে অ্যালিলের অপসারণকে কী বলা হয়?", options: ["জিন ফ্লো", "জেনেটিক ড্রিফট", "ফাউন্ডার এফেক্ট", "বটলনেক এফেক্ট"], answer: "জেনেটিক ড্রিফট", explanation: "ছোট পপুলেশনে দৈব ঘটনার কারণে কোনো অ্যালিলের ফ্রিকোয়েন্সি পরিবর্তিত হওয়া বা হারিয়ে যাওয়াকে জেনেটিক ড্রিফট বলে।", level: 4, chapter: 1, time: 40 },
-            { question: "ফিলাডেলফিয়া ক্রোমোজোম কোন রোগের সাথে সম্পর্কিত?", options: ["ডাউন সিনড্রোম", "ক্রনিক মায়েলয়েড লিউকেমিয়া (CML)", "টার্নার সিনড্রোম", "থ্যালাসেমিয়া"], answer: "ক্রনিক মায়েলয়েড লিউকেমিয়া (CML)", explanation: "৯ নং এবং ২২ নং ক্রোমোজোমের মধ্যে ট্রান্সলোকেশন-এর ফলে ফিলাডেলফিয়া ক্রোমোজোম (একটি ছোট ২২ নং ক্রোমোজোম) তৈরি হয়, যা CML রোগের কারণ।", level: 4, chapter: 1, time: 50 },
-            { question: "রিভার্স ট্রান্সক্রিপশন কী?", options: ["DNA থেকে RNA তৈরি", "RNA থেকে প্রোটিন তৈরি", "RNA থেকে DNA তৈরি", "DNA থেকে DNA তৈরি"], answer: "RNA থেকে DNA তৈরি", explanation: "রেট্রোভাইরাসের মতো কিছু ভাইরাসে RNA থেকে DNA তৈরি হয়, এই প্রক্রিয়াকে রিভার্স ট্রান্সক্রিপশন বলে।", level: 4, chapter: 1, time: 40 },
-            { question: "পেডিগ্রি অ্যানালাইসিস (Pedigree Analysis) এর প্রধান উদ্দেশ্য কী?", options: ["নতুন প্রজাতি তৈরি করা", "কোনো বংশে একটি বৈশিষ্ট্যের সঞ্চারণের ধারা বিশ্লেষণ করা", "জিনোম সিকোয়েন্সিং", "ক্রোমোজোম সংখ্যা গণনা করা"], answer: "কোনো বংশে একটি বৈশিষ্ট্যের সঞ্চারণের ধারা বিশ্লেষণ করা", explanation: "পেডিগ্রি চার্টের মাধ্যমে কোনো একটি পরিবারের বিভিন্ন প্রজন্মে জিনগত বৈশিষ্ট্য বা রোগের সঞ্চারণের পদ্ধতি বিশ্লেষণ করা হয়।", level: 4, chapter: 1, time: 35 },
-            { question: "ইউপ্লয়েডি (Euploidy) বলতে কী বোঝায়?", options: ["ক্রোমোজোমের সংখ্যার পরিবর্তন", "ক্রোমোজোমের সম্পূর্ণ সেটের সংখ্যার পরিবর্তন", "জিনের সংখ্যার পরিবর্তন", "ক্রোমোজোমের আকারের পরিবর্তন"], answer: "ক্রোমোজোমের সম্পূর্ণ সেটের সংখ্যার পরিবর্তন", explanation: "যখন কোনো জীবের কোষে ক্রোমোজোমের সম্পূর্ণ সেটের (n) সংখ্যার পরিবর্তন ঘটে (যেমন- 3n, 4n), তাকে ইউপ্লয়েডি বলে।", level: 4, chapter: 1, time: 40 },
-            { question: "ড্রসোফিলা মাছির সাদা চোখ বৈশিষ্ট্যটি কোন ধরনের বংশগতির উদাহরণ?", options: ["অটোজোমাল প্রকট", "অটোজোমাল প্রচ্ছন্ন", "সেক্স-লিঙ্কড প্রচ্ছন্ন", "সেক্স-লিঙ্কড প্রকট"], answer: "সেক্স-লিঙ্কড প্রচ্ছন্ন", explanation: "থমাস হান্ট মরগ্যান ড্রসোফিলা মাছির উপর কাজ করে প্রথম সেক্স-লিঙ্কড ইনহেরিটেন্স বা লিঙ্গ সংযোজিত বংশগতি আবিষ্কার করেন।", level: 4, chapter: 1, time: 45 },
-            { question: "জিন থেরাপি কী?", options: ["ওষুধ দিয়ে জিনের চিকিৎসা", "ত্রুটিপূর্ণ জিনকে সঠিক জিন দ্বারা প্রতিস্থাপন", "জিনোম সিকোয়েন্সিং", "জেনেটিক কাউন্সেলিং"], answer: "ত্রুটিপূর্ণ জিনকে সঠিক জিন দ্বারা প্রতিস্থাপন", explanation: "জিনগত রোগ নিরাময়ের জন্য রোগীর কোষে ত্রুটিপূর্ণ জিনের পরিবর্তে একটি কার্যকরী জিন প্রবেশ করানোর পদ্ধতিকে জিন থেরাপি বলে।", level: 4, chapter: 1, time: 35 },
-            { question: "একটি কোডন কতগুলি নিউক্লিওটাইড নিয়ে গঠিত?", options: ["১টি", "২টি", "৩টি", "৪টি"], answer: "৩টি", explanation: "জেনেটিক কোডে তিনটি নিউক্লিওটাইড বেস मिलकर একটি অ্যামিনো অ্যাসিডকে কোড করে, একে কোডন বলে।", level: 4, chapter: 1, time: 30 },
-            { question: "হার্ডি-উইনবার্গ সূত্রের সমীকরণটি কী?", options: ["p + q = 1", "p² + 2pq + q² = 1", "উভয়ই সঠিক", "কোনোটিই নয়"], answer: "উভয়ই সঠিক", explanation: "p + q = 1 অ্যালিল ফ্রিকোয়েন্সির সম্পর্ক দেখায় এবং p² + 2pq + q² = 1 জিনোটাইপ ফ্রিকোয়েন্সির সম্পর্ক দেখায়। দুটিই হার্ডি-উইনবার্গ সূত্রের অংশ।", level: 4, chapter: 1, time: 45 },
-            { question: "সিকেল সেল অ্যানিমিয়া কোন ধরনের মিউটেশনের ফল?", options: ["ফ্রেমশিফট মিউটেশন", "ননসেন্স মিউটেশন", "মিসসেন্স পয়েন্ট মিউটেশন", "সাইলেন্ট মিউটেশন"], answer: "মিসসেন্স পয়েন্ট মিউটেশন", explanation: "বিটা-গ্লোবিন জিনে একটি মাত্র বেসের পরিবর্তনে (GAG থেকে GUG) গ্লুটামিক অ্যাসিডের পরিবর্তে ভ্যালিন তৈরি হয়, যা একটি মিসসেন্স মিউটেশন।", level: 4, chapter: 1, time: 50 },
-            { question: "অ্যামনিওসেন্টেসিস (Amniocentesis) পদ্ধতির মাধ্যমে কী নির্ণয় করা যায়?", options: ["ভ্রূণের লিঙ্গ", "ভ্রূণের ক্রোমোজোমীয় অস্বাভাবিকতা", "উভয়ই", "কোনোটিই নয়"], answer: "উভয়ই", explanation: "অ্যামনিওটিক ফ্লুইড থেকে ভ্রূণের কোষ সংগ্রহ করে তার ক্রোমোজোমীয় গঠন বিশ্লেষণ করা হয়, যা থেকে জিনগত রোগ ও লিঙ্গ উভয়ই জানা যায়।", level: 4, chapter: 1, time: 40 },
-            { question: "কোনটি জেনেটিক কোডের বৈশিষ্ট্য নয়?", options: ["ট্রিপলেট", "ইউনিভার্সাল", "ওভারল্যাপিং", "ডিজেনারেট"], answer: "ওভারল্যাপিং", explanation: "জেনেটিক কোড নন-ওভারল্যাপিং, অর্থাৎ একটি বেস কেবল একটি কোডনের অংশ।", level: 4, chapter: 1, time: 45 },
-            { question: "ফাউন্ডার এফেক্ট (Founder Effect) কী?", options: ["প্রাকৃতিক দুর্যোগের ফলে পপুলেশন কমে যাওয়া", "মূল পপুলেশন থেকে বিচ্ছিন্ন হয়ে নতুন পপুলেশন তৈরি", "অন্য পপুলেশন থেকে জিনের আগমন", "দৈবচয়নের ফলে অ্যালিল হারানো"], answer: "মূল পপুলেশন থেকে বিচ্ছিন্ন হয়ে নতুন পপুলেশন তৈরি", explanation: "যখন মূল পপুলেশন থেকে কিছু সদস্য বিচ্ছিন্ন হয়ে নতুন পপুলেশন তৈরি করে, তখন নতুন পপুলেশনের জিনপুল মূল পপুলেশনের থেকে ভিন্ন হতে পারে। এটি জেনেটিক ড্রিফটের একটি উদাহরণ।", level: 4, chapter: 1, time: 50 },
-            { question: "কোন বিজ্ঞানী প্রথম 'জিন' শব্দটি ব্যবহার করেন?", options: ["মেন্ডেল", "মরগ্যান", "বেটসন", "জোহানসেন"], answer: "জোহানসেন", explanation: "ডেনমার্কের বিজ্ঞানী উইলহেম জোহানসেন ১৯০৯ সালে প্রথম 'জিন' শব্দটি ব্যবহার করেন। মেন্ডেল একে 'ফ্যাক্টর' বলেছিলেন।", level: 4, chapter: 1, time: 40 },
-            { question: "ক্রাই-ডু-চ্যাট (Cri-du-chat) সিনড্রোম কোন ক্রোমোজোমের অস্বাভাবিকতার কারণে হয়?", options: ["৫ নং ক্রোমোজোমের ক্ষুদ্র বাহুর ডিলিশন", "২১ নং ক্রোমোজোমের ট্রাইসোমি", "X ক্রোমোজোমের মনোসোমি", "Y ক্রোমোজোমের উপস্থিতি"], answer: "৫ নং ক্রোমোজোমের ক্ষুদ্র বাহুর ডিলিশন", explanation: "৫ নং ক্রোমোজোমের ক্ষুদ্র বাহুর একটি অংশ বিলুপ্ত বা ডিলিট হয়ে গেলে এই সিনড্রোম দেখা যায়, যেখানে শিশুর কান্না বিড়ালের কান্নার মতো শোনায়।", level: 4, chapter: 1, time: 50 },
-            { question: "মানব জিনোম প্রকল্পে কোন কৌশলটি ব্যবহৃত হয়েছিল?", options: ["পেডিগ্রি অ্যানালাইসিস", "DNA ফিঙ্গারপ্রিন্টিং", "এক্সপ্রেসড সিকোয়েন্স ট্যাগ (ESTs) এবং সিকোয়েন্স অ্যানোটেশন", "PCR"], answer: "এক্সপ্রেসড সিকোয়েন্স ট্যাগ (ESTs) এবং সিকোয়েন্স অ্যানোটেশন", explanation: "মানব জিনোম প্রকল্পে জিন শনাক্ত করার জন্য ESTs (যেগুলি RNA হিসেবে প্রকাশিত হয়) এবং সম্পূর্ণ জিনোমকে সিকোয়েন্স করে কার্যকরী অংশ চিহ্নিত করার (সিকোয়েন্স অ্যানোটেশন) পদ্ধতি ব্যবহৃত হয়েছিল।", level: 4, chapter: 1, time: 55 },
+            // Evolution & Adaptation Questions (Level 3)
+            { chapter: "Evolution", question: "নিও-ডারউইনিজম বা আধুনিক সংশ্লেষণ তত্ত্বে কোন বিষয়গুলিকে অন্তর্ভুক্ত করা হয়েছে?", options: ["শুধুমাত্র প্রাকৃতিক নির্বাচন", "প্রাকৃতিক নির্বাচন, পরিব্যক্তি এবং জেনেটিক ড্রিফট", "শুধুমাত্র পরিব্যক্তি", "অর্জিত বৈশিষ্ট্যের উত্তরাধিকার"], answer: "প্রাকৃতিক নির্বাচন, পরিব্যক্তি এবং জেনেটিক ড্রিফট", explanation: "আধুনিক সংশ্লেষণ তত্ত্ব ডারউইনের মূল তত্ত্বের সাথে পরিব্যক্তি, জিনের পুনঃসংযুক্তি, জেনেটিক ড্রিফট ইত্যাদি বিষয়গুলিকে যুক্ত করে অভিব্যক্তিকে ব্যাখ্যা করে।", level: 3, time: 45 },
+            { chapter: "Evolution", question: "কোনটিকে 'মিসিং লিঙ্ক' বা 'হারানো সূত্র' বলা হয়?", options: ["পেরিপেটাস", "প্লাটিপাস", "আর্কিওপটেরিক্স", "মানুষ"], answer: "আর্কিওপটেরিক্স", explanation: "আর্কিওপটেরিক্সের জীবাশ্মে সরীসৃপ ও পাখি উভয়ের বৈশিষ্ট্য থাকায় একে দুটি শ্রেণীর মধ্যে সংযোগ রক্ষাকারী প্রাণী বা মিসিং লিঙ্ক বলা হয়।", level: 3, time: 35 },
+            { chapter: "Evolution", question: "রাসায়নিক বিবর্তন বা জীবনের উৎপত্তি সংক্রান্ত 'হট ডাইলুট স্যুপ' তত্ত্বটি কে দেন?", options: ["ওপারিন ও হ্যালডেন", "মিলার ও উরে", "লুই পাস্তুর", "ডারউইন"], answer: "ওপারিন ও হ্যালডেন", explanation: "বিজ্ঞানী আলেকজান্ডার ওপারিন এবং জে.বি.এস. হ্যালডেন পৃথকভাবে প্রস্তাব করেন যে আদিম পৃথিবীতে অজৈব যৌগ থেকে জৈব যৌগ এবং তারপর জীবনের উৎপত্তি ঘটেছিল।", level: 3, time: 40 },
+            { chapter: "Evolution", question: "মিলার ও উরের পরীক্ষায় কোন গ্যাসটি অনুপস্থিত ছিল?", options: ["মিথেন (CH₄)", "অ্যামোনিয়া (NH₃)", "হাইড্রোজেন (H₂)", "অক্সিজেন (O₂)"], answer: "অক্সিজেন (O₂)", explanation: "মিলার ও উরে আদিম পৃথিবীর অনুকরণে যে পরীক্ষা করেন, তাতে বিজারক পরিবেশ ছিল এবং মুক্ত অক্সিজেন অনুপস্থিত ছিল।", level: 3, time: 40 },
+            { chapter: "Evolution", question: "শিল্পাঞ্চলে মথের রঙের পরিবর্তন কোন ধরনের নির্বাচনের উদাহরণ?", options: ["স্থিতিশীল নির্বাচন (Stabilizing)", "দিকনির্দেশক নির্বাচন (Directional)", "বিচ্ছিন্নকারী নির্বাচন (Disruptive)", "যৌন নির্বাচন (Sexual)"], answer: "দিকনির্দেশক নির্বাচন (Directional)", explanation: "শিল্প দূষণের ফলে গাছের ছালের রঙ গাঢ় হয়ে যাওয়ায় গাঢ় রঙের মথেরা প্রাকৃতিক নির্বাচনের সুবিধা পায়। এটি দিকনির্দেশক নির্বাচনের একটি ক্লাসিক উদাহরণ।", level: 3, time: 45 },
+            { chapter: "Evolution", question: "কোন প্রাণীর হৃৎপিণ্ডকে 'ভেনাস হার্ট' বলা হয়?", options: ["মাছ", "ব্যাঙ", "টিকটিকি", "পাখি"], answer: "মাছ", explanation: "মাছের হৃৎপিণ্ডের মধ্যে দিয়ে শুধুমাত্র দূষিত বা কার্বন ডাইঅক্সাইডযুক্ত রক্ত প্রবাহিত হয়, তাই একে ভেনাস হার্ট বলে।", level: 3, time: 35 },
+            { chapter: "Evolution", question: "খেচর অভিযোজনের জন্য পায়রার দেহে অতিরিক্ত বায়ুথলির সংখ্যা কত?", options: ["৭টি", "৮টি", "৯টি", "১০টি"], answer: "৯টি", explanation: "পায়রার দেহে ৯টি প্রধান বায়ুথলি থাকে যা শ্বাসকার্যে এবং দেহকে হালকা রাখতে সাহায্য করে।", level: 3, time: 35 },
+            { chapter: "Evolution", question: "জরায়ুজ অঙ্কুরোদগম কোন উদ্ভিদে দেখা যায়?", options: ["আম", "ক্যাকটাস", "সুন্দরী", "পাইন"], answer: "সুন্দরী", explanation: "লবণাম্বু বা ম্যানগ্রোভ উদ্ভিদে (যেমন সুন্দরী) ফলের মধ্যে, গাছে থাকাকালীনই বীজের অঙ্কুরোদগম হয়। একে জরায়ুজ অঙ্কুরোদগম বলে।", level: 3, time: 35 },
+            { chapter: "Evolution", question: "ঘোড়ার বিবর্তনের সঠিক পর্যায়ক্রম কোনটি?", options: ["ইয়োহিপ্পাস -> মেসোহিপ্পাস -> মেরিচিপ্পাস -> প্লায়োহিপ্পাস -> ইকুয়াস", "মেসোহিপ্পাস -> ইয়োহিপ্পাস -> মেরিচিপ্পাস -> ইকুয়াস -> প্লায়োহিপ্পাস", "ইকুয়াস -> প্লায়োহিপ্পাস -> মেরিচিপ্পাস -> মেসোহিপ্পাস -> ইয়োহিপ্পাস", "ইয়োহিপ্পাস -> মেরিচিপ্পাস -> মেসোহিপ্পাস -> প্লায়োহিপ্পাস -> ইকুয়াস"], answer: "ইয়োহিপ্পাস -> মেসোহিপ্পাস -> মেরিচিপ্পাস -> প্লায়োহিপ্পাস -> ইকুয়াস", explanation: "এটি ঘোড়ার বিবর্তনের স্বীকৃত পর্যায়ক্রম, যেখানে আকার বৃদ্ধি এবং পায়ের আঙুলের সংখ্যা হ্রাস পেয়েছে।", level: 3, time: 50 },
+            { chapter: "Evolution", question: "সমসংস্থ ও সমবৃত্তীয় অঙ্গের মধ্যে প্রধান পার্থক্য কী?", options: ["কাজ", "উৎপত্তি ও গঠন", "আকার", "অবস্থান"], answer: "উৎপত্তি ও গঠন", explanation: "সমসংস্থ অঙ্গের উৎপত্তি ও গঠন এক কিন্তু কাজ ভিন্ন, অন্যদিকে সমবৃত্তীয় অঙ্গের উৎপত্তি ও গঠন ভিন্ন কিন্তু কাজ এক।", level: 3, time: 30 },
+            
+            // Heredity Questions (Level 4)
+            { chapter: "Heredity", question: "লিংকেজ (Linkage) মেন্ডেলের কোন সূত্রের ব্যতিক্রম?", options: ["প্রকটতার সূত্র", "পৃথকীভবন সূত্র", "স্বাধীন সঞ্চারণ সূত্র", "কোনোটিই নয়"], answer: "স্বাধীন সঞ্চারণ সূত্র", explanation: "একই ক্রোমোজোমে থাকা জিনগুলি একসঙ্গে সঞ্চারিত হওয়ার প্রবণতা দেখায় (লিংকেজ), যা স্বাধীন সঞ্চারণ সূত্রের ব্যতিক্রম।", level: 4, time: 45 },
+            { chapter: "Heredity", question: "যদি একটি দ্বিসংকর ক্রসের F₂ জনুতে ৯:৩:৪ অনুপাত দেখা যায়, তবে এটি কোন ঘটনার উদাহরণ?", options: ["কমপ্লিমেন্টারি জিন", "প্রচ্ছন্ন এপিস্ট্যাসিস", "প্রকট এপিস্ট্যাসিস", "লিথাল জিন"], answer: "প্রচ্ছন্ন এপিস্ট্যাসিস", explanation: "প্রচ্ছন্ন এপিস্ট্যাসিস-এর ক্ষেত্রে দ্বিসংকর জননের F₂ জনুর ফিনোটাইপিক অনুপাত ৯:৩:৪ হয়।", level: 4, time: 50 },
+            { chapter: "Heredity", question: "হোলান্ড্রিক জিন (Holandric gene) কোথায় অবস্থিত?", options: ["X ক্রোমোজোমে", "Y ক্রোমোজোমে", "অটোজোমে", "মাইটোকন্ড্রিয়ায়"], answer: "Y ক্রোমোজোমে", explanation: "যেসব জিন কেবল Y ক্রোমোজোমে থাকে এবং শুধুমাত্র পিতা থেকে পুত্রে সঞ্চারিত হয়, তাদের হোলান্ড্রিক জিন বলে।", level: 4, time: 45 },
+            { chapter: "Heredity", question: "জিন ম্যাপিং এর একক কী?", options: ["ম্যাপ ইউনিট বা সেন্টিমরগ্যান", "অ্যাংস্ট্রম", "নিউক্লিওটাইড", "মরগ্যান"], answer: "ম্যাপ ইউনিট বা সেন্টিমরগ্যান", explanation: "জিন ম্যাপিং এর একক হল ম্যাপ ইউনিট। ১% ক্রসিং ওভারকে ১ ম্যাপ ইউনিট বা ১ সেন্টিমরগ্যান (cM) ধরা হয়।", level: 4, time: 45 },
+            { chapter: "Heredity", question: "সেক্স-ইনফ্লুয়েন্সড (Sex-influenced) বৈশিষ্ট্য কোনটি?", options: ["হিমোফিলিয়া", "মানুষের টাক পড়া", "বর্ণান্ধতা", "দাড়ি-গোঁফ"], answer: "মানুষের টাক পড়া", explanation: "সেক্স-ইনফ্লুয়েন্সড বৈশিষ্ট্যগুলি অটোজোমাল জিন দ্বারা নিয়ন্ত্রিত হলেও হরমোনের প্রভাবে একটি লিঙ্গে প্রকট এবং অন্য লিঙ্গে প্রচ্ছন্ন হিসেবে আচরণ করে।", level: 4, time: 45 },
 
-            // Chapter 2: Evolution and Adaptation
-            // Level 1 (25 questions)
-            { question: "'অরিজিন অফ স্পিসিস বাই মিনস অফ ন্যাচারাল সিলেকশন' বইটির লেখক কে?", options: ["ল্যামার্ক", "মেন্ডেল", "ডারউইন", "হেকেল"], answer: "ডারউইন", explanation: "চার্লস ডারউইন ১৮৫৯ সালে এই যুগান্তকারী বইটি প্রকাশ করেন।", level: 1, chapter: 2, time: 15 },
-            { question: "কোন বিজ্ঞানী 'অর্জিত বৈশিষ্ট্যের উত্তরাধিকার' মতবাদটি দেন?", options: ["ডারউইন", "ল্যামার্ক", "দ্য ভ্রিস", "ভাইসম্যান"], answer: "ল্যামার্ক", explanation: "জ্যাঁ ব্যাপটিস্ট ল্যামার্কের মতে, জীব তার জীবনে যে বৈশিষ্ট্য অর্জন করে তা বংশানুক্রমে সঞ্চারিত হয়।", level: 1, chapter: 2, time: 15 },
-            { question: "বিবর্তনের সবচেয়ে গুরুত্বপূর্ণ প্রমাণ কোনটি?", options: ["সমসংস্থ অঙ্গ", "সমবৃত্তীয় অঙ্গ", "নিষ্ক্রিয় অঙ্গ", "জীবাশ্ম"], answer: "জীবাশ্ম", explanation: "জীবাশ্ম বা ফসিল থেকে জীবের বিবর্তনের ধারার প্রত্যক্ষ প্রমাণ পাওয়া যায়।", level: 1, chapter: 2, time: 15 },
-            { question: "পাখির ডানা ও পতঙ্গের ডানা কি ধরনের অঙ্গ?", options: ["সমসংস্থ", "সমবৃত্তীয়", "নিষ্ক্রিয়", "প্রতিস্থাপিত"], answer: "সমবৃত্তীয়", explanation: "এদের কাজ এক (উড়তে সাহায্য করা) কিন্তু উৎপত্তি ও গঠন ভিন্ন, তাই এরা সমবৃত্তীয় অঙ্গ।", level: 1, chapter: 2, time: 20 },
-            { question: "শ্বাসমূল কোন উদ্ভিদে দেখা যায়?", options: ["ক্যাকটাস", "পদ্ম", "সুন্দরী", "আম"], answer: "সুন্দরী", explanation: "লবণাক্ত ও কর্দমাক্ত মাটিতে অক্সিজেনের অভাব মেটাতে সুন্দরী গাছের শ্বাসমূল মাটির উপরে উঠে আসে।", level: 1, chapter: 2, time: 15 },
-            { question: "উটের কুঁজে কী সঞ্চিত থাকে?", options: ["জল", "চর্বি", "প্রোটিন", "কার্বোহাইড্রেট"], answer: "চর্বি", explanation: "উটের কুঁজে চর্বি সঞ্চিত থাকে, যা প্রয়োজনে বিপাকের মাধ্যমে শক্তি ও জল সরবরাহ করে।", level: 1, chapter: 2, time: 15 },
-            { question: "মানুষের নিষ্ক্রিয় অঙ্গ কোনটি?", options: ["হৃৎপিণ্ড", "যকৃৎ", "অ্যাপেন্ডিক্স", "ফুসফুস"], answer: "অ্যাপেন্ডিক্স", explanation: "ভার্মিফর্ম অ্যাপেন্ডিক্স মানুষের দেহে একটি নিষ্ক্রিয় অঙ্গ, যা পূর্বপুরুষের দেহে সক্রিয় ছিল।", level: 1, chapter: 2, time: 15 },
-            { question: "ডারউইনের তত্ত্বের মূল ধারণা কোনটি?", options: ["অঙ্গের ব্যবহার ও অব্যবহার", "প্রাকৃতিক নির্বাচন", "অর্জিত বৈশিষ্ট্যের উত্তরাধিকার", "মিউটেশন"], answer: "প্রাকৃতিক নির্বাচন", explanation: "ডারউইনের মতে, প্রকৃতি যোগ্যতম জীবদের নির্বাচন করে, যা বিবর্তনের মূল চালিকাশক্তি।", level: 1, chapter: 2, time: 20 },
-            { question: "ক্যাকটাসের পাতা কাঁটায় রূপান্তরিত হয় কেন?", options: ["আত্মরক্ষার জন্য", "বাষ্পমোচন কমানোর জন্য", "খাদ্য সঞ্চয়ের জন্য", "ক ও খ উভয়ই"], answer: "ক ও খ উভয়ই", explanation: "ক্যাকটাসের পাতা কাঁটায় রূপান্তরিত হয়ে আত্মরক্ষা এবং বাষ্পমোচন রোধ উভয় কাজই করে।", level: 1, chapter: 2, time: 20 },
-            { question: "মাছের গমন অঙ্গ কোনটি?", options: ["ডানা", "পাখনা", "পা", "সিটা"], answer: "পাখনা", explanation: "মাছ পাখনার সাহায্যে জলে সাঁতার কাটে এবং ভারসাম্য রক্ষা করে।", level: 1, chapter: 2, time: 15 },
-            { question: "'ফিলোজফি জুলজিক' গ্রন্থটির রচয়িতা কে?", options: ["ডারউইন", "হেকেল", "ল্যামার্ক", "ভাইসম্যান"], answer: "ল্যামার্ক", explanation: "ল্যামার্ক তার বিবর্তন সংক্রান্ত মতবাদ এই গ্রন্থে প্রকাশ করেন।", level: 1, chapter: 2, time: 20 },
-            { question: "যোগ্যতমের উদবর্তন কথাটি কে প্রথম ব্যবহার করেন?", options: ["ডারউইন", "হার্বার্ট স্পেনসার", "ল্যামার্ক", "ওয়ালেস"], answer: "হার্বার্ট স্পেনসার", explanation: "দার্শনিক হার্বার্ট স্পেনসার প্রথম 'Survival of the Fittest' কথাটি ব্যবহার করেন, যা ডারউইন পরে গ্রহণ করেন।", level: 1, chapter: 2, time: 20 },
-            { question: "পায়রার দেহে বায়ুথলি বা এয়ার স্যাক এর কাজ কী?", options: ["দেহের ওজন কমানো", "অতিরিক্ত অক্সিজেন সরবরাহ করা", "উভয়ই", "কোনোটিই নয়"], answer: "উভয়ই", explanation: "বায়ুথলি উড়বার সময় দেহকে হালকা রাখে এবং অতিরিক্ত অক্সিজেন সরবরাহ করে।", level: 1, chapter: 2, time: 20 },
-            { question: "জীবন্ত জীবাশ্মের একটি উদাহরণ দাও।", options: ["আর্কিওপটেরিক্স", "পেরিপেটাস", "তিমি", "ঘোড়া"], answer: "পেরিপেটাস", explanation: "পেরিপেটাস অ্যানেলিডা ও আর্থ্রোপোডা পর্বের সংযোগরক্ষাকারী প্রাণী এবং একটি জীবন্ত জীবাশ্ম।", level: 1, chapter: 2, time: 20 },
-            { question: "অভিব্যক্তি একটি-", options: ["দ্রুত প্রক্রিয়া", "মন্থর প্রক্রিয়া", "হঠাৎ ঘটা প্রক্রিয়া", "স্থির প্রক্রিয়া"], answer: "মন্থর প্রক্রিয়া", explanation: "অভিব্যক্তি বা বিবর্তন লক্ষ লক্ষ বছর ধরে চলা একটি অত্যন্ত মন্থর ও ধারাবাহিক প্রক্রিয়া।", level: 1, chapter: 2, time: 15 },
-            { question: "তিমির ফ্লিপার ও পাখির ডানা কীসের উদাহরণ?", options: ["সমবৃত্তীয় অঙ্গ", "সমসংস্থ অঙ্গ", "নিষ্ক্রিয় অঙ্গ", "কোনোটিই নয়"], answer: "সমসংস্থ অঙ্গ", explanation: "এদের উৎপত্তি ও অভ্যন্তরীণ গঠন এক কিন্তু কাজ আলাদা, তাই এরা সমসংস্থ অঙ্গ।", level: 1, chapter: 2, time: 20 },
-            { question: "কোনটি জেরোফাইট বা জাঙ্গল উদ্ভিদ?", options: ["পদ্ম", "ক্যাকটাস", "সুন্দরী", "হাইড্রিলা"], answer: "ক্যাকটাস", explanation: "শুষ্ক বা মরু অঞ্চলের উদ্ভিদদের জেরোফাইট বলে।", level: 1, chapter: 2, time: 15 },
-            { question: "ডারউইন কোন জাহাজে করে বিশ্ব ভ্রমণ করেন?", options: ["টাইটানিক", "এইচ.এম.এস. বিগল", "ভিক্টোরিয়া", "সান্তা মারিয়া"], answer: "এইচ.এম.এস. বিগল", explanation: "ডারউইন এইচ.এম.এস. বিগল জাহাজে চড়ে পাঁচ বছর ধরে বিশ্ব ভ্রমণ করেন এবং বিভিন্ন তথ্য সংগ্রহ করেন।", level: 1, chapter: 2, time: 20 },
-            { question: "আধুনিক ঘোড়ার নাম কী?", options: ["ইওহিপ্পাস", "মেসোহিপ্পাস", "মেরিচিপ্পাস", "ইকুয়াস"], answer: "ইকুয়াস", explanation: "ঘোড়ার বিবর্তন ধারার সর্বশেষ সদস্য হলো আধুনিক ঘোড়া বা ইকুয়াস।", level: 1, chapter: 2, time: 15 },
-            { question: "মৌমাছির ওয়াগল নৃত্যের কারণ কী?", options: ["আত্মরক্ষা", "প্রজনন", "খাবারের সন্ধান দেওয়া", "বিশ্রাম"], answer: "খাবারের সন্ধান দেওয়া", explanation: "মৌমাছিরা ওয়াগল নৃত্যের মাধ্যমে অন্যান্য শ্রমিক মৌমাছিদের খাদ্যের উৎস, দূরত্ব ও অভিমুখ জানায়।", level: 1, chapter: 2, time: 15 },
-            { question: "কোনটি লবণাম্বু উদ্ভিদ বা হ্যালোফাইট?", options: ["ক্যাকটাস", "শাপলা", "সুন্দরী", "ফার্ন"], answer: "সুন্দরী", explanation: "লবণাক্ত মাটিতে জন্মানো উদ্ভিদদের হ্যালোফাইট বলে।", level: 1, chapter: 2, time: 15 },
-            { question: "মাছের দেহে পটকার কাজ কী?", options: ["শ্বসন", "সাঁতার", "প্লবতা রক্ষা", "রক্ত সংবহন"], answer: "প্লবতা রক্ষা", explanation: "পটকা মাছকে জলের বিভিন্ন গভীরতায় ভেসে থাকতে অর্থাৎ প্লবতা রক্ষা করতে সাহায্য করে।", level: 1, chapter: 2, time: 20 },
-            { question: "মানুষের কক্সিস কোন ধরনের অঙ্গ?", options: ["সমসংস্থ", "সমবৃত্তীয়", "নিষ্ক্রিয়", "জরুরী"], answer: "নিষ্ক্রিয়", explanation: "কক্সিস বা লেজের হাড় মানুষের একটি নিষ্ক্রিয় অঙ্গ, যা লেজযুক্ত পূর্বপুরুষের অস্তিত্ব প্রমাণ করে।", level: 1, chapter: 2, time: 15 },
-            { question: "ডারউইনের মতে প্রকরণ বা ভেদ এর উৎস কী?", options: ["পরিবেশের প্রভাব", "অঙ্গের ব্যবহার", "অজানা কারণ", "ঈশ্বরের ইচ্ছা"], answer: "অজানা কারণ", explanation: "ডারউইন প্রকরণের وجود স্বীকার করলেও এর সঠিক কারণ ব্যাখ্যা করতে পারেননি।", level: 1, chapter: 2, time: 25 },
-            { question: "অভিব্যক্তির ভ্রূণতত্ত্ব ঘটিত প্রমাণের প্রবক্তা কে?", options: ["হেকেল", "ডারউইন", "মেন্ডেল", "ল্যামার্ক"], answer: "হেকেল", explanation: "বিজ্ঞানী হেকেল তার বায়োজেনেটিক সূত্রের মাধ্যমে বলেন 'Ontogeny recapitulates Phylogeny', যা ভ্রূণতত্ত্বের প্রমাণ।", level: 1, chapter: 2, time: 20 },
+            // Evolution & Adaptation Questions (Level 4)
+            { chapter: "Evolution", question: "জেনেটিক ড্রিফট (Genetic Drift) কোন ধরনের পপুলেশনে বেশি প্রভাবশালী?", options: ["বৃহৎ পপুলেশন", "ক্ষুদ্র ও বিচ্ছিন্ন পপুলেশন", "পরিযায়ী পপুলেশন", "সব ধরনের পপুলেশন"], answer: "ক্ষুদ্র ও বিচ্ছিন্ন পপুলেশন", explanation: "পপুলেশনের আকার যত ছোট হয়, দৈবচয়নের কারণে অ্যালিল ফ্রিকোয়েন্সির পরিবর্তন বা জেনেটিক ড্রিফটের প্রভাব তত বেশি হয়।", level: 4, time: 45 },
+            { chapter: "Evolution", question: "হার্ডি-উইনবার্গ সাম্যাবস্থা (Hardy-Weinberg Equilibrium) বজায় থাকার শর্ত কোনটি নয়?", options: ["বৃহৎ পপুলেশন", "দৈব যৌন মিলন", "প্রাকৃতিক নির্বাচন ঘটা", "পরিব্যক্তি ও মাইগ্রেশন না ঘটা"], answer: "প্রাকৃতিক নির্বাচন ঘটা", explanation: "হার্ডি-উইনবার্গ সাম্যাবস্থা বজায় থাকার জন্য পপুলেশনকে অভিব্যক্তি ঘটায় এমন শক্তি (যেমন প্রাকৃতিক নির্বাচন, পরিব্যক্তি) থেকে মুক্ত থাকতে হবে।", level: 4, time: 50 },
+            { chapter: "Evolution", question: "কোনটিকে 'অ্যাডাপটিভ রেডিয়েশন' (Adaptive Radiation) বলা হয়?", options: ["একটি প্রজাতি থেকে বিভিন্ন পরিবেশে একাধিক নতুন প্রজাতির উদ্ভব", "দুটি ভিন্ন প্রজাতির একই রকম অভিযোজন", "একটি প্রজাতির বিলুপ্তি", "পরিযায়ী পাখির ফিরে আসা"], answer: "একটি প্রজাতি থেকে বিভিন্ন পরিবেশে একাধিক নতুন প্রজাতির উদ্ভব", explanation: "যখন একটি সাধারণ পূর্বপুরুষ থেকে বিবর্তিত হয়ে একাধিক প্রজাতি বিভিন্ন পরিবেশে ভিন্ন ভিন্ন ভাবে অভিযোজিত হয়, তাকে অ্যাডাপটিভ রেডিয়েশন বলে। যেমন- ডারউইনের ফিঞ্চ।", level: 4, time: 50 },
+            { chapter: "Evolution", question: "বায়োজেনেটিক সূত্রের প্রবক্তা হেকেলের মতে, 'Ontogeny recapitulates Phylogeny'। এখানে 'Ontogeny' বলতে কী বোঝানো হয়েছে?", options: ["একটি জীবের জাতিজনি", "একটি জীবের ব্যক্তিজনি বা জীবন ইতিহাস", "একটি প্রজাতির বিবর্তন", "একটি পপুলেশনের ইতিহাস"], answer: "একটি জীবের ব্যক্তিজনি বা জীবন ইতিহাস", explanation: "'Ontogeny' বলতে একটি জীবের ভ্রূণাবস্থা থেকে পূর্ণাঙ্গ অবস্থা পর্যন্ত পরিস্ফুটনকে বোঝায়, যা তার জাতির বিবর্তন বা 'Phylogeny' কে সংক্ষেপে পুনরাবৃত্তি করে।", level: 4, time: 55 },
+            { chapter: "Evolution", question: "পঙ্গপালের নিষ্ক্রিয় ডানা এবং উটপাখির নিষ্ক্রিয় ডানা কি একই প্রকারের উদাহরণ?", options: ["হ্যাঁ, উভয়ই নিষ্ক্রিয় অঙ্গ", "না, পঙ্গপালের ডানা সমবৃত্তীয় এবং উটপাখির ডানা সমসংস্থ", "না, একটি নিষ্ক্রিয় অন্যটি সক্রিয়", "হ্যাঁ, উভয়ই সমসংস্থ অঙ্গ"], answer: "না, পঙ্গপালের ডানা সমবৃত্তীয় এবং উটপাখির ডানা সমসংস্থ", explanation: "উটপাখির ডানা পাখির ডানার সমসংস্থ কিন্তু নিষ্ক্রিয়। পঙ্গপালের ডানা পতঙ্গের ডানার মতোই, যা পাখির ডানার সাথে সমবৃত্তীয়। এদের বিবর্তনের পথ ভিন্ন।", level: 4, time: 60 },
+            { chapter: "Evolution", question: "কোন সময়কালকে 'সরীসৃপের যুগ' বা 'Age of Reptiles' বলা হয়?", options: ["প্যালিওজোয়িক যুগ", "মেসোজোয়িক যুগ", "সিনোজোয়িক যুগ", "প্রোটেরোজোয়িক যুগ"], answer: "মেসোজোয়িক যুগ", explanation: "মেসোজোয়িক যুগে (ট্রায়াসিক, জুরাসিক, ক্রিটেশিয়াস পিরিয়ড) ডাইনোসরের মতো বিশাল সরীসৃপরা পৃথিবীতে আধিপত্য করত।", level: 4, time: 40 },
+            { chapter: "Evolution", question: "অ্যালোপ্যাট্রিক স্পিসিয়েশন (Allopatric Speciation) কীভাবে ঘটে?", options: ["ভৌগোলিক বিচ্ছিন্নতার মাধ্যমে", "একই বাসস্থানে প্রজননগত বিচ্ছিন্নতার মাধ্যমে", "পলিপ্লয়েডির মাধ্যমে", "হাইব্রিডাইজেশনের মাধ্যমে"], answer: "ভৌগোলিক বিচ্ছিন্নতার মাধ্যমে", explanation: "যখন একটি পপুলেশন ভৌগোলিকভাবে (যেমন- নদী, পাহাড় দ্বারা) বিচ্ছিন্ন হয়ে দুটি ভিন্ন পপুলেশনে পরিণত হয় এবং তাদের মধ্যে জিনের আদান-প্রদান বন্ধ হয়ে যায়, তখন অ্যালোপ্যাট্রিক স্পিসিয়েশন ঘটে।", level: 4, time: 50 },
+            { chapter: "Evolution", question: "মুলারিয়ান মিমিক্রি (Mullerian Mimicry) কী?", options: ["একটি নিরীহ প্রাণী একটি বিষাক্ত প্রাণীকে নকল করে", "দুটি বা তার বেশি বিষাক্ত প্রজাতি একে অপরকে নকল করে", "একটি প্রাণী তার পরিবেশের সাথে মিশে যায়", "একটি পুরুষ প্রাণী স্ত্রীকে আকর্ষণ করে"], answer: "দুটি বা তার বেশি বিষাক্ত প্রজাতি একে অপরকে নকল করে", explanation: "যখন দুটি বা তার বেশি অখাদ্য বা বিষাক্ত প্রজাতি একে অপরের মতো দেখতে হয়, তখন শিকারী প্রাণী তাদের উভয়কেই এড়িয়ে চলে। এটি উভয় প্রজাতির জন্যই সুবিধাজনক।", level: 4, time: 50 },
+            { chapter: "Evolution", question: "মানুষের বিবর্তনে কোন প্রজাতি প্রথম অস্ত্র ব্যবহার করতে শেখে?", options: ["অস্ট্রালোপিথেকাস", "হোমো হ্যাবিলিস", "হোমো ইরেক্টাস", "নিয়ান্ডারথাল মানুষ"], answer: "হোমো হ্যাবিলিস", explanation: "'হোমো হ্যাবিলিস' বা 'Handy Man' কে প্রথম পাথরের অস্ত্র ব্যবহারকারী প্রজাতি হিসেবে গণ্য করা হয়।", level: 4, time: 45 },
+            { chapter: "Evolution", question: "পৃথিবীতে প্রাণের উৎপত্তির জন্য কোন শক্তিটি অপরিহার্য ছিল?", options: ["পারমাণবিক শক্তি", "মহাজাগতিক রশ্মি ও অতিবেগুনি রশ্মি", "চৌম্বকীয় শক্তি", "জোয়ার-ভাটার শক্তি"], answer: "মহাজাগতিক রশ্মি ও অতিবেগুনি রশ্মি", explanation: "আদিম পৃথিবীতে ওজোন স্তর না থাকায় সূর্যের অতিবেগুনি রশ্মি এবং অন্যান্য মহাজাগতিক রশ্মি সরাসরি পৃথিবীতে আসত এবং রাসায়নিক বিক্রিয়ার জন্য প্রয়োজনীয় শক্তি জোগান দিত।", level: 4, time: 45 }
+        ];
+        
+        let currentLevel = 1;
+        let quizQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let wrongAnswers = [];
+        let timerInterval;
+        let studentName = '';
 
-            // Level 2 (25 questions)
-            { question: "ডারউইনের জীবন সংগ্রামকে কয় ভাগে ভাগ করা যায়?", options: ["দুই", "তিন", "চার", "পাঁচ"], answer: "তিন", explanation: "ডারউইনের জীবন সংগ্রাম তিন প্রকার - অন্তঃপ্রজাতিক, আন্তঃপ্রজাতিক এবং পরিবেশের সঙ্গে সংগ্রাম।", level: 2, chapter: 2, time: 25 },
-            { question: "ঘোড়ার বিবর্তনে সবচেয়ে প্রাচীনতম পূর্বপুরুষ কোনটি?", options: ["ইকুয়াস", "ইওহিপ্পাস", "মেসোহিপ্পাস", "প্লিওহিপ্পাস"], answer: "ইওহিপ্পাস", explanation: "প্রায় ৫৫ মিলিয়ন বছর আগেকার ইওহিপ্পাস হলো ঘোড়ার বিবর্তনের প্রথম ধাপ।", level: 2, chapter: 2, time: 25 },
-            { question: "নিচের কোনটি মিসিং লিঙ্ক বা হারানো সূত্রের উদাহরণ?", options: ["পেরিপেটাস", "প্লাটিপাস", "আর্কিওপটেরিক্স", "সিলাকান্থ"], answer: "আর্কিওপটেরিক্স", explanation: "আর্কিওপটেরিক্সের জীবাশ্মে সরীসৃপ ও পাখি উভয়ের বৈশিষ্ট্য থাকায় এটি একটি গুরুত্বপূর্ণ মিসিং লিঙ্ক।", level: 2, chapter: 2, time: 30 },
-            { question: "অভিসারী বিবর্তন এর ফলে কোন প্রকার অঙ্গ গঠিত হয়?", options: ["সমসংস্থ অঙ্গ", "সমবৃত্তীয় অঙ্গ", "নিষ্ক্রিয় অঙ্গ", "সবগুলি"], answer: "সমবৃত্তীয় অঙ্গ", explanation: "ভিন্ন উৎস থেকে उत्पन्न হয়ে একই পরিবেশে অভিযোজিত হওয়ার ফলে একই রকম কাজ করা সমবৃত্তীয় অঙ্গ তৈরি হয়, যা অভিসারী বিবর্তনের উদাহরণ।", level: 2, chapter: 2, time: 30 },
-            { question: "অপসারী বিবর্তন এর ফলে কোন প্রকার অঙ্গ গঠিত হয়?", options: ["সমসংস্থ অঙ্গ", "সমবৃত্তীয় অঙ্গ", "নিষ্ক্রিয় অঙ্গ", "সবগুলি"], answer: "সমসংস্থ অঙ্গ", explanation: "একই উৎস থেকে उत्पन्न হয়ে ভিন্ন পরিবেশে অভিযোজিত হওয়ার ফলে ভিন্ন কাজ করা সমসংস্থ অঙ্গ তৈরি হয়, যা অপসারী বিবর্তনের উদাহরণ।", level: 2, chapter: 2, time: 30 },
-            { question: "শিম্পাঞ্জিরা কীভাবে শক্ত খোলা ভাঙে?", options: ["দাঁত দিয়ে", "পাথর দিয়ে", "লাঠি দিয়ে", "পাথর ও লাঠি উভয়ই ব্যবহার করে"], answer: "পাথর ও লাঠি উভয়ই ব্যবহার করে", explanation: "শিম্পাঞ্জিরা বুদ্ধিমত্তার পরিচয় দিয়ে শক্ত বাদামের খোলা ভাঙার জন্য পাথরকে নেহাই এবং লাঠি বা অন্য পাথরকে হাতুড়ি হিসেবে ব্যবহার করে।", level: 2, chapter: 2, time: 25 },
-            { question: "পায়রার খেচর অভিযোজনে V-আকৃতির স্টারনামের ভূমিকা কী?", options: ["উড্ডয়ন পেশি সংলগ্ন রাখা", "হৃৎপিণ্ড রক্ষা করা", "শ্বাসকার্যে সাহায্য করা", "দেহের ওজন কমানো"], answer: "উড্ডয়ন পেশি সংলগ্ন রাখা", explanation: "বড় ও মজবুত স্টারনাম বা কিল (Keel) উড্ডয়নের জন্য প্রয়োজনীয় শক্তিশালী পেশিগুলিকে সংযুক্ত থাকার জন্য স্থান দেয়।", level: 2, chapter: 2, time: 30 },
-            { question: "সুন্দরী গাছের জরায়ুজ অঙ্কুরোদগম দেখা যায় কেন?", options: ["বীজকে রক্ষা করার জন্য", "দ্রুত বংশবিস্তারের জন্য", "প্রতিকূল পরিবেশে চারাগাছের বেঁচে থাকা নিশ্চিত করার জন্য", "বীজের বিস্তার ঘটানোর জন্য"], answer: "প্রতিকূল পরিবেশে চারাগাছের বেঁচে থাকা নিশ্চিত করার জন্য", explanation: "কর্দমাক্ত ও লবণাক্ত মাটিতে বীজের অঙ্কুরোদগম কঠিন, তাই গাছে থাকাকালীন ফলের মধ্যেই বীজের অঙ্কুরোদগম হয়।", level: 2, chapter: 2, time: 35 },
-            { question: "নিষ্ক্রিয় অঙ্গের وجود বিবর্তনের কোন ধারণাকে সমর্থন করে?", options: ["জীবের উৎপত্তি ঈশ্বর দ্বারা হয়েছে", "জীবের গঠন অপরিবর্তনীয়", "জীবের উৎপত্তি সরল জীব থেকে হয়েছে", "অর্জিত বৈশিষ্ট্য বংশানুসৃত হয়"], answer: "জীবের উৎপত্তি সরল জীব থেকে হয়েছে", explanation: "নিষ্ক্রিয় অঙ্গ প্রমাণ করে যে জীবের পূর্বপুরুষের দেহে ওই অঙ্গগুলি সক্রিয় ছিল, যা সরল জীব থেকে জটিল জীবের উৎপত্তির ধারণাকে সমর্থন করে।", level: 2, chapter: 2, time: 30 },
-            { question: "ডারউইন কোন দ্বীপপুঞ্জের ফিঞ্চ পাখিদের দেখে প্রাকৃতিক নির্বাচন তত্ত্বের ধারণা পান?", options: ["আন্দামান ও নিকোবর", "গালাপাগোস", "মালদ্বীপ", "লক্ষদ্বীপ"], answer: "গালাপাগোস", explanation: "গালাপাগোস দ্বীপপুঞ্জের বিভিন্ন দ্বীপে ফিঞ্চ পাখিদের ঠোঁটের গঠনের পার্থক্য ডারউইনকে প্রাকৃতিক নির্বাচন বুঝতে সাহায্য করে।", level: 2, chapter: 2, time: 25 },
-            { question: "মাছের पार्श्वরেখা বা ল্যাটারাল লাইনের কাজ কী?", options: ["সাঁতার কাটা", "জলের চাপ ও তাপমাত্রা বোঝা", "শ্বাস নেওয়া", "রক্ত সংবহন"], answer: "জলের চাপ ও তাপমাত্রা বোঝা", explanation: "পার্শ্বরেখা একটি সংবেদী অঙ্গ যা মাছকে জলের চাপ, স্রোত এবং তাপমাত্রার পরিবর্তন বুঝতে সাহায্য করে।", level: 2, chapter: 2, time: 30 },
-            { question: "কোনটি বায়বীয় অভিযোজন বা খেচর অভিযোজন নয়?", options: ["ফাপা হাড়", "বায়ুথলি", "ডানা", "পটকা"], answer: "পটকা", explanation: "পটকা মাছের জলজ অভিযোজন, পায়রার বায়বীয় অভিযোজন নয়।", level: 2, chapter: 2, time: 25 },
-            { question: "ল্যামার্কের মতবাদের প্রধান ত্রুটি কী ছিল?", options: ["জীবন সংগ্রামের ধারণা না থাকা", "প্রাকৃতিক নির্বাচনের কথা না বলা", "অর্জিত বৈশিষ্ট্যের উত্তরাধিকার প্রমাণিত না হওয়া", "প্রকরণের উৎস ব্যাখ্যা না করা"], answer: "অর্জিত বৈশিষ্ট্যের উত্তরাধিকার প্রমাণিত না হওয়া", explanation: "বিজ্ঞানী ভাইসম্যান ইঁদুরের লেজ কেটে পরীক্ষা করে প্রমাণ করেন যে অর্জিত বৈশিষ্ট্য বংশানুসৃত হয় না।", level: 2, chapter: 2, time: 35 },
-            { question: "ঘোড়ার বিবর্তনের কোন পর্যায় থেকে প্রথম একটি মাত্র আঙুল বা খুর দেখা যায়?", options: ["ইওহিপ্পাস", "মেসোহিপ্পাস", "মেরিচিপ্পাস", "প্লিওহিপ্পাস"], answer: "প্লিওহিপ্পাস", explanation: "প্লিওহিপ্পাসকে প্রথম এক-আঙুলযুক্ত ঘোড়া বলা হয়, যা আধুনিক ঘোড়ার সরাসরি পূর্বপুরুষ।", level: 2, chapter: 2, time: 30 },
-            { question: "মৌমাছির বৃত্তাকার নৃত্যের (Round Dance) মাধ্যমে কী বোঝানো হয়?", options: ["খাদ্যের উৎস ১০০ মিটারের মধ্যে", "খাদ্যের উৎস ১০০ মিটারের বাইরে", "শত্রুর আগমন", "প্রজননের আহ্বান"], answer: "খাদ্যের উৎস ১০০ মিটারের মধ্যে", explanation: "খাদ্যের উৎস কাছাকাছি (সাধারণত ১০০ মিটারের মধ্যে) হলে মৌমাছিরা বৃত্তাকার নৃত্য করে।", level: 2, chapter: 2, time: 30 },
-            { question: "উটের আরবিসি (RBC) এর অভিযোজনগত বৈশিষ্ট্য কী?", options: ["গোলাকার ও নিউক্লিয়াসযুক্ত", "ডিম্বাকার ও নিউক্লিয়াসবিহীন", "দ্বি-অবতল", "কাস্তের মতো"], answer: "ডিম্বাকার ও নিউক্লিয়াসবিহীন", explanation: "উটের আরবিসি ডিম্বাকার হওয়ায় এটি জলশূন্যতার কারণে রক্ত ঘন হয়ে গেলেও রক্তনালীর মধ্যে সহজে চলাচল করতে পারে।", level: 2, chapter: 2, time: 35 },
-            { question: "কোনটি রাসায়নিক বিবর্তনের তত্ত্ব দেন?", options: ["ল্যামার্ক ও ডারউইন", "ওপারিন ও হ্যালডেন", "মিলার ও উরে", "ওয়াটসন ও ক্রিক"], answer: "ওপারিন ও হ্যালডেন", explanation: "আলেক্সান্ডার ওপারিন এবং জে.বি.এস. হ্যালডেন পৃথিবীতে প্রাণের উৎপত্তির রাসায়নিক বিবর্তন তত্ত্ব বা হট ডাইলুট স্যুপ তত্ত্ব দেন।", level: 2, chapter: 2, time: 30 },
-            { question: "মিলার ও উরের পরীক্ষায় কোন গ্যাসটি অনুপস্থিত ছিল?", options: ["মিথেন (CH₄)", "অ্যামোনিয়া (NH₃)", "অক্সিজেন (O₂)", "হাইড্রোজেন (H₂)"], answer: "অক্সিজেন (O₂)", explanation: "তাঁরা আদিম পৃথিবীর বিজারণধর্মী পরিবেশকে অনুকরণ করেন, যেখানে মুক্ত অক্সিজেন ছিল না।", level: 2, chapter: 2, time: 35 },
-            { question: "কোনটি জলজ স্তন্যপায়ী প্রাণীর উদাহরণ?", options: ["হাঙর", "তিমি", "বোয়াল মাছ", "অক্টোপাস"], answer: "তিমি", explanation: "তিমি মাছের মতো দেখতে হলেও এটি একটি স্তন্যপায়ী প্রাণী যা জলজ জীবনের জন্য অভিযোজিত।", level: 2, chapter: 2, time: 20 },
-            { question: "পর্ণকাণ্ড বা ফাইলোক্ল্যাড কোন উদ্ভিদে দেখা যায়?", options: ["সুন্দরী", "ক্যাকটাস", "পদ্ম", "মটর"], answer: "ক্যাকটাস", explanation: "ক্যাকটাসের রূপান্তরিত সবুজ, চ্যাপ্টা ও রসালো কাণ্ডকে পর্ণকাণ্ড বলে, যা সালোকসংশ্লেষ করে।", level: 2, chapter: 2, time: 25 },
-            { question: "ডারউইনের মতে, একই প্রজাতির সদস্যদের মধ্যে যে পার্থক্য দেখা যায় তাকে কী বলে?", options: ["অভিযোজন", "সংগ্রাম", "প্রকরণ বা ভেদ", "নির্বাচন"], answer: "প্রকরণ বা ভেদ", explanation: "ডারউইন লক্ষ্য করেন যে কোনো দুটি জীব হুবহু একরকম হয় না, তাদের মধ্যে ছোট ছোট পার্থক্য বা প্রকরণ থাকে।", level: 2, chapter: 2, time: 25 },
-            { question: "কোনটি উভচর প্রাণীর হৃৎপিণ্ডের বৈশিষ্ট্য?", options: ["দুই প্রকোষ্ঠযুক্ত", "তিন প্রকোষ্ঠযুক্ত", "চার প্রকোষ্ঠযুক্ত", "অসম্পূর্ণভাবে বিভক্ত চার প্রকোষ্ঠ"], answer: "তিন প্রকোষ্ঠযুক্ত", explanation: "উভচর প্রাণীদের হৃৎপিণ্ড দুটি অলিন্দ এবং একটি নিলয় নিয়ে গঠিত, যা বিবর্তনের একটি ধাপ নির্দেশ করে।", level: 2, chapter: 2, time: 30 },
-            { question: "অস্তিত্বের জন্য সংগ্রাম কথাটির অর্থ কী?", options: ["খাদ্য, বাসস্থান ও প্রজননের জন্য প্রতিযোগিতা", "অন্য প্রাণীর সাথে যুদ্ধ", "পরিবেশের বিরুদ্ধে লড়াই", "সবগুলি সঠিক"], answer: "সবগুলি সঠিক", explanation: "অস্তিত্ব রক্ষার জন্য জীবকে নিজের প্রজাতির সাথে, অন্য প্রজাতির সাথে এবং প্রতিকূল পরিবেশের সাথে প্রতিনিয়ত সংগ্রাম করতে হয়।", level: 2, chapter: 2, time: 25 },
-            { question: "কোন যুগে ঘোড়ার বিবর্তন শুরু হয়?", options: ["ইওসিন", "মায়োসিন", "প্লাইসটোসিন", "জুরাসিক"], answer: "ইওসিন", explanation: "ইওসিন যুগে (প্রায় ৫৫ মিলিয়ন বছর আগে) ইওহিপ্পাসের মাধ্যমে ঘোড়ার বিবর্তন শুরু হয়।", level: 2, chapter: 2, time: 30 },
-            { question: "বায়োজেনেটিক সূত্রটি কী?", options: ["যোগ্যতমের উদবর্তন", "অর্জিত বৈশিষ্ট্যের উত্তরাধিকার", "Ontogeny recapitulates Phylogeny", "প্রাকৃতিক নির্বাচন"], answer: "Ontogeny recapitulates Phylogeny", explanation: "এর অর্থ হলো, একটি জীবের ভ্রূণের পরিস্ফুটনের (Ontogeny) মধ্যে তার পূর্বপুরুষের বিবর্তনের (Phylogeny) পুনরাবৃত্তি ঘটে।", level: 2, chapter: 2, time: 35 },
+        function startQuiz() {
+            studentName = document.getElementById('student-name').value;
+            const errorDiv = document.getElementById('name-error');
+            if (studentName.trim() === '') {
+                errorDiv.classList.remove('hidden');
+                setTimeout(() => errorDiv.classList.add('hidden'), 3000);
+                return;
+            }
+            
+            currentLevel = parseInt(document.getElementById('quiz-level').value);
+            const levelQuestions = allQuestions.filter(q => q.level === currentLevel);
+            
+            // Shuffle and pick up to 25 questions
+            quizQuestions = levelQuestions.sort(() => 0.5 - Math.random()).slice(0, 25);
+            if(quizQuestions.length === 0) {
+                errorDiv.innerText = 'এই স্তরের জন্য কোনো প্রশ্ন পাওয়া যায়নি।';
+                errorDiv.classList.remove('hidden');
+                setTimeout(() => {
+                    errorDiv.classList.add('hidden');
+                    errorDiv.innerText = 'অনুগ্রহ করে আপনার নাম লিখুন।';
+                }, 3000);
+                return;
+            }
 
-            // Level 3 (25 questions)
-            { question: "বিবর্তনের আধুনিক সংশ্লেষণবাদ বা নিও-ডারউইনিজম অনুসারে বিবর্তনের একক কী?", options: ["ব্যক্তি জীব", "প্রজাতি", "পপুলেশন", "গোত্র"], answer: "পপুলেশন", explanation: "নিও-ডারউইনিজমের মতে, কোনো ব্যক্তি জীব বিবর্তিত হয় না, বরং একটি পপুলেশনের জিন ফ্রিকোয়েন্সি সময়ের সাথে পরিবর্তিত হয়।", level: 3, chapter: 2, time: 40 },
-            { question: "শিল্পাঞ্চলে শিল্পবিপ্লবের পরে মথদের মধ্যে কোন পরিবর্তন দেখা যায়?", options: ["সাদা মথের সংখ্যা বৃদ্ধি", "কালো মথের সংখ্যা বৃদ্ধি", "উভয়ের সংখ্যা হ্রাস", "কোনো পরিবর্তন হয়নি"], answer: "কালো মথের সংখ্যা বৃদ্ধি", explanation: "এটি শিল্পজাত মেলানিজম (Industrial Melanism) এর উদাহরণ। দূষণের ফলে গাছের ছাল কালো হয়ে যাওয়ায় কালো মথেরা শিকারিদের থেকে সুরক্ষা পায় ও তাদের সংখ্যা বাড়ে।", level: 3, chapter: 2, time: 40 },
-            { question: "কোন জীবাশ্মটি সরীসৃপ ও স্তন্যপায়ী প্রাণীর সংযোগরক্ষাকারী?", options: ["আর্কিওপটেরিক্স", "পেরিপেটাস", "সাইনোডন্ট", "ইওহিপ্পাস"], answer: "সাইনোডন্ট", explanation: "সাইনোডন্ট ছিল সরীসৃপ-সদৃশ স্তন্যপায়ী, যা সরীসৃপ থেকে স্তন্যপায়ী প্রাণীর বিবর্তনের প্রমাণ দেয়।", level: 3, chapter: 2, time: 45 },
-            { question: "অ্যাডাপটিভ রেডিয়েশন (Adaptive Radiation) এর একটি উৎকৃষ্ট উদাহরণ কোনটি?", options: ["মানুষের বিবর্তন", "ঘোড়ার বিবর্তন", "ডারউইনের ফিঞ্চ", "তিমির বিবর্তন"], answer: "ডারউইনের ফিঞ্চ", explanation: "একটি সাধারণ পূর্বপুরুষ থেকে বিভিন্ন পরিবেশে অভিযোজিত হয়ে বিভিন্ন প্রজাতির ফিঞ্চ পাখির উদ্ভব অ্যাডাপটিভ রেডিয়েশনের উদাহরণ।", level: 3, chapter: 2, time: 40 },
-            { question: "কোনটি মানুষের খুলির এপ-লাইক (Ape-like) বৈশিষ্ট্য?", options: ["ফোরমেন ম্যাগনামের অবস্থান", "সুপ্রা-অরবিটাল রিজের উপস্থিতি", "চিন বা চিবুকের উপস্থিতি", "ক্রেনিয়াল ক্যাপাসিটি বেশি হওয়া"], answer: "সুপ্রা-অরবিটাল রিজের উপস্থিতি", explanation: "চোখের উপরে থাকা পুরু হাড়ের গঠন বা সুপ্রা-অরবিটাল রিজ এপ বা বনমানুষদের বৈশিষ্ট্য, যা আদিম মানুষের খুলিতেও ছিল।", level: 3, chapter: 2, time: 40 },
-            { question: "কোনটি হট ডাইলুট স্যুপ বা তপ্ত লঘু ঝোলের উপাদান ছিল না বলে মনে করা হয়?", options: ["অ্যামিনো অ্যাসিড", "নিউক্লিক অ্যাসিড", "সরল শর্করা", "ফ্যাটি অ্যাসিড"], answer: "নিউক্লিক অ্যাসিড", explanation: "ওপারিন ও হ্যালডেনের মতে, তপ্ত লঘু ঝোলে অ্যামিনো অ্যাসিড, ফ্যাটি অ্যাসিড, শর্করা ইত্যাদি তৈরি হয়েছিল, যা থেকে পরে নিউক্লিক অ্যাসিড ও প্রোটিন তৈরি হয়।", level: 3, chapter: 2, time: 45 },
-            { question: "কোনটি জাঙ্গল উদ্ভিদের শারীরবৃত্তীয় অভিযোজন?", options: ["পাতা কাঁটায় রূপান্তর", "মূল গভীরে যাওয়া", "রসালো কাণ্ড", "CAM সালোকসংশ্লেষ"], answer: "CAM সালোকসংশ্লেষ", explanation: "ক্রাসুলেসিয়ান অ্যাসিড মেটাবলিজম (CAM) একটি বিশেষ ধরনের সালোকসংশ্লেষ পদ্ধতি যা চরম শুষ্ক পরিবেশে জল সাশ্রয় করে।", level: 3, chapter: 2, time: 45 },
-            { question: "কোনটি সমবৃত্তীয় অঙ্গের জোড়?", options: ["মানুষের হাত ও ঘোড়ার অগ্রপদ", "পাখির ডানা ও তিমির ফ্লিপার", "আলুর স্ফীতকন্দ ও আদার গ্রন্থিকন্দ", "মটর গাছের আকর্ষ ও পতঙ্গের ডানা"], answer: "মটর গাছের আকর্ষ ও পতঙ্গের ডানা", explanation: "এটি একটি ভুল জোড়, সঠিক উত্তর হবে পতঙ্গের ডানা ও পাখির ডানা। প্রশ্নটি বিভ্রান্ত করার জন্য দেওয়া।", level: 3, chapter: 2, time: 40 },
-            { question: "কোনটি প্রাকৃতিক নির্বাচন তত্ত্বের সমালোচনা?", options: ["যোগ্যতমের উদবর্তন", "প্রকরণের উৎপত্তির ব্যাখ্যা না থাকা", "জীবন সংগ্রামের ধারণা", "অত্যধিক হারে বংশবৃদ্ধি"], answer: "প্রকরণের উৎপত্তির ব্যাখ্যা না থাকা", explanation: "ডারউইন প্রকরণের গুরুত্ব বললেও, কেন বা কীভাবে প্রকরণ তৈরি হয় তার কোনো ব্যাখ্যা দিতে পারেননি।", level: 3, chapter: 2, time: 35 },
-            { question: "কোনটি আচরণগত অভিযোজনের উদাহরণ?", options: ["ক্যাকটাসের কাঁটা", "উটের কুঁজ", "পরিযায়ী পাখিদের পরিযান", "মাছের পটকা"], answer: "পরিযায়ী পাখিদের পরিযান", explanation: "নির্দিষ্ট ঋতুতে খাদ্য ও প্রজননের জন্য পাখিদের এক স্থান থেকে অন্য স্থানে যাওয়া একটি আচরণগত অভিযোজন।", level: 3, chapter: 2, time: 30 },
-            { question: "প্যালিওন্টোলজি বা জীবাশ্মবিদ্যা কী?", options: ["জীবের গঠন নিয়ে আলোচনা", "জীবের অভিযোজন নিয়ে আলোচনা", "জীবাশ্ম সংক্রান্ত বিজ্ঞান", "পরিবেশ নিয়ে আলোচনা"], answer: "জীবাশ্ম সংক্রান্ত বিজ্ঞান", explanation: "বিজ্ঞানের যে শাখায় জীবাশ্ম বা ফসিল নিয়ে গবেষণা করা হয়, তাকে প্যালিওন্টোলজি বলে।", level: 3, chapter: 2, time: 25 },
-            { question: "কোনটি মানুষের মধ্যে একটি অ্যাটাভিজম বা পূর্বপুরুষের বৈশিষ্ট্যর পুনরাবির্ভাবের উদাহরণ?", options: ["অ্যাপেন্ডিক্স", "কক্সিস", "শরীরে ঘন লোম", "আক্কেল দাঁত"], answer: "শরীরে ঘন লোম", explanation: "কিছু মানুষের মধ্যে পূর্বপুরুষের মতো সারা শরীরে ঘন লোমের আবির্ভাব ঘটে, যা অ্যাটাভিজমের উদাহরণ।", level: 3, chapter: 2, time: 35 },
-            { question: "বিবর্তনের ধারায় মেরুদণ্ডী প্রাণীদের হৃৎপিণ্ডের সঠিক ক্রম কোনটি?", options: ["মাছ → উভচর → সরীসৃপ → পাখি/স্তন্যপায়ী", "উভচর → মাছ → সরীসৃপ → পাখি/স্তন্যপায়ী", "মাছ → সরীসৃপ → উভচর → পাখি/স্তন্যপায়ী", "সরীসৃপ → মাছ → উভচর → পাখি/স্তন্যপায়ী"], answer: "মাছ → উভচর → সরীসৃপ → পাখি/স্তন্যপায়ী", explanation: "বিবর্তনের ধারায় হৃৎপিণ্ড ক্রমশ ২-প্রকোষ্ঠ (মাছ), ৩-প্রকোষ্ঠ (উভচর), অসম্পূর্ণ ৪-প্রকোষ্ঠ (সরীসৃপ) থেকে সম্পূর্ণ ৪-প্রকোষ্ঠ (পাখি ও স্তন্যপায়ী) হয়েছে।", level: 3, chapter: 2, time: 45 },
-            { question: "কোয়াসারভেট মডেলটি কার প্রস্তাব?", options: ["হ্যালডেন", "ওপারিন", "ফক্স", "মিলার"], answer: "ওপারিন", explanation: "আলেক্সান্ডার ওপারিন প্রস্তাব করেন যে আদিম সমুদ্রে বৃহৎ কোলয়েড কণাগুলি একত্রিত হয়ে কোয়াসারভেট তৈরি করে, যা আদি কোষের পূর্বসূরি।", level: 3, chapter: 2, time: 35 },
-            { question: "মাইক্রোস্ফিয়ার মডেলটি কার প্রস্তাব?", options: ["হ্যালডেন", "ওপারিন", "সিডনি ফক্স", "উরে"], answer: "সিডনি ফক্স", explanation: "সিডনি ফক্স দেখান যে উত্তপ্ত অ্যামিনো অ্যাসিড পলিমারাইজড হয়ে প্রোটিনয়েড তৈরি করে, যা জলে ঠান্ডা করলে মাইক্রোস্ফিয়ার গঠন করে।", level: 3, chapter: 2, time: 35 },
-            { question: "কোনটি বিচ্ছিন্নকারী বা আইসোলেটিং মেকানিজম নয়?", options: ["ভৌগোলিক বিচ্ছিন্নতা", "ঋতুভিত্তিক বিচ্ছিন্নতা", "আচরণগত বিচ্ছিন্নতা", "জিন ফ্লো"], answer: "জিন ফ্লো", explanation: "জিন ফ্লো বা জিনের প্রবাহ দুটি পপুলেশনের মধ্যে জিনের আদানপ্রদান ঘটায়, যা তাদের বিচ্ছিন্ন না করে বরং সংযুক্ত করে।", level: 3, chapter: 2, time: 40 },
-            { question: "কোন বিজ্ঞানী প্রথম প্রমাণ করেন যে জীবন কেবল পূর্ববর্তী জীবন থেকেই সৃষ্টি হতে পারে?", options: ["লুই পাস্তুর", "ফ্রান্সেসকো রেডি", "ল্যামার্ক", "ডারউইন"], answer: "লুই পাস্তুর", explanation: "লুই পাস্তুর তার রাজহাঁসের মতো গলাযুক্ত ফ্ল্যাস্কের পরীক্ষার মাধ্যমে স্বতঃস্ফূর্ত জীবন সৃষ্টির তত্ত্বকে ভুল প্রমাণ করেন।", level: 3, chapter: 2, time: 40 },
-            { question: "ঘোড়ার বিবর্তনে কোন শারীরিক পরিবর্তনটি ঘটেনি?", options: ["আকার বৃদ্ধি", "পায়ের আঙুলের সংখ্যা হ্রাস", "মস্তিষ্কের আকার বৃদ্ধি", "পেশকের জটিলতা হ্রাস"], answer: "পেশকের জটিলতা হ্রাস", explanation: "ঘাস খাওয়ার জন্য তাদের দাঁতের পেশক বা মোলার দাঁত আরও জটিল ও শক্তিশালী হয়েছে, হ্রাস পায়নি।", level: 3, chapter: 2, time: 45 },
-            { question: "কোনটি প্রাকৃতিক নির্বাচনের একক?", options: ["জিন", "ক্রোমোজোম", "ব্যক্তি জীব", "পপুলেশন"], answer: "ব্যক্তি জীব", explanation: "প্রকৃতি কোনো নির্দিষ্ট জিন বা ক্রোমোজোমকে নির্বাচন করে না, বরং সম্পূর্ণ জীবটিকে তার বৈশিষ্ট্যের ভিত্তিতে নির্বাচন বা বর্জন করে।", level: 3, chapter: 2, time: 35 },
-            { question: "কোনটি জেরোফাইটিক অভিযোজন নয়?", options: ["নিঃসৃত পত্ররন্ধ্র", "কিউটিকলের পুরু আস্তরণ", "বায়ুপূর্ণ প্যারেনকাইমা", "রসালো কাণ্ড"], answer: "বায়ুপূর্ণ প্যারেনকাইমা", explanation: "বায়ুপূর্ণ প্যারেনকাইমা বা অ্যারেনকাইমা জলজ উদ্ভিদের অভিযোজন, যা তাদের ভেসে থাকতে সাহায্য করে।", level: 3, chapter: 2, time: 30 },
-            { question: "বেটসিয়ান মিমিক্রি (Batesian Mimicry) কী?", options: ["দুটি বিষাক্ত প্রাণী একে অপরকে নকল করে", "একটি নিরীহ প্রাণী একটি বিষাক্ত প্রাণীকে নকল করে", "প্রাণী পরিবেশের সাথে মিশে যায়", "প্রাণী হঠাৎ রঙ পরিবর্তন করে"], answer: "একটি নিরীহ প্রাণী একটি বিষাক্ত প্রাণীকে নকল করে", explanation: "যখন একটি স্বাদযুক্ত বা নিরীহ প্রাণী শিকারিদের থেকে বাঁচতে একটি বিষাক্ত বা অখাদ্য প্রাণীর মতো দেখতে হয়, তাকে বেটসিয়ান মিমিক্রি বলে।", level: 3, chapter: 2, time: 40 },
-            { question: "মুলেরিয়ান মিমিক্রি (Müllerian Mimicry) কী?", options: ["দুটি বা তার বেশি বিষাক্ত প্রজাতি একে অপরকে নকল করে", "একটি নিরীহ প্রাণী একটি বিষাক্ত প্রাণীকে নকল করে", "প্রাণী পরিবেশের সাথে মিশে যায়", "প্রাণী হঠাৎ রঙ পরিবর্তন করে"], answer: "দুটি বা তার বেশি বিষাক্ত প্রজাতি একে অপরকে নকল করে", explanation: "যখন দুটি বা তার বেশি বিষাক্ত বা অখাদ্য প্রজাতি একই রকম সতর্কীকরণ সংকেত (রঙ বা নকশা) ধারণ করে, তখন তাকে মুলেরিয়ান মিমিক্রি বলে।", level: 3, chapter: 2, time: 40 },
-            { question: "কোনটি মানুষের খুলির মানব-সদৃশ (Human-like) বৈশিষ্ট্য?", options: ["U-আকৃতির চোয়াল", "ফোরমেন ম্যাগনামের পশ্চাৎ অবস্থান", "চিন বা চিবুকের উপস্থিতি", "ডায়াস্টেমার উপস্থিতি"], answer: "চিন বা চিবুকের উপস্থিতি", explanation: "মানুষের খুলিতে সুস্পষ্ট চিবুক বা চিন থাকে, যা এপ-দের মধ্যে অনুপস্থিত।", level: 3, chapter: 2, time: 35 },
-            { question: "ডারউইনিজম-এর মূল প্রতিপাদ্য বিষয় কয়টি?", options: ["২টি", "৩টি", "৪টি", "৫টি"], answer: "৫টি", explanation: "ডারউইনের তত্ত্বের মূল বিষয়গুলি হল - অত্যাধিক হারে বংশবৃদ্ধি, সীমিত খাদ্য ও বাসস্থান, জীবন সংগ্রাম, প্রকরণের উদ্ভব এবং যোগ্যতমের উদবর্তন ও প্রাকৃতিক নির্বাচন।", level: 3, chapter: 2, time: 30 },
-            { question: "কোনটি জলজ উদ্ভিদের অভিযোজন?", options: ["শ্বাসমূল", "পর্ণকাণ্ড", "পত্রঝাঁজি", "আকর্ষ"], answer: "পত্রঝাঁজি", explanation: "কিছু জলজ উদ্ভিদের পাতা সরু ফিতার মতো বা শাখাপ্রশাখাযুক্ত হয়ে পত্রঝাঁজি গঠন করে, যা জলের স্রোত সহ্য করতে সাহায্য করে।", level: 3, chapter: 2, time: 30 },
+            currentQuestionIndex = 0;
+            score = 0;
+            wrongAnswers = [];
 
-            // Level 4 (25 questions)
-            { question: "জেনেটিক ড্রিফট (Genetic Drift) কোন ধরনের পপুলেশনে বেশি প্রভাবশালী?", options: ["বড় পপুলেশন", "ছোট ও বিচ্ছিন্ন পপুলেশন", "পরিযায়ী পপুলেশন", "সব ধরনের পপুলেশন"], answer: "ছোট ও বিচ্ছিন্ন পপুলেশন", explanation: "ছোট পপুলেশনে দৈব ঘটনার কারণে অ্যালিল ফ্রিকোয়েন্সির ব্যাপক পরিবর্তন ঘটতে পারে, যা জেনেটিক ড্রিফট নামে পরিচিত।", level: 4, chapter: 2, time: 45 },
-            { question: "হার্ডি-উইনবার্গ সাম্যাবস্থা (Hardy-Weinberg Equilibrium) থেকে বিচ্যুতি ঘটলে কী নির্দেশিত হয়?", options: ["পপুলেশনটি স্থিতিশীল", "পপুলেশনে বিবর্তন ঘটছে", "পপুলেশনে কোনো প্রকরণ নেই", "পপুলেশনটি বিলুপ্ত হয়ে যাবে"], answer: "পপুলেশনে বিবর্তন ঘটছে", explanation: "হার্ডি-উইনবার্গ সাম্যাবস্থা একটি আদর্শ অবস্থা। এর বিচ্যুতি (জিন ফ্লো, জেনেটিক ড্রিফট, মিউটেশন, প্রাকৃতিক নির্বাচনের কারণে) ঘটলে বোঝা যায় পপুলেশনটি বিবর্তিত হচ্ছে।", level: 4, chapter: 2, time: 50 },
-            { question: "অ্যালোপ্যাট্রিক স্পিসিয়েশন (Allopatric Speciation) এর মূল কারণ কী?", options: ["প্রজননগত বিচ্ছিন্নতা", "ভৌগোলিক বিচ্ছিন্নতা", "আচরণগত বিচ্ছিন্নতা", "ঋতুভিত্তিক বিচ্ছিন্নতা"], answer: "ভৌগোলিক বিচ্ছিন্নতা", explanation: "যখন একটি পপুলেশন ভৌগোলিকভাবে বিচ্ছিন্ন হয়ে দুটি ভিন্ন পপুলেশনে বিভক্ত হয় এবং কালক্রমে তাদের মধ্যে প্রজননগত বিচ্ছিন্নতা তৈরি হয়, তখন নতুন প্রজাতির উদ্ভব ঘটে।", level: 4, chapter: 2, time: 45 },
-            { question: "সিমপ্যাট্রিক স্পিসিয়েশন (Sympatric Speciation) কীভাবে ঘটে?", options: ["ভৌগোলিক বিচ্ছিন্নতার মাধ্যমে", "একই ভৌগোলিক অঞ্চলের মধ্যে প্রজননগত বিচ্ছিন্নতার মাধ্যমে", "পরিযানের মাধ্যমে", "জেনেটিক ড্রিফটের মাধ্যমে"], answer: "একই ভৌগোলিক অঞ্চলের মধ্যে প্রজননগত বিচ্ছিন্নতার মাধ্যমে", explanation: "কোনো ভৌগোলিক বাধা ছাড়াই একই পপুলেশনের মধ্যে পলিপ্লয়েডি বা অন্য কোনো কারণে প্রজননগত বিচ্ছিন্নতা তৈরি হলে সিমপ্যাট্রিক স্পিসিয়েশন ঘটে।", level: 4, chapter: 2, time: 50 },
-            { question: "কোনটি 'আণবিক কাঁচি' (Molecular Scissors) নামে পরিচিত?", options: ["লাইগেজ", "পলিমারেজ", "রেস্ট্রিকশন এন্ডোনিউক্লিয়েজ", "হেলিকেজ"], answer: "রেস্ট্রিকশন এন্ডোনিউক্লিয়েজ", explanation: "এটি একটি উৎসেচক যা ডিএনএ-কে নির্দিষ্ট স্থানে কাটে। এটি সরাসরি বিবর্তনের সাথে যুক্ত না হলেও আণবিক জীববিজ্ঞানের একটি গুরুত্বপূর্ণ ধারণা।", level: 4, chapter: 2, time: 40 },
-            { question: "কোনটি কো-ইভোলিউশন (Co-evolution) বা সহ-বিবর্তনের উদাহরণ?", options: ["শিকারী ও শিকারের সম্পর্ক", "ফুল ও পরাগরেণু বহনকারী পতঙ্গের সম্পর্ক", "হোস্ট ও পরজীবীর সম্পর্ক", "উপরের সবগুলি"], answer: "উপরের সবগুলি", explanation: "যখন দুটি ভিন্ন প্রজাতি একে অপরের উপর নির্ভরশীল হয়ে একসঙ্গে বিবর্তিত হয়, তখন তাকে সহ-বিবর্তন বলে। উপরের সবগুলিই এর উদাহরণ।", level: 4, chapter: 2, time: 45 },
-            { question: "কোন মানব পূর্বপুরুষ প্রথম আগুনের ব্যবহার শুরু করে বলে মনে করা হয়?", options: ["অস্ট্রালোপিথেকাস", "হোমো হ্যাবিলিস", "হোমো ইরেক্টাস", "হোমো নিয়ান্ডারথালেনসিস"], answer: "হোমো ইরেক্টাস", explanation: "হোমো ইরেক্টাস প্রথম আগুনের নিয়ন্ত্রিত ব্যবহার শুরু করে, যা তাদের খাদ্যগ্রহণ ও আত্মরক্ষায় ব্যাপক পরিবর্তন আনে।", level: 4, chapter: 2, time: 40 },
-            { question: "কোন মানব পূর্বপুরুষ প্রথম গুহাশিল্প বা চিত্রাঙ্কন শুরু করে?", options: ["হোমো ইরেক্টাস", "হোমো নিয়ান্ডারথালেনসিস", "ক্রো-ম্যাগনন মানব (হোমো স্যাপিয়েন্স)", "হোমো হ্যাবিলিস"], answer: "ক্রো-ম্যাগনন মানব (হোমো স্যাপিয়েন্স)", explanation: "ক্রো-ম্যাগনন মানবদের দ্বারা সৃষ্ট গুহাচিত্রগুলি তাদের উন্নত সংস্কৃতি ও বিমূর্ত চিন্তাভাবনার প্রমাণ দেয়।", level: 4, chapter: 2, time: 40 },
-            { question: "ডারউইনের তত্ত্বের দুর্বলতা দূর করে যে আধুনিক তত্ত্বটি গঠিত হয়েছে তার নাম কী?", options: ["ল্যামার্কবাদ", "নিও-ল্যামার্কবাদ", "আধুনিক সংশ্লেষণবাদ বা নিও-ডারউইনিজম", "মিউটেশন তত্ত্ব"], answer: "আধুনিক সংশ্লেষণবাদ বা নিও-ডারউইনিজম", explanation: "এই তত্ত্বে ডারউইনের প্রাকৃতিক নির্বাচনের সাথে মেন্ডেলের বংশগতি, মিউটেশন, জেনেটিক ড্রিফট ইত্যাদি ধারণাকে সংযুক্ত করা হয়েছে।", level: 4, chapter: 2, time: 45 },
-            { question: "কোনটি পপুলেশনে জেনেটিক ভ্যারিয়েশন বা জিনগত প্রকরণ সৃষ্টি করে না?", options: ["মিউটেশন", "জিন রিকম্বিনেশন", "জেনেটিক ড্রিফট", "জিন ফ্লো"], answer: "জেনেটিক ড্রিফট", explanation: "মিউটেশন এবং রিকম্বিনেশন নতুন প্রকরণ তৈরি করে, এবং জিন ফ্লো নতুন অ্যালিল নিয়ে আসে। কিন্তু জেনেটিক ড্রিফট কেবল বিদ্যমান অ্যালিলের ফ্রিকোয়েন্সি পরিবর্তন করে, নতুন প্রকরণ তৈরি করে না।", level: 4, chapter: 2, time: 55 },
-            { question: "কোনটি 'আউট অফ আফ্রিকা' (Out of Africa) তত্ত্বের মূল বক্তব্য?", options: ["মানুষের উৎপত্তি আফ্রিকায় এবং সেখান থেকে সারা বিশ্বে ছড়িয়ে পড়েছে", "মানুষের উৎপত্তি এশিয়ায়", "মানুষ বিভিন্ন মহাদেশে স্বাধীনভাবে বিবর্তিত হয়েছে", "মানুষের উৎপত্তি সমুদ্রে"], answer: "মানুষের উৎপত্তি আফ্রিকায় এবং সেখান থেকে সারা বিশ্বে ছড়িয়ে পড়েছে", explanation: "এই তত্ত্ব অনুযায়ী, আধুনিক মানুষ (হোমো স্যাপিয়েন্স) আফ্রিকায় বিবর্তিত হয়ে পরে বিভিন্ন মহাদেশে ছড়িয়ে পড়ে এবং অন্যান্য আদিম মানব প্রজাতিকে প্রতিস্থাপিত করে।", level: 4, chapter: 2, time: 50 },
-            { question: "কোনটি 'মাল্টিরিজিওনাল' (Multiregional) তত্ত্বের মূল বক্তব্য?", options: ["মানুষের উৎপত্তি আফ্রিকায়", "মানুষ বিভিন্ন মহাদেশে হোমো ইরেক্টাস থেকে স্বাধীনভাবে বিবর্তিত হয়েছে", "মানুষের উৎপত্তি ইউরোপে", "মানুষের বিবর্তন হয়নি"], answer: "মানুষ বিভিন্ন মহাদেশে হোমো ইরেক্টাস থেকে স্বাধীনভাবে বিবর্তিত হয়েছে", explanation: "এই তত্ত্ব অনুযায়ী, আফ্রিকা, ইউরোপ ও এশিয়ার হোমো ইরেক্টাস পপুলেশনগুলির মধ্যে জিন ফ্লো বজায় ছিল এবং তারা ধীরে ধীরে হোমো স্যাপিয়েন্সে বিবর্তিত হয়েছে।", level: 4, chapter: 2, time: 50 },
-            { question: "কোনটি কনভারজেন্ট ইভোলিউশন বা অভিসারী বিবর্তনের ফল?", options: ["তিমির ফ্লিপার ও হাঙরের পাখনা", "পাখির ডানা ও মানুষের হাত", "ঘোড়ার পা ও মানুষের পা", "ক্যাকটাসের কাঁটা ও গোলাপের কাঁটা"], answer: "তিমির ফ্লিপার ও হাঙরের পাখনা", explanation: "তিমি স্তন্যপায়ী এবং হাঙর মাছ হওয়া সত্ত্বেও, একই রকম জলজ পরিবেশে অভিযোজিত হওয়ায় তাদের অগ্রপদ একই রকম পাখনা বা ফ্লিপারে রূপান্তরিত হয়েছে।", level: 4, chapter: 2, time: 50 },
-            { question: "কোনটি ডাইভারজেন্ট ইভোলিউশন বা অপসারী বিবর্তনের ফল?", optio
+            document.getElementById('quiz-start-screen').classList.add('hidden');
+            document.getElementById('quiz-result-screen').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            if (currentQuestionIndex < quizQuestions.length) {
+                const question = quizQuestions[currentQuestionIndex];
+                const wrapper = document.getElementById('questions-wrapper');
+                wrapper.innerHTML = '';
+
+                const qDiv = document.createElement('div');
+                qDiv.className = 'quiz-question active fade-in';
+                qDiv.innerHTML = `
+                    <p class="text-xl md:text-2xl font-semibold mb-6">${currentQuestionIndex + 1}. ${question.question}</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${question.options.map(option => `
+                            <button class="option-btn w-full text-left p-4 border rounded-lg hover:bg-gray-200 transition" onclick="selectAnswer(this, '${option.replace(/'/g, "\\'")}')">
+                                ${option}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <p class="explanation mt-4 p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded-r-lg">${question.explanation}</p>
+                `;
+                wrapper.appendChild(qDiv);
+                
+                document.getElementById('question-counter').innerText = `প্রশ্ন ${currentQuestionIndex + 1}/${quizQuestions.length}`;
+                document.getElementById('next-question-btn').classList.add('hidden');
+                
+                startTimer(question.time);
+            } else {
+                showResult();
+            }
+        }
+
+        function startTimer(duration) {
+            clearInterval(timerInterval);
+            let timeLeft = duration;
+            const timerEl = document.getElementById('timer');
+            const timerBar = document.getElementById('timer-bar');
+            
+            timerEl.innerText = `সময়: ${timeLeft}s`;
+            timerBar.style.width = '100%';
+            
+            setTimeout(() => {
+                timerBar.style.transition = `width ${duration}s linear`;
+                timerBar.style.width = '0%';
+            }, 100);
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                timerEl.innerText = `সময়: ${timeLeft}s`;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    handleTimeout();
+                }
+            }, 1000);
+        }
+
+        function handleTimeout() {
+            const question = quizQuestions[currentQuestionIndex];
+            wrongAnswers.push({ question: question.question, correctAnswer: question.answer, explanation: question.explanation });
+            
+            const options = document.querySelectorAll('.option-btn');
+            options.forEach(btn => {
+                btn.disabled = true;
+                if (btn.innerText === question.answer) {
+                    btn.classList.add('correct');
+                }
+            });
+            
+            document.querySelector('.explanation').style.display = 'block';
+            document.getElementById('next-question-btn').classList.remove('hidden');
+        }
+
+        function selectAnswer(button, selectedOption) {
+            clearInterval(timerInterval);
+            document.getElementById('timer-bar').style.transition = 'none';
+            
+            const question = quizQuestions[currentQuestionIndex];
+            const options = document.querySelectorAll('.option-btn');
+            options.forEach(btn => btn.disabled = true);
+
+            button.classList.add('selected');
+
+            if (selectedOption === question.answer) {
+                score++;
+                button.classList.add('correct');
+            } else {
+                button.classList.add('incorrect');
+                wrongAnswers.push({ question: question.question, correctAnswer: question.answer, explanation: question.explanation });
+                options.forEach(btn => {
+                    if (btn.innerText === question.answer) {
+                        btn.classList.add('correct');
+                    }
+                });
+            }
+            
+            document.querySelector('.explanation').style.display = 'block';
+            document.getElementById('next-question-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            displayQuestion();
+        }
+
+        function showResult() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-result-screen').classList.remove('hidden');
+
+            document.getElementById('result-summary').innerHTML = `<b>${studentName}</b>, আপনি ${quizQuestions.length}টি প্রশ্নের মধ্যে ${score}টি সঠিক উত্তর দিয়েছেন।`;
+
+            const wrongAnswersContainer = document.getElementById('wrong-answers-container');
+            wrongAnswersContainer.innerHTML = '<h3 class="text-2xl font-semibold border-b pb-2">ভুল উত্তর ও সঠিক ব্যাখ্যা:</h3>'; // Reset
+            if (wrongAnswers.length > 0) {
+                wrongAnswers.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg fade-in';
+                    div.innerHTML = `
+                        <p class="font-semibold">${item.question}</p>
+                        <p class="text-green-700 mt-2"><b>সঠিক উত্তর:</b> ${item.correctAnswer}</p>
+                        <p class="text-gray-700 mt-1"><b>ব্যাখ্যা:</b> ${item.explanation}</p>
+                    `;
+                    wrongAnswersContainer.appendChild(div);
+                });
+            } else {
+                wrongAnswersContainer.innerHTML += '<p class="text-green-600 font-semibold mt-4">দারুণ! আপনার কোনো উত্তর ভুল হয়নি।</p>';
+            }
+        }
+
+        function restartQuiz() {
+            document.getElementById('quiz-result-screen').classList.add('hidden');
+            document.getElementById('quiz-start-screen').classList.remove('hidden');
+        }
+
+    </script>
+</body>
+</html>
